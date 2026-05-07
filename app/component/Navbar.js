@@ -30,7 +30,7 @@ const Navbar = () => {
 
             <li className="relative group">
               <Link
-                href="/About"
+                href="/about"
                 className="text-gray-300 font-semibold transition hover:text-cyan-400"
               >
                 About
@@ -40,7 +40,7 @@ const Navbar = () => {
 
             <li className="relative group">
               <Link
-                href="/Service"
+                href="/services"
                 className="text-gray-300 font-semibold transition hover:text-cyan-400"
               >
                 Services
@@ -50,7 +50,7 @@ const Navbar = () => {
 
             <li className="relative group">
               <Link
-                href="/Blog"
+                href="/blog"
                 className="text-gray-300 font-semibold transition hover:text-cyan-400"
               >
                 Blog

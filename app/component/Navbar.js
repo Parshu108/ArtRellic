@@ -37,7 +37,7 @@ const Navbar = () => {
 
             <li className="relative group">
               <Link
-                href="/about"
+                href="/abouts"
                 className="text-[#0bccc1]/90 font-semibold transition duration-300 hover:text-[#07ebd1]"
               >
                 About

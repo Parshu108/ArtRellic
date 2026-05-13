@@ -17,7 +17,7 @@ export default function Footer() {
   return (
     <footer className="relative overflow-hidden bg-[#09284b] text-white">
       {/* ================= BACKGROUND GLOW ================= */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 max-w-4xl h-96 bg-[#0bccc1]/10 blur-[160px]" />
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 max-w-4xl h-72 bg-[#0bccc1]/10 blur-[160px]" />
 
       <div className="max-w-7xl mx-auto px-2 md:px-3 xl:px-3 py-6 md:py-6 relative z-10">
         {/* ================================================= */}

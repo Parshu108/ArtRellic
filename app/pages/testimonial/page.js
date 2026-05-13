@@ -46,7 +46,7 @@ export default function TestimonialsSection() {
         <div className="absolute inset-0 bg-[#081c15]/55"></div>
 
         {/* LIGHT GREEN OVERLAY */}
-        <div className="absolute inset-0 bg-cyan-400/10"></div>
+        <div className="absolute inset-0 bg-secondary/10"></div>
       </div>
 
       {/* FLOATING DOT */}
@@ -59,7 +59,7 @@ export default function TestimonialsSection() {
           duration: 4,
           repeat: Infinity,
         }}
-        className="absolute top-72 right-[22%] w-4 h-4 rounded-full bg-cyan-400 z-20"
+        className="absolute top-72 right-[22%] w-4 h-4 rounded-full bg-secondary z-20"
       />
 
       <div className="max-w-7xl mx-auto px-6 relative z-20">
@@ -74,7 +74,7 @@ export default function TestimonialsSection() {
               transition={{ duration: 0.6 }}
               className="inline-flex items-center gap-3 px-7 py-3 rounded-full bg-white/10 backdrop-blur-xl border border-white/10"
             >
-              <span className="w-2 h-2 rounded-full bg-cyan-400"></span>
+              <span className="w-2 h-2 rounded-full bg-secondary"></span>
 
               <span className="text-white font-semibold text-lg">
                 Our Testimonials
@@ -112,7 +112,7 @@ export default function TestimonialsSection() {
               whileTap={{
                 scale: 0.95,
               }}
-              className="group mt-10 flex items-center overflow-hidden rounded-full bg-cyan-400 text-black shadow-2xl"
+              className="group mt-10 flex items-center overflow-hidden rounded-full bg-secondary text-black shadow-2xl"
             >
               <span className="px-2 py-1 text-md font-bold">
                 View All Testimonials

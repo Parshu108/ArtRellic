@@ -17,20 +17,7 @@ export default function Footer() {
   return (
     <footer className="relative overflow-hidden bg-[#09284b] text-white">
       {/* ================= BACKGROUND GLOW ================= */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[900px] h-[400px] bg-[#123a63]/10 blur-[160px]" />
-
-      {/* FLOATING DOT */}
-      <motion.div
-        animate={{
-          y: [0, -20, 0],
-          x: [0, 12, 0],
-        }}
-        transition={{
-          duration: 4,
-          repeat: Infinity,
-        }}
-        className="absolute top-[34%] left-[58%] w-3 h-1 rounded-full bg-[#84ec5a]"
-      />
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 max-w-4xl h-96 bg-[#0bccc1]/10 blur-[160px]" />
 
       <div className="max-w-7xl mx-auto px-2 md:px-3 xl:px-3 py-6 md:py-6 relative z-10">
         {/* ================================================= */}
@@ -43,7 +30,7 @@ export default function Footer() {
             initial={{ opacity: 0, y: 70 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
-            className="max-w-[420px]"
+            className="max-w-xl"
           >
             <h2 className="text-2xl md:text-3xl font-black leading-tight">
               Subscribe Our Newsletter to Get Latest Updates
@@ -68,14 +55,14 @@ export default function Footer() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9 }}
           >
-            <div className="flex items-center overflow-hidden rounded-2xl border border-white/10 bg-white/5 backdrop-blur-xl">
+            <div className="flex items-center overflow-hidden rounded-2xl bg-[#0bccc1]/10 border border-[#0bccc1]/20 backdrop-blur-xl">
               <input
                 type="email"
                 placeholder="Enter Email Address*"
                 className="w-full bg-transparent px-6 py-5 text-base md:text-lg outline-none placeholder:text-gray-400"
               />
 
-              <button className="w-16 h-16 flex items-center justify-center bg-cyan-400 text-black hover:bg-cyan-500 transition duration-300">
+              <button className="w-16 h-16 flex items-center justify-center bg-secondary text-[#0c264b] hover:bg-[#0bccc1] transition duration-300">
                 <ArrowRight size={28} />
               </button>
             </div>
@@ -83,7 +70,7 @@ export default function Footer() {
         </div>
 
         {/* LINE */}
-        <div className="w-full h-[1px] bg-white/10 my-4 md:my-8"></div>
+        <div className="w-full h-0.5 bg-[#0bccc1]/10 my-4 md:my-8"></div>
 
         {/* ================================================= */}
         {/* FOOTER CONTENT */}
@@ -98,16 +85,16 @@ export default function Footer() {
             initial={{ opacity: 0, y: 70 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
-            className="max-w-[420px]"
+            className="max-w-96"
           >
             {/* LOGO */}
             <div className="flex items-center gap-4">
               <Image
                 src="/logo/Logo.jpeg"
                 alt="logo"
-                width={70}
-                height={70}
-                className="rounded-full"
+                width={80}
+                height={80}
+                className=" rounded-2 w-auto h-auto "
               />
 
               <h2 className="text-3xl font-black">Greva</h2>
@@ -121,10 +108,10 @@ export default function Footer() {
             </p>
 
             {/* CONTACT CARD */}
-            <div className="mt-10 rounded-[32px] border border-white/10 bg-white/5 backdrop-blur-xl p-4 md:p-6">
+            <div className="mt-10 rounded-4xl border bg-[#0bccc1]/10  border-[#0bccc1]/20 backdrop-blur-xl p-4 md:p-6">
               {/* PHONE */}
               <div className="flex items-center gap-5">
-                <div className="w-14 h-14 rounded-full border border-white/10 flex items-center justify-center text-cyan-400">
+                <div className="w-14 h-14 rounded-full border border-white/10 flex items-center justify-center text-[#0bccc1]">
                   <PhoneCall size={24} />
                 </div>
 
@@ -137,7 +124,7 @@ export default function Footer() {
 
               {/* EMAIL */}
               <div className="flex items-center gap-5 mt-4">
-                <div className="w-14 h-14 rounded-full border border-white/10 flex items-center justify-center text-cyan-400">
+                <div className="w-14 h-14 rounded-full border border-white/10 flex items-center justify-center text-[#0bccc1]">
                   <Mail size={24} />
                 </div>
 
@@ -149,7 +136,7 @@ export default function Footer() {
               </div>
 
               {/* LINE */}
-              <div className="w-full h-[1px] bg-white/10 my-4"></div>
+              <div className="w-full h-0.5 bg-white/10 my-4"></div>
 
               {/* SOCIAL */}
               <div className="flex items-center justify-between flex-wrap gap-3">
@@ -168,7 +155,7 @@ export default function Footer() {
                         y: -5,
                         scale: 1.1,
                       }}
-                      className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center text-white hover:bg-cyan-600 hover:text-black transition duration-300 cursor-pointer"
+                      className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center text-white hover:bg-[#0bccc1] hover:text-black transition duration-300 cursor-pointer"
                     >
                       {icon}
                     </motion.div>
@@ -195,7 +182,7 @@ export default function Footer() {
                   <Link
                     href="/"
                     key={index}
-                    className="group flex items-center gap-2 text-lg md:text-lg text-gray-300 hover:text-cyan-500 transition duration-300"
+                    className="group flex items-center gap-2 text-lg md:text-lg text-gray-300 hover:text-[#0bccc1] transition duration-300"
                   >
                     <ChevronRight
                       size={20}
@@ -232,7 +219,7 @@ export default function Footer() {
               ].map((item, index) => (
                 <div
                   key={index}
-                  className="group flex items-center gap-2 text-lg md:text-lg text-gray-300 hover:text-cyan-500 transition duration-300 cursor-pointer"
+                  className="group flex items-center gap-2 text-lg md:text-lg text-gray-300 hover:text-[#0bccc1] transition duration-300 cursor-pointer"
                 >
                   <ChevronRight
                     size={22}
@@ -263,7 +250,7 @@ export default function Footer() {
             </p>
 
             {/* LINE */}
-            <div className="w-full h-[1px] bg-white/10 my-4"></div>
+            <div className="w-full h-0.5 bg-white/10 my-4"></div>
 
             <h2 className="text-xl md:text-2xl font-black mb-4">
               Working Hours
@@ -293,13 +280,13 @@ export default function Footer() {
           </motion.div>
         </div>
 
-        <div className="relative w-[940px] h-[1px] bg-white/10 -mt-34 ml-80"></div>
+        <div className="relative w-4xl h-0.5 bg-white/10 -mt-34 ml-84"></div>
 
         {/* ================================================= */}
         {/* COPYRIGHT */}
         {/* ================================================= */}
 
-        <div className="w-full h-[1px] bg-white/10 mt-10 md:mt-50 mb-6"></div>
+        <div className="w-full h-0.5 bg-white/10 mt-10 md:mt-50 mb-6"></div>
 
         <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-center md:text-left">
           <p className="text-sm md:text-base text-gray-400">
@@ -307,11 +294,11 @@ export default function Footer() {
           </p>
 
           <div className="flex items-center gap-6 text-sm text-gray-400">
-            <span className="hover:text-[#84ec5a] transition cursor-pointer">
+            <span className="hover:text-[#0bccc1] transition cursor-pointer">
               Privacy Policy
             </span>
 
-            <span className="hover:text-[#84ec5a] transition cursor-pointer">
+            <span className="hover:text-[#0bccc1] transition cursor-pointer">
               Terms & Conditions
             </span>
           </div>

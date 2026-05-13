@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import Image from "next/image";
 import Link from "next/link";
@@ -9,382 +9,376 @@ import { FaTwitter } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa";
 import { FaInstagramSquare } from "react-icons/fa";
 
-
-
-const page = () => {
+const About = () => {
   const [active, setActive] = useState(0);
-   const cards = [
-     {
-       icon: (
-         <svg
-           xmlns="http://www.w3.org/2000/svg"
-           width="24"
-           height="24"
-           viewBox="0 0 24 24"
-           fill="none"
-           stroke="currentColor"
-           strokeWidth="2"
-           strokeLinecap="round"
-           strokeLinejoin="round"
-           className="lucide lucide-clipboard-icon lucide-clipboard"
-         >
-           <rect width="8" height="4" x="8" y="2" rx="1" ry="1" />
-           <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2" />
-         </svg>
-       ),
-       title: "Our Mission",
-       desc: "Our Mission are rooted in transparency, collaboration, and innovation, ensuring that every project we undertake creates real, positive impact.",
-     },
-     {
-       icon: (
-         <svg
-           xmlns="http://www.w3.org/2000/svg"
-           width="24"
-           height="24"
-           viewBox="0 0 24 24"
-           fill="none"
-           stroke="currentColor"
-           strokeWidth="2"
-           strokeLinecap="round"
-           strokeLinejoin="round"
-           className="lucide lucide-circle-slash-icon lucide-circle-slash"
-         >
-           <circle cx="12" cy="12" r="10" />
-           <line x1="9" x2="15" y1="15" y2="9" />
-         </svg>
-       ),
-       title: "Our Vision",
-       desc: "Our Vision are rooted in transparency, collaboration, and innovation, ensuring that every project we undertake creates real, positive impact.",
-     },
-     {
-       icon: (
-         <svg
-           xmlns="http://www.w3.org/2000/svg"
-           width="24"
-           height="24"
-           viewBox="0 0 24 24"
-           fill="none"
-           stroke="currentColor"
-           strokeWidth="2"
-           strokeLinecap="round"
-           strokeLinejoin="round"
-           className="lucide lucide-gem-icon lucide-gem"
-         >
-           <path d="M10.5 3 8 9l4 13 4-13-2.5-6" />
-           <path d="M17 3a2 2 0 0 1 1.6.8l3 4a2 2 0 0 1 .013 2.382l-7.99 10.986a2 2 0 0 1-3.247 0l-7.99-10.986A2 2 0 0 1 2.4 7.8l2.998-3.997A2 2 0 0 1 7 3z" />
-           <path d="M2 9h20" />
-         </svg>
-       ),
-       title: "Our Values",
-       desc: "Our values are rooted in transparency, collaboration, and innovation, ensuring that every project we undertake creates real, positive impact.",
-     },
-   ];
-   const featuresLeft = [
-     {
-       icon: (
-         <svg
-           xmlns="http://www.w3.org/2000/svg"
-           width="24"
-           height="24"
-           viewBox="0 0 24 24"
-           fill="none"
-           stroke="currentColor"
-           strokeWidth="2"
-           strokeLinecap="round"
-           strokeLinejoin="round"
-           className="lucide lucide-workflow-icon lucide-workflow"
-         >
-           <rect width="8" height="8" x="3" y="3" rx="2" />
-           <path d="M7 11v4a2 2 0 0 0 2 2h4" />
-           <rect width="8" height="8" x="13" y="13" rx="2" />
-         </svg>
-       ),
-       title: "Science-Driven Approach",
-       desc: "We use research, data, & proven practice to ensure accurate assessment.",
-     },
-     {
-       icon: (
-         <svg
-           xmlns="http://www.w3.org/2000/svg"
-           width="24"
-           height="24"
-           viewBox="0 0 24 24"
-           fill="none"
-           stroke="currentColor"
-           strokeWidth="2"
-           strokeLinecap="round"
-           strokeLinejoin="round"
-           className="lucide lucide-trees-icon lucide-trees"
-         >
-           <path d="M10 10v.2A3 3 0 0 1 8.9 16H5a3 3 0 0 1-1-5.8V10a3 3 0 0 1 6 0Z" />
-           <path d="M7 16v6" />
-           <path d="M13 19v3" />
-           <path d="M12 19h8.3a1 1 0 0 0 .7-1.7L18 14h.3a1 1 0 0 0 .7-1.7L16 9h.2a1 1 0 0 0 .8-1.7L13 3l-1.4 1.5" />
-         </svg>
-       ),
-       title: "Sustainable Solutions",
-       desc: "Our initiatives are designed to balance environmental protection.",
-     },
-   ];
+  const cards = [
+    {
+      icon: (
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          className="lucide lucide-clipboard-icon lucide-clipboard"
+        >
+          <rect width="8" height="4" x="8" y="2" rx="1" ry="1" />
+          <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2" />
+        </svg>
+      ),
+      title: "Our Mission",
+      desc: "Our Mission are rooted in transparency, collaboration, and innovation, ensuring that every project we undertake creates real, positive impact.",
+    },
+    {
+      icon: (
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          className="lucide lucide-circle-slash-icon lucide-circle-slash"
+        >
+          <circle cx="12" cy="12" r="10" />
+          <line x1="9" x2="15" y1="15" y2="9" />
+        </svg>
+      ),
+      title: "Our Vision",
+      desc: "Our Vision are rooted in transparency, collaboration, and innovation, ensuring that every project we undertake creates real, positive impact.",
+    },
+    {
+      icon: (
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          className="lucide lucide-gem-icon lucide-gem"
+        >
+          <path d="M10.5 3 8 9l4 13 4-13-2.5-6" />
+          <path d="M17 3a2 2 0 0 1 1.6.8l3 4a2 2 0 0 1 .013 2.382l-7.99 10.986a2 2 0 0 1-3.247 0l-7.99-10.986A2 2 0 0 1 2.4 7.8l2.998-3.997A2 2 0 0 1 7 3z" />
+          <path d="M2 9h20" />
+        </svg>
+      ),
+      title: "Our Values",
+      desc: "Our values are rooted in transparency, collaboration, and innovation, ensuring that every project we undertake creates real, positive impact.",
+    },
+  ];
+  const featuresLeft = [
+    {
+      icon: (
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          className="lucide lucide-workflow-icon lucide-workflow"
+        >
+          <rect width="8" height="8" x="3" y="3" rx="2" />
+          <path d="M7 11v4a2 2 0 0 0 2 2h4" />
+          <rect width="8" height="8" x="13" y="13" rx="2" />
+        </svg>
+      ),
+      title: "Science-Driven Approach",
+      desc: "We use research, data, & proven practice to ensure accurate assessment.",
+    },
+    {
+      icon: (
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          className="lucide lucide-trees-icon lucide-trees"
+        >
+          <path d="M10 10v.2A3 3 0 0 1 8.9 16H5a3 3 0 0 1-1-5.8V10a3 3 0 0 1 6 0Z" />
+          <path d="M7 16v6" />
+          <path d="M13 19v3" />
+          <path d="M12 19h8.3a1 1 0 0 0 .7-1.7L18 14h.3a1 1 0 0 0 .7-1.7L16 9h.2a1 1 0 0 0 .8-1.7L13 3l-1.4 1.5" />
+        </svg>
+      ),
+      title: "Sustainable Solutions",
+      desc: "Our initiatives are designed to balance environmental protection.",
+    },
+  ];
 
-   const featuresRight = [
-     {
-       icon: (
-         <svg
-           xmlns="http://www.w3.org/2000/svg"
-           width="24"
-           height="24"
-           viewBox="0 0 24 24"
-           fill="none"
-           stroke="currentColor"
-           strokeWidth="2"
-           strokeLinecap="round"
-           strokeLinejoin="round"
-           className="lucide lucide-shapes-icon lucide-shapes"
-         >
-           <path d="M8.3 10a.7.7 0 0 1-.626-1.079L11.4 3a.7.7 0 0 1 1.198-.043L16.3 8.9a.7.7 0 0 1-.572 1.1Z" />
-           <rect x="3" y="14" width="7" height="7" rx="1" />
-           <circle cx="17.5" cy="17.5" r="3.5" />
-         </svg>
-       ),
-       title: "Community-Focused Action",
-       desc: "We actively involve communities to create awareness, encourage impact.",
-     },
-     {
-       icon: (
-         <svg
-           xmlns="http://www.w3.org/2000/svg"
-           width="24"
-           height="24"
-           viewBox="0 0 24 24"
-           fill="none"
-           stroke="currentColor"
-           strokeWidth="2"
-           strokeLinecap="round"
-           strokeLinejoin="round"
-           className="lucide lucide-badge-dollar-sign-icon lucide-badge-dollar-sign"
-         >
-           <path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z" />
-           <path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8" />
-           <path d="M12 18V6" />
-         </svg>
-       ),
-       title: "Ethical Practices",
-       desc: "We operate with honesty & accountable, ensure trust, compliance.",
-     },
-   ];
+  const featuresRight = [
+    {
+      icon: (
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          className="lucide lucide-shapes-icon lucide-shapes"
+        >
+          <path d="M8.3 10a.7.7 0 0 1-.626-1.079L11.4 3a.7.7 0 0 1 1.198-.043L16.3 8.9a.7.7 0 0 1-.572 1.1Z" />
+          <rect x="3" y="14" width="7" height="7" rx="1" />
+          <circle cx="17.5" cy="17.5" r="3.5" />
+        </svg>
+      ),
+      title: "Community-Focused Action",
+      desc: "We actively involve communities to create awareness, encourage impact.",
+    },
+    {
+      icon: (
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          className="lucide lucide-badge-dollar-sign-icon lucide-badge-dollar-sign"
+        >
+          <path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z" />
+          <path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8" />
+          <path d="M12 18V6" />
+        </svg>
+      ),
+      title: "Ethical Practices",
+      desc: "We operate with honesty & accountable, ensure trust, compliance.",
+    },
+  ];
 
-   const process = [
-     {
-       step: "Step 01",
-       title: "Awareness & Education",
-       desc: "We educate communities & organizations about key environmental issues.",
-       icon: (
-         <svg
-           xmlns="http://www.w3.org/2000/svg"
-           width="24"
-           height="24"
-           viewBox="0 0 24 24"
-           fill="none"
-           stroke="currentColor"
-           strokeWidth="2"
-           strokeLinecap="round"
-           strokeLinejoin="round"
-           className="lucide lucide-briefcase-business-icon lucide-briefcase-business"
-         >
-           <path d="M12 12h.01" />
-           <path d="M16 6V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2" />
-           <path d="M22 13a18.15 18.15 0 0 1-20 0" />
-           <rect width="20" height="14" x="2" y="6" rx="2" />
-         </svg>
-       ),
-       points: [
-         "Share actionable sustainability tips",
-         "Conduct workshop & seminar educate",
-       ],
-       image: "/service2.jpg",
-       dark: true,
-     },
+  const process = [
+    {
+      step: "Step 01",
+      title: "Awareness & Education",
+      desc: "We educate communities & organizations about key environmental issues.",
+      icon: (
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          className="lucide lucide-briefcase-business-icon lucide-briefcase-business"
+        >
+          <path d="M12 12h.01" />
+          <path d="M16 6V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2" />
+          <path d="M22 13a18.15 18.15 0 0 1-20 0" />
+          <rect width="20" height="14" x="2" y="6" rx="2" />
+        </svg>
+      ),
+      points: [
+        "Share actionable sustainability tips",
+        "Conduct workshop & seminar educate",
+      ],
+      image: "/service2.jpg",
+      dark: true,
+    },
 
-     {
-       step: "Step 02",
-       title: "Planning & Strategy",
-       desc: "Our team design practical, research back strategie that address environment.",
-       icon: (
-         <svg
-           xmlns="http://www.w3.org/2000/svg"
-           width="24"
-           height="24"
-           viewBox="0 0 24 24"
-           fill="none"
-           stroke="currentColor"
-           strokeWidth="2"
-           strokeLinecap="round"
-           strokeLinejoin="round"
-           className="lucide lucide-clipboard-list-icon lucide-clipboard-list"
-         >
-           <rect width="8" height="4" x="8" y="2" rx="1" ry="1" />
-           <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2" />
-           <path d="M12 11h4" />
-           <path d="M12 16h4" />
-           <path d="M8 11h.01" />
-           <path d="M8 16h.01" />
-         </svg>
-       ),
-       points: [
-         "Align strategies with community need",
-         "Assess environmental opportunity",
-       ],
-       image: "/service1.jpg",
-       dark: true,
-     },
+    {
+      step: "Step 02",
+      title: "Planning & Strategy",
+      desc: "Our team design practical, research back strategie that address environment.",
+      icon: (
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          className="lucide lucide-clipboard-list-icon lucide-clipboard-list"
+        >
+          <rect width="8" height="4" x="8" y="2" rx="1" ry="1" />
+          <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2" />
+          <path d="M12 11h4" />
+          <path d="M12 16h4" />
+          <path d="M8 11h.01" />
+          <path d="M8 16h.01" />
+        </svg>
+      ),
+      points: [
+        "Align strategies with community need",
+        "Assess environmental opportunity",
+      ],
+      image: "/service1.jpg",
+      dark: true,
+    },
 
-     {
-       step: "Step 03",
-       title: "Action & Implementation",
-       desc: "We implement projects on the ground, from conservation efforts.",
-       icon: (
-         <svg
-           xmlns="http://www.w3.org/2000/svg"
-           width="24"
-           height="24"
-           viewBox="0 0 24 24"
-           fill="none"
-           stroke="currentColor"
-           strokeWidth="2"
-           strokeLinecap="round"
-           strokeLinejoin="round"
-           className="lucide lucide-locate-fixed-icon lucide-locate-fixed"
-         >
-           <line x1="2" x2="5" y1="12" y2="12" />
-           <line x1="19" x2="22" y1="12" y2="12" />
-           <line x1="12" x2="12" y1="2" y2="5" />
-           <line x1="12" x2="12" y1="19" y2="22" />
-           <circle cx="12" cy="12" r="7" />
-           <circle cx="12" cy="12" r="3" />
-         </svg>
-       ),
-       points: [
-         "Launch community driven campaigns",
-         "Execute conservate project like habitat",
-       ],
-       image: "/service3.jpg",
-       dark: true,
-     },
-   ];
+    {
+      step: "Step 03",
+      title: "Action & Implementation",
+      desc: "We implement projects on the ground, from conservation efforts.",
+      icon: (
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          className="lucide lucide-locate-fixed-icon lucide-locate-fixed"
+        >
+          <line x1="2" x2="5" y1="12" y2="12" />
+          <line x1="19" x2="22" y1="12" y2="12" />
+          <line x1="12" x2="12" y1="2" y2="5" />
+          <line x1="12" x2="12" y1="19" y2="22" />
+          <circle cx="12" cy="12" r="7" />
+          <circle cx="12" cy="12" r="3" />
+        </svg>
+      ),
+      points: [
+        "Launch community driven campaigns",
+        "Execute conservate project like habitat",
+      ],
+      image: "/service3.jpg",
+      dark: true,
+    },
+  ];
 
-   const testimonials = [
-     {
-       quote:
-         "Their conservation programs brought real change to our local community. The approach was practical, transparent, and focused on long-term impact.",
-       name: "Jerome Bell",
-       role: "Community Project Lead",
-       image: "/user1.jpg",
-     },
+  const testimonials = [
+    {
+      quote:
+        "Their conservation programs brought real change to our local community. The approach was practical, transparent, and focused on long-term impact.",
+      name: "Jerome Bell",
+      role: "Community Project Lead",
+      image: "/user1.jpg",
+    },
 
-     {
-       quote:
-         "We appreciated their hands-on support and deep understanding of environmental challenges. The results were measurable and meaningful.",
-       name: "Jane Cooper",
-       role: "Environmental Consultant",
-       image: "/user2.jpg",
-     },
+    {
+      quote:
+        "We appreciated their hands-on support and deep understanding of environmental challenges. The results were measurable and meaningful.",
+      name: "Jane Cooper",
+      role: "Environmental Consultant",
+      image: "/user2.jpg",
+    },
 
-     {
-       quote:
-         "Their sustainability initiatives inspired our organization to take stronger action for a cleaner and healthier future.",
-       name: "Eleanor Pena",
-       role: "Community Project Lead",
-       image: "/user4.jpg",
-     },
-   ];
+    {
+      quote:
+        "Their sustainability initiatives inspired our organization to take stronger action for a cleaner and healthier future.",
+      name: "Eleanor Pena",
+      role: "Community Project Lead",
+      image: "/user4.jpg",
+    },
+  ];
 
-    const benefits = [
-      {
-        title: "Proven Environmental Impact",
-        description:
-          "We deliver measurable results through well planned sustainability initiatives, conservation programs.",
-      },
-      {
-        title: "Community Focus Approach",
-        description:
-          "Our solutions are built around people. We work closely with local communities and partners.",
-      },
-      {
-        title: "Data-Driven & Transparent",
-        description:
-          "We rely on research, clear reporting, and performance tracking to ensure every action is effective and accountable.",
-      },
-    ];
+  const benefits = [
+    {
+      title: "Proven Environmental Impact",
+      description:
+        "We deliver measurable results through well planned sustainability initiatives, conservation programs.",
+    },
+    {
+      title: "Community Focus Approach",
+      description:
+        "Our solutions are built around people. We work closely with local communities and partners.",
+    },
+    {
+      title: "Data-Driven & Transparent",
+      description:
+        "We rely on research, clear reporting, and performance tracking to ensure every action is effective and accountable.",
+    },
+  ];
 
-    const tags = [
-      "Climate Change",
-      "Environmental Awareness",
-      "Community Engagement",
-      "Wildlife Protection",
-    ];
+  const tags = [
+    "Climate Change",
+    "Environmental Awareness",
+    "Community Engagement",
+    "Wildlife Protection",
+  ];
 
-    const faqs = [
-      {
-        question: "Q1. How can we get started with your services?",
-        answer:
-          "We support sustainability through eco-friendly practices, community programs, renewable energy advocacy, and partnerships that encourage responsible environmental actions.",
-      },
-      {
-        question: "Q2. How do you measure environmental impact?",
-        answer:
-          "We use measurable sustainability metrics, carbon tracking systems, environmental audits, and transparent reporting methods to evaluate long-term impact.",
-      },
-      {
-        question: "Q3. How do you support sustainability initiatives?",
-        answer:
-          "Our team works with organizations and communities to implement renewable energy projects, conservation campaigns, and sustainable operational strategies.",
-      },
-      {
-        question: "Q4. Do you provide reports and documentation?",
-        answer:
-          "Yes, we provide detailed environmental assessments, sustainability reports, compliance documentation, and strategic implementation plans.",
-      },
-      {
-        question: "Q5. Can you help with regulatory compliance?",
-        answer:
-          "We assist businesses with environmental compliance, policy guidance, and sustainability frameworks aligned with international standards.",
-      },
-    ];
+  const faqs = [
+    {
+      question: "Q1. How can we get started with your services?",
+      answer:
+        "We support sustainability through eco-friendly practices, community programs, renewable energy advocacy, and partnerships that encourage responsible environmental actions.",
+    },
+    {
+      question: "Q2. How do you measure environmental impact?",
+      answer:
+        "We use measurable sustainability metrics, carbon tracking systems, environmental audits, and transparent reporting methods to evaluate long-term impact.",
+    },
+    {
+      question: "Q3. How do you support sustainability initiatives?",
+      answer:
+        "Our team works with organizations and communities to implement renewable energy projects, conservation campaigns, and sustainable operational strategies.",
+    },
+    {
+      question: "Q4. Do you provide reports and documentation?",
+      answer:
+        "Yes, we provide detailed environmental assessments, sustainability reports, compliance documentation, and strategic implementation plans.",
+    },
+    {
+      question: "Q5. Can you help with regulatory compliance?",
+      answer:
+        "We assist businesses with environmental compliance, policy guidance, and sustainability frameworks aligned with international standards.",
+    },
+  ];
 
-    const logos = [
-      "Logoipsum",
-      "Logoipsum",
-      "Logoipsum",
-      "Logoipsum",
-      "Logoipsum",
-    ];
+  const logos = [
+    "Logoipsum",
+    "Logoipsum",
+    "Logoipsum",
+    "Logoipsum",
+    "Logoipsum",
+  ];
 
-    const teamMembers = [
-      {
-        name: "Courtney Henry",
-        role: "Environmental Program Director",
-        image:
-          "/team-1.jpg",
-      },
-      {
-        name: "Leslie Alexander",
-        role: "Community Outreach Lead",
-        image:
-          "/team-2.jpg",
-      },
-      {
-        name: "Ralph Edwards",
-        role: "Conservation Project Manager",
-        image:
-          "/team-3.jpg",
-      },
-    ];
-
+  const teamMembers = [
+    {
+      name: "Courtney Henry",
+      role: "Environmental Program Director",
+      image: "/team-1.jpg",
+    },
+    {
+      name: "Leslie Alexander",
+      role: "Community Outreach Lead",
+      image: "/team-2.jpg",
+    },
+    {
+      name: "Ralph Edwards",
+      role: "Conservation Project Manager",
+      image: "/team-3.jpg",
+    },
+  ];
 
   return (
     <>
-      <section className="relative h-[70vh] min-h-[500px] overflow-hidden bg-[#09284b]">
+      <section className="relative h-[70vh] min-h-140 overflow-hidden bg-[#0c264b]">
         {/* ================================================= */}
         {/* BACKGROUND IMAGE */}
         {/* ================================================= */}
@@ -395,6 +389,7 @@ const page = () => {
             alt="About Hero"
             fill
             priority
+            sizes="100vw"
             className="object-cover"
           />
         </div>
@@ -403,25 +398,12 @@ const page = () => {
 
         {/* LEFT GRADIENT */}
 
-        <div className="absolute inset-0 bg-gradient-to-r from-[#09284b]/90 via-[#09284b]/40 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#0c264b]/90 via-[#07ebd1]/10 to-transparent" />
 
         {/* TOP BLUR */}
 
-        <div className="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-[#09284b]/80 to-transparent" />
+        <div className="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-[#0c264b]/80 to-transparent" />
 
-        {/* FLOATING DOT */}
-
-        <motion.div
-          animate={{
-            y: [0, -15, 0],
-            x: [0, 10, 0],
-          }}
-          transition={{
-            duration: 4,
-            repeat: Infinity,
-          }}
-          className="absolute top-[72%] left-[62%] w-3 h-3 rounded-full bg-[#00d2c6] z-20"
-        />
         {/* ================================================= */}
         {/* HERO CONTENT */}
         {/* ================================================= */}
@@ -468,12 +450,12 @@ const page = () => {
         {/* BOTTOM FADE */}
         {/* ================================================= */}
 
-        <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-[#09284b] to-transparent z-10" />
+        <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-[#0c264b] to-transparent z-10" />
       </section>
 
-      <section className="relative overflow-hidden bg-[#f4f7f8] py-24">
+      <section className="relative overflow-hidden bg-[#0c264b] py-24">
         {/* BACKGROUND GLOW */}
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(34,211,238,0.08),transparent_45%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(11,204,193,0.12),transparent_45%)]" />
 
         <div className="max-w-7xl mx-auto px-6 relative z-10">
           <div className="grid md:grid-cols-2 gap-16 items-center">
@@ -485,13 +467,13 @@ const page = () => {
               className="relative"
             >
               {/* MAIN IMAGE */}
-              <div className="relative rounded-[36px] overflow-hidden shadow-2xl bg-[#dce6e1]">
+              <div className="relative rounded-[36px] overflow-hidden shadow-2xl bg-[#102f5c]">
                 <Image
                   src="/service2.jpg"
                   alt="Solar"
                   width={700}
                   height={900}
-                  className="w-full h-[850px] object-cover hover:scale-105 transition duration-700"
+                  className="w-full h-[860px] object-cover hover:scale-105 transition duration-700"
                 />
               </div>
 
@@ -504,9 +486,9 @@ const page = () => {
                   duration: 5,
                   repeat: Infinity,
                 }}
-                className="absolute bottom-10 right-6 bg-black/40 backdrop-blur-xl border border-white/10 rounded-[28px] p-6 w-[230px] shadow-2xl"
+                className="absolute bottom-10 right-6  backdrop-blur-xl bg-[#0c264b]/70 border border-[#0bccc1]/20 rounded-[28px] p-6 w-[230px] shadow-2xl"
               >
-                <div className="w-16 h-16 rounded-full bg-cyan-400 flex items-center justify-center mb-5">
+                <div className="w-16 h-16 rounded-full bg-[#0bccc1] text-[#0c264b] flex items-center justify-center mb-5">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
@@ -526,11 +508,11 @@ const page = () => {
                   </svg>
                 </div>
 
-                <div className="flex gap-2 text-white text-xl mb-4">
+                <div className="flex gap-2 text-[#e6f7f6] text-xl mb-4">
                   ★ ★ ★ ★ ★
                 </div>
 
-                <h3 className="text-white text-3xl font-bold leading-tight">
+                <h3 className="text-[#e6f7f6] text-3xl font-bold leading-tight">
                   Eco Awareness Programs
                 </h3>
               </motion.div>
@@ -543,20 +525,20 @@ const page = () => {
               transition={{ duration: 0.8 }}
             >
               {/* BADGE */}
-              <div className="inline-flex items-center gap-2 bg-[#e9ece7] rounded-full px-6 py-3 mb-8">
-                <span className="w-2 h-2 rounded-full bg-cyan-400 animate-pulse" />
+              <div className="inline-flex items-center gap-2 bg-[#0bccc1]/10 border border-[#0bccc1]/20 rounded-full px-6 py-3 mb-8">
+                <span className="w-2 h-2 rounded-full bg-[#07ebd1] animate-pulse" />
 
-                <span className="text-[#071c34] font-semibold text-sm">
+                <span className="text-[#0bccc1] font-semibold text-sm">
                   About Us
                 </span>
               </div>
 
               {/* HEADING */}
-              <h1 className="text-[#071c34] text-4xl md:text-5xl font-bold leading-tight w-100">
+              <h1 className="text-white text-4xl md:text-5xl font-bold leading-tight w-100">
                 Trusted Partner in Environmental
                 <span className="block">
                   Conservation &
-                  <span className="bg-gradient-to-r from-cyan-400 to-teal-400 bg-clip-text text-transparent">
+                  <span className="bg-gradient-to-r from-[#0bccc1] to-[#07ebd1] bg-clip-text text-transparent">
                     {" "}
                     Sustainability
                   </span>
@@ -567,7 +549,7 @@ const page = () => {
               <motion.div
                 whileHover={{ y: -8 }}
                 transition={{ duration: 0.4 }}
-                className="mt-4 bg-[#e9ece7] rounded-[32px] overflow-hidden shadow-lg"
+                className="mt-4 bg-[#102f5c] border border-[#0bccc1]/10 rounded-[32px] overflow-hidden shadow-lg"
               >
                 <div className="grid md:grid-cols-2">
                   <Image
@@ -579,18 +561,20 @@ const page = () => {
                   />
 
                   <div className="p-2 flex flex-col justify-center">
-                    <p className="text-[#071c34] text-xl font-semibold leading-relaxed">
-                      “Protecting the environment is not a choice it is a
-                      responsibility we owe to future generations.”
+                    <p className="text-white text-xl font-semibold leading-relaxed">
+                      Protecting the environment is not a choice it is a
+                      responsibility we owe to future generations.
                     </p>
 
                     <div className="w-full h-[1px] bg-gray-300 "></div>
 
-                    <h4 className="text-xl font-bold text-[#071c34]">
+                    <h4 className="text-xl font-bold text-secondary">
                       Marvin McKinney
                     </h4>
 
-                    <p className="text-gray-500 mt-1 text-lg">Founder & CEO</p>
+                    <p className="text-[#0bccc1]/70 mt-1 text-lg">
+                      Founder & CEO
+                    </p>
                   </div>
                 </div>
               </motion.div>
@@ -599,7 +583,7 @@ const page = () => {
               <div className="grid md:grid-cols-2 gap-5 mt-4">
                 {/* FEATURE 1 */}
                 <motion.div whileHover={{ y: -6 }} className="flex gap-5">
-                  <div className="w-12 h-12 rounded-full bg-cyan-400 flex items-center justify-center shrink-0">
+                  <div className="w-12 h-12 rounded-full bg-[#0bccc1] text-[#0c264b] flex items-center justify-center shrink-0">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="24"
@@ -618,11 +602,11 @@ const page = () => {
                   </div>
 
                   <div>
-                    <h3 className="text-2xl font-bold text-[#071c34]">
+                    <h3 className="text-2xl font-bold text-white">
                       Innovative Solutions
                     </h3>
 
-                    <p className="text-gray-500 text-md mt-1 leading-relaxed">
+                    <p className="text-[#b8c5d6] text-md mt-1 leading-relaxed">
                       We develop practical & creative ideas that address
                       environmental
                     </p>
@@ -631,7 +615,7 @@ const page = () => {
 
                 {/* FEATURE 2 */}
                 <motion.div whileHover={{ y: -6 }} className="flex gap-5">
-                  <div className="w-12 h-12 rounded-full bg-cyan-400 flex items-center justify-center shrink-0">
+                  <div className="w-12 h-12 rounded-full bg-[#0bccc1] text-[#0c264b] flex items-center justify-center shrink-0">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="24"
@@ -653,11 +637,11 @@ const page = () => {
                   </div>
 
                   <div>
-                    <h3 className="text-2xl font-bold text-[#071c34]">
+                    <h3 className="text-2xl font-bold text-white">
                       Education & Awareness
                     </h3>
 
-                    <p className="text-gray-500 text-md mt-1 leading-relaxed">
+                    <p className="text-[#b8c5d6] text-md mt-1 leading-relaxed">
                       We run programs and campaigns to educate communities.
                     </p>
                   </div>
@@ -665,7 +649,7 @@ const page = () => {
               </div>
 
               {/* LINE */}
-              <div className="w-full h-[1px] bg-gray-300 my-2"></div>
+              <div className="w-full h-[1px] bg-[#0bccc1]/20 my-2"></div>
 
               {/* CHECK LIST */}
               <div className="grid md:grid-cols-2 gap-8">
@@ -680,13 +664,13 @@ const page = () => {
                     strokeWidth="2"
                     strokeLinecap="round"
                     strokeLinejoin="round"
-                    className="lucide lucide-circle-check-icon lucide-circle-check text-cyan-400"
+                    className="lucide lucide-circle-check-icon lucide-circle-check text-[#07ebd1]"
                   >
                     <circle cx="12" cy="12" r="10" />
                     <path d="m9 12 2 2 4-4" />
                   </svg>
 
-                  <p className="text-gray-600 text-md">
+                  <p className="text-[#d1dde9] text-md">
                     Our initiative design to balance environmental
                   </p>
                 </div>
@@ -702,13 +686,13 @@ const page = () => {
                     strokeWidth="2"
                     strokeLinecap="round"
                     strokeLinejoin="round"
-                    className="lucide lucide-circle-check-icon lucide-circle-check text-cyan-400"
+                    className="lucide lucide-circle-check-icon lucide-circle-check text-[#07ebd1]"
                   >
                     <circle cx="12" cy="12" r="10" />
                     <path d="m9 12 2 2 4-4" />
                   </svg>
 
-                  <p className="text-gray-600 text-md">
+                  <p className="text-[#d1dde9] text-md">
                     We deliver solutions that create measurable
                   </p>
                 </div>
@@ -717,10 +701,10 @@ const page = () => {
               {/* BUTTON */}
               <motion.button
                 whileHover={{ scale: 1.05 }}
-                className="group mt-4 bg-gradient-to-r from-cyan-400 to-teal-400 text-black px-6 py-2 rounded-full font-bold text-xl flex items-center gap-5 shadow-xl"
+                className="group mt-4 bg-gradient-to-r from-[#0bccc1] to-[#07ebd1] text-black px-6 py-2 rounded-full font-bold text-xl flex items-center gap-5 shadow-xl"
               >
                 More About Us
-                <span className="w-14 h-14 rounded-full bg-black text-white flex items-center justify-center group-hover:translate-x-2 transition duration-300">
+                <span className="w-14 h-14 rounded-full bg-[#0c264b] text-[#07ebd1] flex items-center justify-center group-hover:translate-x-2 transition duration-300">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
@@ -748,7 +732,7 @@ const page = () => {
         {/* CONTAINER */}
         {/* ================================================= */}
 
-        <div className="max-w-[1700px] mx-auto px-4 md:px-8">
+        <div className="max-w-425 mx-auto px-4 md:px-8">
           <div className="grid grid-cols-1 xl:grid-cols-2 gap-10 items-start">
             {/* ================================================= */}
             {/* LEFT SIDE */}
@@ -773,13 +757,13 @@ const page = () => {
 
               {/* HEADING */}
 
-              <h2 className="mt-8 text-[#09284b] text-3xl sm:text-4xl xl:text-5xl font-black leading-[1.05] max-w-[750px]">
+              <h2 className="mt-8 text-[#09284b] text-3xl sm:text-4xl xl:text-5xl font-black leading-[1.05] max-w-188">
                 Working Together to Protect Nature & Support
               </h2>
 
               {/* DESCRIPTION */}
 
-              <p className="mt-4 text-[#64748b] text-md leading-[1.9] max-w-[600px]">
+              <p className="mt-4 text-[#64748b] text-md leading-[1.9] max-w-150">
                 Our work is guided by clear purpose, scientific knowledge, and
                 ethical practices to ensure reliable and sustainable
                 environmental outcomes.
@@ -791,7 +775,7 @@ const page = () => {
 
               {/* IMAGE CARD */}
 
-              <div className="relative mt-10 overflow-hidden rounded-[34px]">
+              <div className="relative mt-10 overflow-hidden rounded-4xl">
                 <Image
                   src="/approach.jpg"
                   alt="Environmental"
@@ -802,7 +786,7 @@ const page = () => {
 
                 {/* GOOGLE REVIEW */}
 
-                <div className="absolute bottom-8 left-8 bg-[#ffffff20] backdrop-blur-xl border border-white/20 rounded-[26px] px-8 py-6 shadow-2xl">
+                <div className="absolute bottom-8 left-8 bg-[#ffffff20] backdrop-blur-xl border border-white/20 rounded-3xl px-8 py-6 shadow-2xl">
                   <div className="flex items-center gap-5">
                     {/* GOOGLE */}
 
@@ -898,7 +882,7 @@ const page = () => {
             >
               {/* TAG */}
               <div className="inline-flex items-center gap-2 bg-white/5 border border-white/10 backdrop-blur-md px-5 py-3 rounded-full mb-8">
-                <span className="w-2 h-2 rounded-full bg-cyan-400" />
+                <span className="w-2 h-2 rounded-full bg-secondary" />
                 <span className="text-sm text-white font-medium">
                   Why Choose Us
                 </span>
@@ -1109,8 +1093,8 @@ const page = () => {
                     src="/mid.jpg"
                     alt="Wind"
                     width={400}
-                    height={350}
-                    className="w-full h-[320px] object-cover"
+                    height={320}
+                    className="w-full object-cover w-auto h-auto"
                   />
                 </motion.div>
               </div>
@@ -1180,7 +1164,7 @@ const page = () => {
                       {Array.from({ length: 48 }).map((_, i) => (
                         <div
                           key={i}
-                          className="w-1.5 h-1.5 rounded-full bg-cyan-400"
+                          className="w-1.5 h-1.5 rounded-full bg-secondary"
                         />
                       ))}
                     </div> */}
@@ -1205,7 +1189,7 @@ const page = () => {
             duration: 5,
             repeat: Infinity,
           }}
-          className="absolute top-1/3 left-1/2 w-4 h-4 rounded-full bg-cyan-400"
+          className="absolute top-1/3 left-1/2 w-4 h-4 rounded-full bg-secondary"
         />
 
         <div className="max-w-7xl mx-auto px-6 relative z-10">
@@ -1214,7 +1198,7 @@ const page = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              className="bg-cyan-400/20 text-slate-700 px-4 py-1 rounded-full text-sm inline-block"
+              className="bg-secondary/20 text-slate-700 px-4 py-1 rounded-full text-sm inline-block"
             >
               our Features
             </motion.span>
@@ -1261,7 +1245,7 @@ const page = () => {
                       rotate: 10,
                       scale: 1.1,
                     }}
-                    className="w-16 h-16 rounded-full bg-cyan-400 flex items-center justify-center text-black shadow-lg"
+                    className="w-16 h-16 rounded-full bg-secondary flex items-center justify-center text-black shadow-lg"
                   >
                     {item.icon}
                   </motion.div>
@@ -1287,13 +1271,14 @@ const page = () => {
               className="relative flex justify-center mt-20 "
             >
               {/* GLOW */}
-              <div className="absolute w-[380px] h-[380px] bg-cyan-400/20 blur-[120px] rounded-full bottom-0" />
+              <div className="absolute w-[380px] h-[380px] bg-secondary/20 blur-[120px] rounded-full bottom-0" />
 
               <Image
                 src="/worker.png"
                 alt="Worker"
                 width={520}
                 height={780}
+                sizes="100vw"
                 className="relative z-10 object-contain h-[600px] "
               />
             </motion.div>
@@ -1320,7 +1305,7 @@ const page = () => {
                       rotate: -10,
                       scale: 1.1,
                     }}
-                    className="w-16 h-16 rounded-full bg-cyan-400 flex items-center justify-center text-black shadow-lg"
+                    className="w-16 h-16 rounded-full bg-secondary flex items-center justify-center text-black shadow-lg"
                   >
                     {item.icon}
                   </motion.div>
@@ -1347,6 +1332,7 @@ const page = () => {
           <Image
             src="/testimonials.jpg"
             alt="background"
+            sizes="100vw"
             fill
             className="object-cover"
           />
@@ -1355,7 +1341,7 @@ const page = () => {
           <div className="absolute inset-0 bg-[#081c15]/55"></div>
 
           {/* LIGHT GREEN OVERLAY */}
-          <div className="absolute inset-0 bg-cyan-400/10"></div>
+          <div className="absolute inset-0 bg-secondary/10"></div>
         </div>
 
         {/* FLOATING DOT */}
@@ -1368,7 +1354,7 @@ const page = () => {
             duration: 4,
             repeat: Infinity,
           }}
-          className="absolute top-72 right-[22%] w-4 h-4 rounded-full bg-cyan-400 z-20"
+          className="absolute top-72 right-[22%] w-4 h-4 rounded-full bg-secondary z-20"
         />
 
         <div className="max-w-7xl mx-auto px-6 relative z-20">
@@ -1383,7 +1369,7 @@ const page = () => {
                 transition={{ duration: 0.6 }}
                 className="inline-flex items-center gap-3 px-7 py-3 rounded-full bg-white/10 backdrop-blur-xl border border-white/10"
               >
-                <span className="w-2 h-2 rounded-full bg-cyan-400"></span>
+                <span className="w-2 h-2 rounded-full bg-secondary"></span>
 
                 <span className="text-white font-semibold text-lg">
                   Our Testimonials
@@ -1829,7 +1815,7 @@ const page = () => {
             transition={{ duration: 0.5 }}
             className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/10 px-5 py-3 rounded-full mb-8"
           >
-            <span className="w-2 h-2 bg-cyan-400 rounded-full"></span>
+            <span className="w-2 h-2 bg-secondary rounded-full"></span>
             <p className="text-sm font-medium text-white">Watch Our Story</p>
           </motion.div>
 
@@ -2140,11 +2126,11 @@ const page = () => {
                   {/* SOCIALS */}
 
                   <div className="mt-8 flex items-center gap-4">
-                    {[(
-                      <FaDribbble/>,
-                      <FaTwitter/>,
-                      <FaFacebook/>,
-                      <FaInstagramSquare/>),
+                    {[
+                      ((<FaDribbble />),
+                      (<FaTwitter />),
+                      (<FaFacebook />),
+                      (<FaInstagramSquare />)),
                     ].map((icon, i) => (
                       <button
                         key={i}
@@ -2446,7 +2432,7 @@ const page = () => {
             duration: 4,
             repeat: Infinity,
           }}
-          className="absolute right-[28%] top-44 w-4 h-4 rounded-full bg-cyan-400"
+          className="absolute right-[28%] top-44 w-4 h-4 rounded-full bg-secondary"
         />
 
         <div className="max-w-7xl mx-auto px-6">
@@ -2458,7 +2444,7 @@ const page = () => {
             className="flex justify-center"
           >
             <div className="px-7 py-3 rounded-full bg-[#e4e8df] flex items-center gap-3">
-              <span className="w-2 h-2 rounded-full bg-cyan-400"></span>
+              <span className="w-2 h-2 rounded-full bg-secondary"></span>
               <span className="text-[#081c15] font-semibold text-lg">
                 How It Works
               </span>
@@ -2495,7 +2481,7 @@ const page = () => {
                         ${
                           item.dark
                             ? "bg-[#081c15] text-white"
-                            : "bg-cyan-400 text-black"
+                            : "bg-secondary text-black"
                         }`}
                   >
                     {item.step}
@@ -2514,7 +2500,7 @@ const page = () => {
                     ${
                       item.dark
                         ? "bg-[#081c15] text-white"
-                        : "bg-cyan-400 text-black"
+                        : "bg-secondary text-black"
                     }`}
               >
                 {item.step}
@@ -2575,7 +2561,7 @@ const page = () => {
                     className={`w-16 h-16 rounded-full flex items-center justify-center shadow-lg
                         ${
                           item.dark
-                            ? "bg-cyan-400 text-[#081c15]"
+                            ? "bg-secondary text-[#081c15]"
                             : "bg-white text-[#081c15]"
                         }`}
                   >
@@ -2609,7 +2595,7 @@ const page = () => {
                         whileHover={{ x: 8 }}
                         className="flex items-center gap-4"
                       >
-                        <span className="w-2 h-2 rounded-full bg-cyan-400"></span>
+                        <span className="w-2 h-2 rounded-full bg-secondary"></span>
 
                         <p
                           className={`text-lg
@@ -2630,4 +2616,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default About;

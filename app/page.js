@@ -4,8 +4,8 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
-
 export default function Home() {
+  const [active, setActive] = useState(0);
 
   const featuresLeft = [
     {
@@ -55,105 +55,125 @@ export default function Home() {
     },
   ];
 
+  const process = [
+    {
+      step: "Step 01",
+      title: "Awareness & Education",
+      desc: "We educate communities & organizations about key environmental issues.",
+      icon: (
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          className="lucide lucide-briefcase-business-icon lucide-briefcase-business"
+        >
+          <path d="M12 12h.01" />
+          <path d="M16 6V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2" />
+          <path d="M22 13a18.15 18.15 0 0 1-20 0" />
+          <rect width="20" height="14" x="2" y="6" rx="2" />
+        </svg>
+      ),
+      points: [
+        "Share actionable sustainability tips",
+        "Conduct workshop & seminar educate",
+      ],
+      image: "/service2.jpg",
+      dark: true,
+    },
 
-   const process = [
-     {
-       step: "Step 01",
-       title: "Awareness & Education",
-       desc: "We educate communities & organizations about key environmental issues.",
-       icon: (
-         <svg
-           xmlns="http://www.w3.org/2000/svg"
-           width="24"
-           height="24"
-           viewBox="0 0 24 24"
-           fill="none"
-           stroke="currentColor"
-           strokeWidth="2"
-           strokeLinecap="round"
-           strokeLinejoin="round"
-           className="lucide lucide-briefcase-business-icon lucide-briefcase-business"
-         >
-           <path d="M12 12h.01" />
-           <path d="M16 6V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2" />
-           <path d="M22 13a18.15 18.15 0 0 1-20 0" />
-           <rect width="20" height="14" x="2" y="6" rx="2" />
-         </svg>
-       ),
-       points: [
-         "Share actionable sustainability tips",
-         "Conduct workshop & seminar educate",
-       ],
-       image: "/service2.jpg",
-       dark: true,
-     },
+    {
+      step: "Step 02",
+      title: "Planning & Strategy",
+      desc: "Our team design practical, research back strategie that address environment.",
+      icon: (
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          className="lucide lucide-clipboard-list-icon lucide-clipboard-list"
+        >
+          <rect width="8" height="4" x="8" y="2" rx="1" ry="1" />
+          <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2" />
+          <path d="M12 11h4" />
+          <path d="M12 16h4" />
+          <path d="M8 11h.01" />
+          <path d="M8 16h.01" />
+        </svg>
+      ),
+      points: [
+        "Align strategies with community need",
+        "Assess environmental opportunity",
+      ],
+      image: "/service1.jpg",
+      dark: true,
+    },
 
-     {
-       step: "Step 02",
-       title: "Planning & Strategy",
-       desc: "Our team design practical, research back strategie that address environment.",
-       icon: (
-         <svg
-           xmlns="http://www.w3.org/2000/svg"
-           width="24"
-           height="24"
-           viewBox="0 0 24 24"
-           fill="none"
-           stroke="currentColor"
-           strokeWidth="2"
-           strokeLinecap="round"
-           strokeLinejoin="round"
-           className="lucide lucide-clipboard-list-icon lucide-clipboard-list"
-         >
-           <rect width="8" height="4" x="8" y="2" rx="1" ry="1" />
-           <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2" />
-           <path d="M12 11h4" />
-           <path d="M12 16h4" />
-           <path d="M8 11h.01" />
-           <path d="M8 16h.01" />
-         </svg>
-       ),
-       points: [
-         "Align strategies with community need",
-         "Assess environmental opportunity",
-       ],
-       image: "/service1.jpg",
-       dark: true,
-     },
+    {
+      step: "Step 03",
+      title: "Action & Implementation",
+      desc: "We implement projects on the ground, from conservation efforts.",
+      icon: (
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          className="lucide lucide-locate-fixed-icon lucide-locate-fixed"
+        >
+          <line x1="2" x2="5" y1="12" y2="12" />
+          <line x1="19" x2="22" y1="12" y2="12" />
+          <line x1="12" x2="12" y1="2" y2="5" />
+          <line x1="12" x2="12" y1="19" y2="22" />
+          <circle cx="12" cy="12" r="7" />
+          <circle cx="12" cy="12" r="3" />
+        </svg>
+      ),
+      points: [
+        "Launch community driven campaigns",
+        "Execute conservate project like habitat",
+      ],
+      image: "/service3.jpg",
+      dark: true,
+    },
+  ];
 
-     {
-       step: "Step 03",
-       title: "Action & Implementation",
-       desc: "We implement projects on the ground, from conservation efforts.",
-       icon: (
-         <svg
-           xmlns="http://www.w3.org/2000/svg"
-           width="24"
-           height="24"
-           viewBox="0 0 24 24"
-           fill="none"
-           stroke="currentColor"
-           strokeWidth="2"
-           strokeLinecap="round"
-           strokeLinejoin="round"
-           className="lucide lucide-locate-fixed-icon lucide-locate-fixed"
-         >
-           <line x1="2" x2="5" y1="12" y2="12" />
-           <line x1="19" x2="22" y1="12" y2="12" />
-           <line x1="12" x2="12" y1="2" y2="5" />
-           <line x1="12" x2="12" y1="19" y2="22" />
-           <circle cx="12" cy="12" r="7" />
-           <circle cx="12" cy="12" r="3" />
-         </svg>
-       ),
-       points: [
-         "Launch community driven campaigns",
-         "Execute conservate project like habitat",
-       ],
-        image: "/service3.jpg",
-       dark: true,
-     },
-   ];
+  const blogs = [
+    {
+      id: 1,
+      title: "How Sustainable Living Can Reduce Your Carbon Footprint",
+      category: "Sustainability",
+      image: "/blog1.jpg",
+    },
+    {
+      id: 2,
+      title: "The Role of Renewable Energy in Fighting Climate Change",
+      category: "Climate Action",
+      image: "/blog2.jpg",
+    },
+    {
+      id: 3,
+      title: "Reducing Waste Through Recycling & Circular Economy",
+      category: "Waste Management",
+      image: "/blog3.jpg",
+    },
+  ];
 
   const featuresRight = [
     {
@@ -228,6 +248,42 @@ export default function Home() {
     },
   ];
 
+  const faqs = [
+    {
+      question: "Q1. How can we get started with your services?",
+      answer:
+        "We support sustainability through eco-friendly practices, community programs, renewable energy advocacy, and partnerships that encourage responsible environmental actions.",
+    },
+    {
+      question: "Q2. How do you measure environmental impact?",
+      answer:
+        "We use measurable sustainability metrics, carbon tracking systems, environmental audits, and transparent reporting methods to evaluate long-term impact.",
+    },
+    {
+      question: "Q3. How do you support sustainability initiatives?",
+      answer:
+        "Our team works with organizations and communities to implement renewable energy projects, conservation campaigns, and sustainable operational strategies.",
+    },
+    {
+      question: "Q4. Do you provide reports and documentation?",
+      answer:
+        "Yes, we provide detailed environmental assessments, sustainability reports, compliance documentation, and strategic implementation plans.",
+    },
+    {
+      question: "Q5. Can you help with regulatory compliance?",
+      answer:
+        "We assist businesses with environmental compliance, policy guidance, and sustainability frameworks aligned with international standards.",
+    },
+  ];
+
+  const logos = [
+    "Logoipsum",
+    "Logoipsum",
+    "Logoipsum",
+    "Logoipsum",
+    "Logoipsum",
+  ];
+
   const [pos, setPos] = useState({ x: 0, y: 0 });
 
   useEffect(() => {
@@ -251,11 +307,11 @@ export default function Home() {
         />
 
         {/* 🔵 Dark Overlay */}
-        <div className="absolute inset-0 bg-[#0f2b4c]/70"></div>
+        <div className="absolute inset-0 bg-[#0c264b]/80"></div>
 
         {/* 🟢 Cursor Dot */}
         <div
-          className="pointer-events-none fixed  w-3 h-3 rounded-full bg-gradient-to-r from-cyan-400 to-teal-400 "
+          className="pointer-events-none fixed  w-3 h-3 rounded-full bg-gradient-to-r from-[#0bccc1] to-[#07ebd1] "
           style={{
             transform: `translate(${pos.x - 1}px, ${pos.y - 1}px)`,
           }}
@@ -269,9 +325,9 @@ export default function Home() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="inline-flex items-center gap-3 bg-white/10 backdrop-blur-md border border-white/10 rounded-full px-6 py-3 mb-10"
+              className="inline-flex items-center gap-3 backdrop-blur-md bg-[#0bccc1]/10 border border-[#0bccc1]/20 rounded-full px-6 py-3 mb-10"
             >
-              <span className="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
+              <span className="w-2 h-2 rounded-full bg-[#07ebd1] animate-pulse"></span>
 
               <span className="text-white text-sm md:text-base font-medium">
                 Protecting Nature Today For A Sustainable
@@ -287,14 +343,14 @@ export default function Home() {
             >
               Together for a Greener
               <span className="block">
-                <span className="bg-gradient-to-r from-cyan-400 to-teal-400 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-[#0bccc1] to-[#07ebd1] bg-clip-text text-transparent">
                   Tomorrow
                 </span>
               </span>
             </motion.h1>
 
             {/* LINE */}
-            <div className="w-full h-[1px] bg-white/10 my-14"></div>
+            <div className="w-full h-[1px] bg-[#0bccc1]/20 my-14"></div>
 
             {/* BUTTONS */}
             <motion.div
@@ -306,10 +362,10 @@ export default function Home() {
               {/* BUTTON */}
               <motion.button
                 whileHover={{ scale: 1.05 }}
-                className="group mt-2 bg-cyan-400 text-black px-6 py-2 rounded-full font-bold text-xl flex items-center gap-5 shadow-xl"
+                className="group mt-2 bg-[#0bccc1] text-[#0c264b] hover:bg-[#07ebd1] px-6 py-2 rounded-full font-bold text-xl flex items-center gap-5 shadow-xl"
               >
                 Get Involved
-                <span className="w-14 h-14 rounded-full bg-black text-white flex items-center justify-center group-hover:translate-x-2 transition duration-300">
+                <span className="w-14 h-14 rounded-full bg-[#0c264b] text-[#07ebd1] flex items-center justify-center group-hover:translate-x-2 transition duration-300">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
@@ -332,7 +388,7 @@ export default function Home() {
               <div className="flex items-center gap-5 group cursor-pointer">
                 <motion.div
                   whileHover={{ scale: 1.1 }}
-                  className="w-14 h-14 rounded-full bg-cyan-400 flex items-center justify-center shadow-xl"
+                  className="w-14 h-14 rounded-full bg-[#0bccc1] text-[#0c264b] flex items-center justify-center shadow-xl"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -350,7 +406,7 @@ export default function Home() {
                   </svg>
                 </motion.div>
 
-                <span className="text-white text-2xl font-semibold group-hover:text-cyan-400 transition duration-300">
+                <span className="text-white text-2xl font-semibold group-hover:text-[#07ebd1] transition duration-300">
                   Watch Our Video
                 </span>
               </div>
@@ -358,9 +414,10 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="relative overflow-hidden bg-[#f4f7f8] py-24">
+
+      <section className="relative overflow-hidden bg-[#0c264b] py-24">
         {/* BACKGROUND GLOW */}
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(34,211,238,0.08),transparent_45%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(11,204,193,0.12),transparent_45%)]" />
 
         <div className="max-w-7xl mx-auto px-6 relative z-10">
           <div className="grid md:grid-cols-2 gap-16 items-center">
@@ -372,13 +429,13 @@ export default function Home() {
               className="relative"
             >
               {/* MAIN IMAGE */}
-              <div className="relative rounded-[36px] overflow-hidden shadow-2xl bg-[#dce6e1]">
+              <div className="relative rounded-[36px] overflow-hidden shadow-2xl bg-[#102f5c]">
                 <Image
                   src="/service2.jpg"
                   alt="Solar"
                   width={700}
                   height={900}
-                  className="w-full h-[850px] object-cover hover:scale-105 transition duration-700"
+                  className="w-full h-[860px] object-cover hover:scale-105 transition duration-700"
                 />
               </div>
 
@@ -391,9 +448,9 @@ export default function Home() {
                   duration: 5,
                   repeat: Infinity,
                 }}
-                className="absolute bottom-10 right-6 bg-black/40 backdrop-blur-xl border border-white/10 rounded-[28px] p-6 w-[230px] shadow-2xl"
+                className="absolute bottom-10 right-6  backdrop-blur-xl bg-[#0c264b]/70 border border-[#0bccc1]/20 rounded-[28px] p-6 w-[230px] shadow-2xl"
               >
-                <div className="w-16 h-16 rounded-full bg-cyan-400 flex items-center justify-center mb-5">
+                <div className="w-16 h-16 rounded-full bg-[#0bccc1] text-[#0c264b] flex items-center justify-center mb-5">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
@@ -413,11 +470,11 @@ export default function Home() {
                   </svg>
                 </div>
 
-                <div className="flex gap-2 text-white text-xl mb-4">
+                <div className="flex gap-2 text-[#e6f7f6] text-xl mb-4">
                   ★ ★ ★ ★ ★
                 </div>
 
-                <h3 className="text-white text-3xl font-bold leading-tight">
+                <h3 className="text-[#e6f7f6] text-3xl font-bold leading-tight">
                   Eco Awareness Programs
                 </h3>
               </motion.div>
@@ -430,20 +487,20 @@ export default function Home() {
               transition={{ duration: 0.8 }}
             >
               {/* BADGE */}
-              <div className="inline-flex items-center gap-2 bg-[#e9ece7] rounded-full px-6 py-3 mb-8">
-                <span className="w-2 h-2 rounded-full bg-cyan-400 animate-pulse" />
+              <div className="inline-flex items-center gap-2 bg-[#0bccc1]/10 border border-[#0bccc1]/20 rounded-full px-6 py-3 mb-8">
+                <span className="w-2 h-2 rounded-full bg-[#07ebd1] animate-pulse" />
 
-                <span className="text-[#071c34] font-semibold text-sm">
+                <span className="text-[#0bccc1] font-semibold text-sm">
                   About Us
                 </span>
               </div>
 
               {/* HEADING */}
-              <h1 className="text-[#071c34] text-4xl md:text-5xl font-bold leading-tight w-100">
+              <h1 className="text-white text-4xl md:text-5xl font-bold leading-tight w-100">
                 Trusted Partner in Environmental
                 <span className="block">
                   Conservation &
-                  <span className="bg-gradient-to-r from-cyan-400 to-teal-400 bg-clip-text text-transparent">
+                  <span className="bg-gradient-to-r from-[#0bccc1] to-[#07ebd1] bg-clip-text text-transparent">
                     {" "}
                     Sustainability
                   </span>
@@ -454,7 +511,7 @@ export default function Home() {
               <motion.div
                 whileHover={{ y: -8 }}
                 transition={{ duration: 0.4 }}
-                className="mt-4 bg-[#e9ece7] rounded-[32px] overflow-hidden shadow-lg"
+                className="mt-4 bg-[#102f5c] border border-[#0bccc1]/10 rounded-[32px] overflow-hidden shadow-lg"
               >
                 <div className="grid md:grid-cols-2">
                   <Image
@@ -466,18 +523,20 @@ export default function Home() {
                   />
 
                   <div className="p-2 flex flex-col justify-center">
-                    <p className="text-[#071c34] text-xl font-semibold leading-relaxed">
-                      “Protecting the environment is not a choice it is a
-                      responsibility we owe to future generations.”
+                    <p className="text-white text-xl font-semibold leading-relaxed">
+                      Protecting the environment is not a choice it is a
+                      responsibility we owe to future generations.
                     </p>
 
                     <div className="w-full h-[1px] bg-gray-300 "></div>
 
-                    <h4 className="text-xl font-bold text-[#071c34]">
+                    <h4 className="text-xl font-bold text-secondary">
                       Marvin McKinney
                     </h4>
 
-                    <p className="text-gray-500 mt-1 text-lg">Founder & CEO</p>
+                    <p className="text-[#0bccc1]/70 mt-1 text-lg">
+                      Founder & CEO
+                    </p>
                   </div>
                 </div>
               </motion.div>
@@ -486,7 +545,7 @@ export default function Home() {
               <div className="grid md:grid-cols-2 gap-5 mt-4">
                 {/* FEATURE 1 */}
                 <motion.div whileHover={{ y: -6 }} className="flex gap-5">
-                  <div className="w-12 h-12 rounded-full bg-cyan-400 flex items-center justify-center shrink-0">
+                  <div className="w-12 h-12 rounded-full bg-[#0bccc1] text-[#0c264b] flex items-center justify-center shrink-0">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="24"
@@ -505,11 +564,11 @@ export default function Home() {
                   </div>
 
                   <div>
-                    <h3 className="text-2xl font-bold text-[#071c34]">
+                    <h3 className="text-2xl font-bold text-white">
                       Innovative Solutions
                     </h3>
 
-                    <p className="text-gray-500 text-md mt-1 leading-relaxed">
+                    <p className="text-[#b8c5d6] text-md mt-1 leading-relaxed">
                       We develop practical & creative ideas that address
                       environmental
                     </p>
@@ -518,7 +577,7 @@ export default function Home() {
 
                 {/* FEATURE 2 */}
                 <motion.div whileHover={{ y: -6 }} className="flex gap-5">
-                  <div className="w-12 h-12 rounded-full bg-cyan-400 flex items-center justify-center shrink-0">
+                  <div className="w-12 h-12 rounded-full bg-[#0bccc1] text-[#0c264b] flex items-center justify-center shrink-0">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="24"
@@ -540,11 +599,11 @@ export default function Home() {
                   </div>
 
                   <div>
-                    <h3 className="text-2xl font-bold text-[#071c34]">
+                    <h3 className="text-2xl font-bold text-white">
                       Education & Awareness
                     </h3>
 
-                    <p className="text-gray-500 text-md mt-1 leading-relaxed">
+                    <p className="text-[#b8c5d6] text-md mt-1 leading-relaxed">
                       We run programs and campaigns to educate communities.
                     </p>
                   </div>
@@ -552,7 +611,7 @@ export default function Home() {
               </div>
 
               {/* LINE */}
-              <div className="w-full h-[1px] bg-gray-300 my-2"></div>
+              <div className="w-full h-[1px] bg-[#0bccc1]/20 my-2"></div>
 
               {/* CHECK LIST */}
               <div className="grid md:grid-cols-2 gap-8">
@@ -567,13 +626,13 @@ export default function Home() {
                     strokeWidth="2"
                     strokeLinecap="round"
                     strokeLinejoin="round"
-                    className="lucide lucide-circle-check-icon lucide-circle-check text-cyan-400"
+                    className="lucide lucide-circle-check-icon lucide-circle-check text-[#07ebd1]"
                   >
                     <circle cx="12" cy="12" r="10" />
                     <path d="m9 12 2 2 4-4" />
                   </svg>
 
-                  <p className="text-gray-600 text-md">
+                  <p className="text-[#d1dde9] text-md">
                     Our initiative design to balance environmental
                   </p>
                 </div>
@@ -589,13 +648,13 @@ export default function Home() {
                     strokeWidth="2"
                     strokeLinecap="round"
                     strokeLinejoin="round"
-                    className="lucide lucide-circle-check-icon lucide-circle-check text-cyan-400"
+                    className="lucide lucide-circle-check-icon lucide-circle-check text-[#07ebd1]"
                   >
                     <circle cx="12" cy="12" r="10" />
                     <path d="m9 12 2 2 4-4" />
                   </svg>
 
-                  <p className="text-gray-600 text-md">
+                  <p className="text-[#d1dde9] text-md">
                     We deliver solutions that create measurable
                   </p>
                 </div>
@@ -604,10 +663,10 @@ export default function Home() {
               {/* BUTTON */}
               <motion.button
                 whileHover={{ scale: 1.05 }}
-                className="group mt-4 bg-gradient-to-r from-cyan-400 to-teal-400 text-black px-6 py-2 rounded-full font-bold text-xl flex items-center gap-5 shadow-xl"
+                className="group mt-4 bg-gradient-to-r from-[#0bccc1] to-[#07ebd1] text-black px-6 py-2 rounded-full font-bold text-xl flex items-center gap-5 shadow-xl"
               >
                 More About Us
-                <span className="w-14 h-14 rounded-full bg-black text-white flex items-center justify-center group-hover:translate-x-2 transition duration-300">
+                <span className="w-14 h-14 rounded-full bg-[#0c264b] text-[#07ebd1] flex items-center justify-center group-hover:translate-x-2 transition duration-300">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
@@ -630,7 +689,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-[#0f2b4c] text-white py-20">
+      <section className="bg-[#0c264b] text-white py-20">
         {/* 🔥 GREEN GLOW */}
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(132,255,84,0.18),transparent_35%)]" />
 
@@ -644,7 +703,7 @@ export default function Home() {
             duration: 5,
             repeat: Infinity,
           }}
-          className="absolute left-1/3 top-1/3 w-4 h-4 rounded-full bg-cyan-400 blur-[1px]"
+          className="absolute left-1/3 top-1/3 w-4 h-4 rounded-full bg-secondary blur-[1px]"
         />
         <div className="relative z-10 max-w-7xl mx-auto px-6">
           {/* ================= TOP BADGE ================= */}
@@ -654,11 +713,11 @@ export default function Home() {
             transition={{ duration: 0.6 }}
             className="flex justify-center"
           >
-            <div className="inline-flex items-center gap-3 bg-cyan-400/10 border border-cyan-400/10 backdrop-blur-xl rounded-full px-7 py-3">
-              <span className="w-2 h-2 rounded-full bg-cyan-400 animate-pulse" />
+            <div className="inline-flex items-center gap-2 bg-[#0bccc1]/10 border border-[#0bccc1]/20 rounded-full px-6 py-3 mb-8">
+              <span className="w-2 h-2 rounded-full bg-[#07ebd1] animate-pulse" />
 
-              <span className="text-white text-sm font-semibold">
-                Our Services
+              <span className="text-[#0bccc1] font-semibold text-sm">
+                Our Service
               </span>
             </div>
           </motion.div>
@@ -671,7 +730,7 @@ export default function Home() {
             className="text-center text-white text-4xl md:text-6xl font-bold mt-7 leading-tight"
           >
             Trusted Environmental
-            <span className="block bg-gradient-to-r from-cyan-400 to-cyan-400 bg-clip-text text-transparent">
+            <span className="block bg-gradient-to-r from-[#0bccc1] to-[#0bccc1] bg-clip-text text-transparent">
               Services
             </span>
           </motion.h1>
@@ -705,9 +764,9 @@ export default function Home() {
             {/* Card 1 */}
             <motion.div
               whileHover={{ y: -10 }}
-              className="bg-[#123a63] p-6 rounded-2xl border border-slate-700 shadow-lg text-left transition duration-300"
+              className=" p-6 rounded-2xl bg-[#0c264b]/70 border border-[#0bccc1]/20 shadow-lg text-left transition duration-300"
             >
-              <div className="w-12 h-12 bg-gradient-to-r from-cyan-400 to-teal-400 text-black rounded-full flex items-center justify-center mb-4">
+              <div className="w-12 h-12 bg-gradient-to-r from-[#0bccc1] to-[#07ebd1] text-black rounded-full flex items-center justify-center mb-4">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -735,7 +794,7 @@ export default function Home() {
               </p>
 
               {/* LINE */}
-              <div className="relative z-10 w-full h-[1px] bg-white/10 my-4"></div>
+              <div className="relative z-10 w-full h-0.5 bg-white/10 my-4"></div>
 
               <ul className="relative z-10 space-y-2 text-gray-200 text-sm mb-6">
                 <li>• Conduct data study to assess impact</li>
@@ -743,7 +802,7 @@ export default function Home() {
                 <li>• Ensure compliance with environmental</li>
               </ul>
 
-              <button className="flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-teal-400 text-black px-5 py-2 rounded-full font-medium hover:scale-105 transition">
+              <button className="flex items-center gap-2 bg-gradient-to-r from-[#0bccc1] to-[#07ebd1] text-black px-5 py-2 rounded-full font-medium hover:scale-105 transition">
                 Read More →
               </button>
             </motion.div>
@@ -751,9 +810,9 @@ export default function Home() {
             {/* Card 2 */}
             <motion.div
               whileHover={{ y: -10 }}
-              className="bg-[#123a63] p-6 rounded-2xl border border-slate-700 shadow-lg text-left transition duration-300"
+              className=" p-6 rounded-2xl bg-[#0c264b]/70 border border-[#0bccc1]/20 shadow-lg text-left transition duration-300"
             >
-              <div className="w-12 h-12 bg-gradient-to-r from-cyan-400 to-teal-400 text-black rounded-full flex items-center justify-center mb-4">
+              <div className="w-12 h-12 bg-gradient-to-r from-[#0bccc1] to-[#07ebd1] text-black rounded-full flex items-center justify-center mb-4">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -782,7 +841,7 @@ export default function Home() {
               </p>
 
               {/* LINE */}
-              <div className="relative z-10 w-full h-[1px] bg-white/10 my-4"></div>
+              <div className="relative z-10 w-full h-0.5 bg-white/10 my-4"></div>
 
               <ul className="relative z-10 text-sm text-gray-200 space-y-2 mb-6">
                 <li>• Conduct data study to assess impact</li>
@@ -790,7 +849,7 @@ export default function Home() {
                 <li>• Ensure compliance with environmental</li>
               </ul>
 
-              <button className="flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-teal-400 text-black px-5 py-2 rounded-full font-medium hover:scale-105 transition">
+              <button className="flex items-center gap-2 bg-gradient-to-r from-[#0bccc1] to-[#07ebd1] text-black px-5 py-2 rounded-full font-medium hover:scale-105 transition">
                 Read More →
               </button>
             </motion.div>
@@ -798,9 +857,9 @@ export default function Home() {
             {/* Card 3 */}
             <motion.div
               whileHover={{ y: -10 }}
-              className="bg-[#123a63] p-6 rounded-2xl border border-slate-700 shadow-lg text-left transition duration-300"
+              className=" p-6 rounded-2xl bg-[#0c264b]/70 border border-[#0bccc1]/20 shadow-lg text-left transition duration-300"
             >
-              <div className="w-12 h-12 bg-gradient-to-r from-cyan-400 to-teal-400 text-black rounded-full flex items-center justify-center mb-4">
+              <div className="w-12 h-12 bg-gradient-to-r from-[#0bccc1] to-[#07ebd1] text-black rounded-full flex items-center justify-center mb-4">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -829,7 +888,7 @@ export default function Home() {
               </p>
 
               {/* LINE */}
-              <div className="relative z-10 w-full h-[1px] bg-white/10 my-4"></div>
+              <div className="relative z-10 w-full h-0.5 bg-white/10 my-4"></div>
 
               <ul className="relative z-10 text-sm text-gray-200 space-y-2 mb-6">
                 <li>• Conduct data study to assess impact</li>
@@ -837,7 +896,7 @@ export default function Home() {
                 <li>• Ensure compliance with environmental</li>
               </ul>
 
-              <button className="flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-teal-400 text-black px-5 py-2 rounded-full font-medium hover:scale-105 transition">
+              <button className="flex items-center gap-2 bg-gradient-to-r from-[#0bccc1] to-[#07ebd1] text-black px-5 py-2 rounded-full font-medium hover:scale-105 transition">
                 Read More →
               </button>
             </motion.div>
@@ -861,17 +920,18 @@ export default function Home() {
               transition={{ duration: 0.8 }}
             >
               {/* TAG */}
-              <div className="inline-flex items-center gap-2 bg-white/5 border border-white/10 backdrop-blur-md px-5 py-3 rounded-full mb-8">
-                <span className="w-2 h-2 rounded-full bg-cyan-400" />
-                <span className="text-sm text-white font-medium">
-                  Why Choose Us
+              <div className="inline-flex items-center gap-2 bg-[#0bccc1]/10 border border-[#0bccc1]/20 rounded-full px-6 py-3 mb-8">
+                <span className="w-2 h-2 rounded-full bg-[#07ebd1] animate-pulse" />
+
+                <span className="text-[#0bccc1] font-semibold text-sm">
+                  why us chose
                 </span>
               </div>
 
               {/* HEADING */}
               <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-8">
                 Purpose Led Environmental Solutions{" "}
-                <span className="bg-gradient-to-r from-cyan-400 to-teal-400 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-[#0bccc1] to-[#07ebd1] bg-clip-text text-transparent">
                   you Can Trust
                 </span>
               </h1>
@@ -888,20 +948,20 @@ export default function Home() {
                 {/* STATS CARD */}
                 <motion.div
                   whileHover={{ y: -8 }}
-                  className="bg-white/5 border border-cyan-400/20 backdrop-blur-xl rounded-3xl p-6 shadow-[0_0_40px_rgba(34,211,238,0.08)]"
+                  className="bg-white/5 border border-[#0bccc1]/20 backdrop-blur-xl rounded-3xl p-6 shadow-[0_0_40px_rgba(34,211,238,0.08)]"
                 >
                   <div>
-                    <h2 className="text-6xl font-bold text-cyan-400">45K+</h2>
+                    <h2 className="text-6xl font-bold text-[#0bccc1]">45K+</h2>
 
                     <p className="text-2xl mt-5 leading-snug font-semibold">
                       Trees Planted Through Conservation
                     </p>
                   </div>
 
-                  <div className="w-full h-[1px] bg-white/10 my-10" />
+                  <div className="w-full h-0.5 bg-white/10 my-10" />
 
                   <div>
-                    <h2 className="text-6xl font-bold text-cyan-400">80+</h2>
+                    <h2 className="text-6xl font-bold text-[#0bccc1]">80+</h2>
 
                     <p className="text-2xl mt-5 leading-snug font-semibold">
                       Communities Actively Supported
@@ -914,7 +974,7 @@ export default function Home() {
                   {/* ICON */}
                   <motion.div
                     whileHover={{ scale: 1.1, rotate: 10 }}
-                    className="w-15 h-15 rounded-full bg-gradient-to-r from-cyan-400 to-teal-400 flex items-center justify-center shadow-[0_0_30px_rgba(34,211,238,0.4)] mb-8"
+                    className="w-15 h-15 rounded-full bg-gradient-to-r from-[#0bccc1] to-[#07ebd1] flex items-center justify-center shadow-[0_0_30px_rgba(34,211,238,0.4)] mb-8"
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -944,7 +1004,7 @@ export default function Home() {
                     improve long term responsibility.
                   </p>
 
-                  <div className="w-full h-[1px] bg-white/10 mb-8" />
+                  <div className="w-full h-0.5 bg-white/10 mb-8" />
 
                   {/* CHECK LIST */}
                   <div className="space-y-5">
@@ -998,13 +1058,13 @@ export default function Home() {
               {/* 🔵 BUTTON */}
               <motion.button
                 whileHover={{ scale: 1.05 }}
-                className="group mt-16 flex items-center overflow-hidden rounded-full bg-gradient-to-r from-cyan-400 to-teal-400"
+                className="group mt-16 flex items-center overflow-hidden rounded-full bg-gradient-to-r from-[#0bccc1] to-[#07ebd1]"
               >
                 <span className="px-7 py-4 text-[#071c34] text-xl font-semibold">
                   Learn More
                 </span>
 
-                <span className="w-16 h-16 flex items-center justify-center bg-[#071c34] text-white group-hover:bg-black transition duration-300">
+                <span className="w-14 h-14 rounded-full bg-[#0c264b] text-[#07ebd1] flex items-center justify-center group-hover:translate-x-2 transition duration-300">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
@@ -1044,7 +1104,7 @@ export default function Home() {
                   alt="People"
                   width={700}
                   height={700}
-                  className="w-full h-[600px] object-cover"
+                  className="w-full h-168 object-cover"
                 />
               </motion.div>
 
@@ -1117,8 +1177,8 @@ export default function Home() {
                   </svg>
 
                   {/* CENTER */}
-                  <div className="w-24 h-24 rounded-full bg-[#071c34] border border-cyan-400 flex items-center justify-center shadow-[0_0_40px_rgba(34,211,238,0.4)]">
-                    <div className="w-14 h-14 rounded-full bg-gradient-to-r from-cyan-400 to-teal-400 flex items-center justify-center">
+                  <div className="w-24 h-24 rounded-full bg-[#071c34] border border-[#0bccc1] flex items-center justify-center shadow-[0_0_40px_rgba(34,211,238,0.4)]">
+                    <div className="w-14 h-14 rounded-full bg-gradient-to-r from-[#0bccc1] to-[#07ebd1] flex items-center justify-center">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="24"
@@ -1138,16 +1198,6 @@ export default function Home() {
                   </div>
                 </div>
               </motion.div>
-
-              {/* 🔵 DOT PATTERN */}
-              {/* <div className="absolute bottom-3 left-[55%] grid grid-cols-8 gap-2">
-                {Array.from({ length: 48 }).map((_, i) => (
-                  <div
-                    key={i}
-                    className="w-1.5 h-1.5 rounded-full bg-cyan-400"
-                  />
-                ))}
-              </div> */}
             </motion.div>
           </div>
         </div>
@@ -1175,10 +1225,13 @@ export default function Home() {
             initial={{ opacity: 0, y: -20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/10 px-5 py-3 rounded-full mb-8"
+            className="inline-flex items-center gap-2 bg-[#0bccc1]/10 border border-[#0bccc1]/20 rounded-full px-6 py-3 mb-8"
           >
-            <span className="w-2 h-2 bg-cyan-400 rounded-full"></span>
-            <p className="text-sm font-medium text-white">Watch Our Story</p>
+            <span className="w-2 h-2 rounded-full bg-[#07ebd1] animate-pulse" />
+
+            <span className="text-[#0bccc1] font-semibold text-sm">
+              watch our story
+            </span>
           </motion.div>
 
           {/* HEADING */}
@@ -1189,7 +1242,7 @@ export default function Home() {
             className="max-w-4xl text-5xl md:text-7xl font-bold leading-tight"
           >
             From Awareness to Action Our Mission{" "}
-            <span className="bg-gradient-to-r from-cyan-400 to-teal-400 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-[#0bccc1] to-[#07ebd1] bg-clip-text text-transparent">
               in Motion
             </span>
           </motion.h1>
@@ -1214,7 +1267,7 @@ export default function Home() {
               transition={{ duration: 0.3 }}
               className="backdrop-blur-xl bg-white/5 border border-white/10 rounded-3xl p-8 shadow-2xl"
             >
-              <div className="w-16 h-16 rounded-full bg-gradient-to-r from-cyan-400 to-teal-400 flex items-center justify-center mb-8">
+              <div className="w-16 h-16 rounded-full bg-gradient-to-r from-[#0bccc1] to-[#07ebd1] flex items-center justify-center mb-8">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -1235,7 +1288,7 @@ export default function Home() {
 
               <h2 className="text-5xl font-bold mb-2">5,000+</h2>
 
-              <h3 className="text-cyan-400 text-2xl font-semibold mb-6">
+              <h3 className="text-[#0bccc1] text-2xl font-semibold mb-6">
                 Volunteers Engaged
               </h3>
 
@@ -1253,7 +1306,7 @@ export default function Home() {
               transition={{ duration: 0.3 }}
               className="backdrop-blur-xl bg-white/5 border border-white/10 rounded-3xl p-8 shadow-2xl"
             >
-              <div className="w-16 h-16 rounded-full bg-gradient-to-r from-blue-500 to-cyan-400 flex items-center justify-center mb-8">
+              <div className="w-16 h-16 rounded-full bg-gradient-to-r from-[#0bccc1] to-[#07ebd1] flex items-center justify-center mb-8">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -1273,11 +1326,11 @@ export default function Home() {
 
               <h2 className="text-5xl font-bold mb-2">150+</h2>
 
-              <h3 className="text-cyan-400 text-2xl font-semibold mb-6">
+              <h3 className="text-[#0bccc1] text-2xl font-semibold mb-6">
                 Community Projects
               </h3>
 
-              <div className="w-full h-[1px] bg-white/10 mb-6" />
+              <div className="w-full h-0.5 bg-white/10 mb-6" />
 
               <p className="text-gray-300 leading-relaxed">
                 Environmental initiatives and programs carried out to engage
@@ -1291,7 +1344,7 @@ export default function Home() {
             {/* BUTTON */}
             <motion.button
               whileHover={{ scale: 1.05 }}
-              className="group flex items-center w-fit bg-gradient-to-r from-cyan-400 to-teal-400 text-[#071c34] font-semibold rounded-full overflow-hidden"
+              className="group flex items-center w-fit bg-gradient-to-r from-[#0bccc1] to-[#07ebd1] text-[#071c34] font-semibold rounded-full overflow-hidden"
             >
               <span className="px-8 py-5 text-lg">View More Videos</span>
 
@@ -1351,7 +1404,7 @@ export default function Home() {
               </svg>
 
               {/* CENTER PLAY */}
-              <div className="w-24 h-24 rounded-full border border-cyan-400 bg-[#071c34]/80 backdrop-blur-xl flex items-center justify-center shadow-2xl">
+              <div className="w-24 h-24 rounded-full border border-[#0bccc1] bg-[#071c34]/80 backdrop-blur-xl flex items-center justify-center shadow-2xl">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -1385,25 +1438,29 @@ export default function Home() {
             duration: 6,
             repeat: Infinity,
           }}
-          className="absolute top-1/2 left-1/2 w-4 h-4 bg-cyan-400 rounded-full blur-[1px]"
+          className="absolute top-1/2 left-1/2 w-4 h-4 bg-secondary rounded-full blur-[1px]"
         />
 
         <div className="max-w-7xl mx-auto px-6 text-center">
-          <motion.span
-            initial={{ opacity: 0, y: 20 }}
+          <motion.div
+            initial={{ opacity: 0, y: -20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="bg-cyan-400/20 text-cyan-300 px-4 py-1 rounded-full text-sm inline-block"
+            className="inline-flex items-center gap-2 bg-[#0bccc1]/10 border border-[#0bccc1]/20 rounded-full px-6 py-3 mb-8"
           >
-            what we do
-          </motion.span>
+            <span className="w-2 h-2 rounded-full bg-[#07ebd1] animate-pulse" />
+
+            <span className="text-[#0bccc1] font-semibold text-sm">
+              what we do
+            </span>
+          </motion.div>
 
           {/* Heading */}
           <motion.h2
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.6 }}
-            className=" mx-w-4xl text-5xl md:text-4xl mx-auto font-bold  leading-tight"
+            className=" mx-w-4xl text-5xl md:text-4xl mx-auto font-bold text-white  leading-tight"
           >
             Helping Communities, Organizations,& Individuals Take Concrete Step
             Toward a Healthier Planet
@@ -1446,7 +1503,7 @@ export default function Home() {
             {/* CARD 2 (ACCENT) */}
             <motion.div
               whileHover={{ y: -8 }}
-              className="bg-gradient-to-br from-cyan-400 to-teal-400 text-black rounded-2xl p-6 h-70 flex flex-col justify-between mt-35"
+              className="bg-gradient-to-br from-[#0bccc1] to-[#07ebd1] text-black rounded-2xl p-6 h-70 flex flex-col justify-between mt-35"
             >
               <div className="w-10 h-10 bg-black text-white flex items-center justify-center rounded-full mb-4">
                 ◈
@@ -1524,12 +1581,12 @@ export default function Home() {
 
           {/* 🔵 CTA LINE */}
           <div className="flex items-center justify-center gap-3 mt-8 text-gray-300">
-            <div className="w-10 h-10 bg-cyan-400 rounded-full flex items-center justify-center text-black">
+            <div className="w-10 h-10 bg-secondary rounded-full flex items-center justify-center text-black">
               ☎
             </div>
 
             <p>
-              Let’s make something great work together.
+              Lets make something great work together.
               <span className="text-cyan-400 ml-2 cursor-pointer">
                 Get Free Quote
               </span>
@@ -1540,7 +1597,7 @@ export default function Home() {
 
       <section className="relative overflow-hidden bg-[#eef1ec] py-24">
         {/* BACKGROUND BIG TEXT */}
-        <h1 className="absolute bottom-[-40px] left-1/2 -translate-x-1/2 text-[220px] font-black uppercase tracking-wider text-cyan-400/10 select-none hidden lg:block">
+        <h1 className="absolute bottom-[-40px] left-1/2 -translate-x-1/2 text-[220px] font-black uppercase tracking-wider text-[#0bccc1]/10 select-none hidden lg:block">
           Greva
         </h1>
 
@@ -1554,19 +1611,23 @@ export default function Home() {
             duration: 5,
             repeat: Infinity,
           }}
-          className="absolute top-1/3 left-1/2 w-4 h-4 rounded-full bg-cyan-400"
+          className="absolute top-1/3 left-1/2 w-4 h-4 rounded-full bg-secondary"
         />
 
         <div className="max-w-7xl mx-auto px-6 relative z-10">
           <div className="flex items-center justify-center gap-3 mb-4">
-            <motion.span
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              className="bg-cyan-400/20 text-slate-700 px-4 py-1 rounded-full text-sm inline-block"
+              className="bg-[#0bccc1]/10 border border-[#0bccc1]/20 text-slate-700 px-4 py-2 rounded-full text-sm inline-block"
             >
-              our Features
-            </motion.span>
+              <span className="w-2 h-2 rounded-full bg-[#07ebd1] animate-pulse" />
+
+              <span className="text-[#0bccc1] font-semibold text-md">
+                our features
+              </span>
+            </motion.div>
           </div>
           {/* Heading */}
           <motion.h2
@@ -1602,7 +1663,7 @@ export default function Home() {
                   whileHover={{
                     y: -8,
                   }}
-                  className="bg-white rounded-[30px] p-10 shadow-sm hover:shadow-2xl transition duration-500 border border-transparent hover:border-cyan-400/20"
+                  className="bg-[#0bccc1]/10 border border-[#0bccc1]/20 rounded-[30px] p-10 shadow-sm hover:shadow-2xl transition duration-500"
                 >
                   {/* ICON */}
                   <motion.div
@@ -1610,13 +1671,13 @@ export default function Home() {
                       rotate: 10,
                       scale: 1.1,
                     }}
-                    className="w-16 h-16 rounded-full bg-cyan-400 flex items-center justify-center text-black shadow-lg"
+                    className="w-16 h-16 rounded-full bg-gradient-to-r from-[#0bccc1] to-[#07ebd1] flex items-center justify-center text-black shadow-lg"
                   >
                     {item.icon}
                   </motion.div>
 
                   {/* TITLE */}
-                  <h2 className="text-[36px] font-bold text-[#081c15] mt-8 leading-tight">
+                  <h2 className="text-[36px] font-bold text-black mt-8 leading-tight">
                     {item.title}
                   </h2>
 
@@ -1636,14 +1697,14 @@ export default function Home() {
               className="relative flex justify-center mt-20 "
             >
               {/* GLOW */}
-              <div className="absolute w-[380px] h-[380px] bg-cyan-400/20 blur-[120px] rounded-full bottom-0" />
+              <div className="absolute w-96 h-96 bg-secondary/20 blur-[120px] rounded-full bottom-0" />
 
               <Image
                 src="/worker.png"
                 alt="Worker"
                 width={520}
                 height={780}
-                className="relative z-10 object-contain h-[600px] "
+                className="relative z-10 object-contain h-165 "
               />
             </motion.div>
 
@@ -1661,7 +1722,7 @@ export default function Home() {
                   whileHover={{
                     y: -8,
                   }}
-                  className="bg-white rounded-[30px] p-10 shadow-sm hover:shadow-2xl transition duration-500 border border-transparent hover:border-cyan-400/20"
+                  className="bg-[#0bccc1]/10 border border-[#0bccc1]/20 rounded-[30px] p-10 shadow-sm hover:shadow-2xl transition duration-500"
                 >
                   {/* ICON */}
                   <motion.div
@@ -1669,7 +1730,7 @@ export default function Home() {
                       rotate: -10,
                       scale: 1.1,
                     }}
-                    className="w-16 h-16 rounded-full bg-cyan-400 flex items-center justify-center text-black shadow-lg"
+                    className="w-16 h-16 rounded-full bg-gradient-to-r from-[#0bccc1] to-[#07ebd1]  flex items-center justify-center text-black shadow-lg"
                   >
                     {item.icon}
                   </motion.div>
@@ -1690,7 +1751,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="relative overflow-hidden bg-[#eef1ec] py-24">
+      <section className="relative overflow-hidden bg-[#071c34] py-24">
         {/* FLOATING DOT */}
         <motion.div
           animate={{
@@ -1701,24 +1762,25 @@ export default function Home() {
             duration: 4,
             repeat: Infinity,
           }}
-          className="absolute right-[28%] top-44 w-4 h-4 rounded-full bg-cyan-400"
+          className="absolute right-[28%] top-44 w-4 h-4 rounded-full bg-secondary"
         />
 
         <div className="max-w-7xl mx-auto px-6">
           {/* TOP TAG */}
-          <motion.div
-            initial={{ opacity: 0, y: -30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="flex justify-center"
-          >
-            <div className="px-7 py-3 rounded-full bg-[#e4e8df] flex items-center gap-3">
-              <span className="w-2 h-2 rounded-full bg-cyan-400"></span>
-              <span className="text-[#081c15] font-semibold text-lg">
-                How It Works
+          <div className="flex items-center justify-center gap-3 mb-4">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              className="bg-[#0bccc1]/10 border border-[#0bccc1]/20 text-slate-700 px-6 py-3 rounded-full text-sm inline-block"
+            >
+              <span className="w-2 h-2 rounded-full bg-[#07ebd1] animate-pulse" />
+
+              <span className="text-[#0bccc1] font-semibold text-md">
+                How It work
               </span>
-            </div>
-          </motion.div>
+            </motion.div>
+          </div>
 
           {/* HEADING */}
           <motion.div
@@ -1727,7 +1789,7 @@ export default function Home() {
             transition={{ duration: 0.7 }}
             className="text-center mt-10"
           >
-            <h1 className="text-5xl md:text-7xl font-black text-[#081c15] leading-tight">
+            <h1 className="text-5xl md:text-7xl font-black text-[#ffffff] leading-tight">
               From Awareness to Action
             </h1>
 
@@ -1740,7 +1802,7 @@ export default function Home() {
 
           {/* STEP LINE */}
           <div className="hidden lg:block relative mt-28">
-            <div className="absolute top-6 left-0 w-full h-[1px] bg-gray-300"></div>
+            <div className="absolute top-6 left-0 w-full h-0.5 bg-gray-300"></div>
 
             <div className="grid grid-cols-3 relative z-10">
               {process.map((item, index) => (
@@ -1750,7 +1812,7 @@ export default function Home() {
                   ${
                     item.dark
                       ? "bg-[#081c15] text-white"
-                      : "bg-cyan-400 text-black"
+                      : "bg-secondary text-black"
                   }`}
                   >
                     {item.step}
@@ -1767,7 +1829,9 @@ export default function Home() {
                 key={index}
                 className={`px-6 py-2 rounded-full font-semibold
               ${
-                item.dark ? "bg-[#081c15] text-white" : "bg-cyan-400 text-black"
+                item.dark
+                  ? "bg-[#081c15] text-white"
+                  : "bg-secondary text-black"
               }`}
               >
                 {item.step}
@@ -1795,7 +1859,7 @@ export default function Home() {
                 whileHover={{
                   y: -10,
                 }}
-                className={`relative overflow-hidden rounded-[32px] border border-gray-200
+                className={`relative overflow-hidden rounded-4xl border border-gray-200
               ${
                 item.dark
                   ? "bg-[#081c15] text-white"
@@ -1818,17 +1882,17 @@ export default function Home() {
                 )}
 
                 {/* CONTENT */}
-                <div className="relative z-10 p-10 min-h-[300px] flex flex-col">
+                <div className="relative z-10 p-10 min-h-80 flex flex-col">
                   {/* ICON */}
                   <motion.div
                     whileHover={{
                       rotate: 10,
                       scale: 1.1,
                     }}
-                    className={`w-16 h-16 rounded-full flex items-center justify-center shadow-lg
+                    className={`w-16 h-16 rounded-full flex items-center justify-center shadow-lg bg-gradient-to-r from-[#0bccc1] to-[#07ebd1]
                   ${
                     item.dark
-                      ? "bg-cyan-400 text-[#081c15]"
+                      ? "bg-secondary text-[#081c15]"
                       : "bg-white text-[#081c15]"
                   }`}
                   >
@@ -1836,22 +1900,22 @@ export default function Home() {
                   </motion.div>
 
                   {/* TITLE */}
-                  <h2 className="text-4xl font-bold mt-4 leading-tight">
+                  <h2 className="text-4xl text-[#071c34] font-bold mt-4 leading-tight">
                     {item.title}
                   </h2>
 
                   {/* DESC */}
                   <p
                     className={`mt-3 text-lg leading-relaxed
-                  ${item.dark ? "text-gray-200" : "text-gray-500"}`}
+                  ${item.dark ? "text-gray-300" : "text-gray-500"}`}
                   >
                     {item.desc}
                   </p>
 
                   {/* LINE */}
                   <div
-                    className={`w-full h-[1px] mt-5
-                  ${item.dark ? "bg-white/20" : "bg-gray-300"}`}
+                    className={`w-full h-0.5 mt-5
+                  ${item.dark ? "bg-[#0bccc1]/20" : "bg-[#07ebd1]"}`}
                   ></div>
 
                   {/* POINTS */}
@@ -1862,11 +1926,11 @@ export default function Home() {
                         whileHover={{ x: 8 }}
                         className="flex items-center gap-4"
                       >
-                        <span className="w-2 h-2 rounded-full bg-cyan-400"></span>
+                        <span className="w-2 h-2 rounded-full bg-secondary"></span>
 
                         <p
                           className={`text-lg
-                        ${item.dark ? "text-white" : "text-gray-500"}`}
+                        ${item.dark ? "text-gray-300" : "text-gray-500"}`}
                         >
                           {point}
                         </p>
@@ -1894,7 +1958,7 @@ export default function Home() {
           <div className="absolute inset-0 bg-[#081c15]/55"></div>
 
           {/* LIGHT GREEN OVERLAY */}
-          <div className="absolute inset-0 bg-cyan-400/10"></div>
+          <div className="absolute inset-0 bg-secondary/10"></div>
         </div>
 
         {/* FLOATING DOT */}
@@ -1907,7 +1971,7 @@ export default function Home() {
             duration: 4,
             repeat: Infinity,
           }}
-          className="absolute top-72 right-[22%] w-4 h-4 rounded-full bg-cyan-400 z-20"
+          className="absolute top-72 right-[22%] w-4 h-4 rounded-full bg-secondary z-20"
         />
 
         <div className="max-w-7xl mx-auto px-6 relative z-20">
@@ -1922,9 +1986,9 @@ export default function Home() {
                 transition={{ duration: 0.6 }}
                 className="inline-flex items-center gap-3 px-7 py-3 rounded-full bg-white/10 backdrop-blur-xl border border-white/10"
               >
-                <span className="w-2 h-2 rounded-full bg-cyan-400"></span>
+                <span className="w-2 h-2 rounded-full bg-[#07ebd1]"></span>
 
-                <span className="text-white font-semibold text-lg">
+                <span className="text-[#0bccc1] font-semibold text-lg">
                   Our Testimonials
                 </span>
               </motion.div>
@@ -1956,7 +2020,7 @@ export default function Home() {
               {/* BUTTON */}
               <motion.button
                 whileHover={{ scale: 1.05 }}
-                className="group mt-4 bg-gradient-to-r from-cyan-400 to-teal-400 text-black px-6 py-2 rounded-full font-bold text-xl flex items-center gap-5 shadow-xl"
+                className="group mt-4 bg-gradient-to-r from-[#0bccc1] to-[#07ebd1] text-black px-6 py-2 rounded-full font-bold text-xl flex items-center gap-5 shadow-xl"
               >
                 View All Testimonials
                 <span className="w-14 h-14 rounded-full bg-black text-white flex items-center justify-center group-hover:translate-x-2 transition duration-300">
@@ -2004,7 +2068,7 @@ export default function Home() {
               >
                 {/* RATING */}
                 <div className="inline-flex items-center gap-3 bg-[#e9eee6] rounded-xl ">
-                  <div className="flex items-center gap-1 text-cyan-400">
+                  <div className="flex items-center gap-1 text-[#0bccc1]">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="24"
@@ -2082,7 +2146,7 @@ export default function Home() {
 
                 {/* QUOTE */}
                 <p className="text-[20px] leading-[1.7] text-[#081c15] font-semibold mt-14">
-                  “ {item.quote} ”
+                  " {item.quote} "
                 </p>
 
                 {/* LINE */}
@@ -2104,6 +2168,460 @@ export default function Home() {
                     </h3>
 
                     <p className="text-gray-500 text-lg mt-1">{item.role}</p>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="relative overflow-hidden bg-[#09284b] py-20 md:py-28">
+        {/* ================= BACKGROUND GLOW ================= */}
+
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[350px] bg-[#00d2c6]/10 blur-[160px]" />
+
+        {/* FLOATING DOT */}
+
+        <motion.div
+          animate={{
+            y: [0, -20, 0],
+            x: [0, 10, 0],
+          }}
+          transition={{
+            duration: 4,
+            repeat: Infinity,
+          }}
+          className="absolute top-[22%] left-[62%] w-3 h-3 rounded-full bg-[#00d2c6]"
+        />
+
+        <div className="max-w-7xl mx-auto px-4 md:px-6 relative z-10">
+          {/* ================================================= */}
+          {/* MAIN GRID */}
+          {/* ================================================= */}
+
+          <div className="grid grid-cols-1 xl:grid-cols-2 gap-16 items-start">
+            {/* ================================================= */}
+            {/* LEFT SIDE */}
+            {/* ================================================= */}
+
+            <motion.div
+              initial={{ opacity: 0, y: 70 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7 }}
+            >
+              {/* TAG */}
+
+              <div className="inline-flex items-center gap-2 bg-[#123a63] border border-[#334155] rounded-full px-5 py-2">
+                <div className="w-2 h-2 rounded-full bg-[#00d2c6]" />
+
+                <span className="text-white font-medium text-sm md:text-base">
+                  Frequently Asked Questions
+                </span>
+              </div>
+
+              {/* HEADING */}
+
+              <h2 className="text-4xl sm:text-5xl md:text-6xl font-black text-white leading-[1.1] mt-8 max-w-[700px]">
+                Clear Information About Our Environmental Approach
+              </h2>
+
+              {/* PARAGRAPH */}
+
+              <p className="text-[#cbd5e1] text-lg leading-relaxed mt-8 max-w-[650px]">
+                Explore detailed yet easy to understand information about our
+                environmental practices, conservation efforts, and long-term
+                sustainability strategies.
+              </p>
+
+              {/* ================================================= */}
+              {/* PROGRESS SECTION */}
+              {/* ================================================= */}
+
+              <div className="mt-14 flex flex-col lg:flex-row lg:items-center gap-12">
+                {/* PROGRESS BARS */}
+
+                <div className="flex-1 space-y-10">
+                  {/* ITEM 1 */}
+
+                  <div>
+                    <div className="flex items-center justify-between mb-4">
+                      <h4 className="text-white text-2xl font-bold">
+                        Climate Action
+                      </h4>
+
+                      <span className="text-[#00d2c6] text-2xl font-black">
+                        95%
+                      </span>
+                    </div>
+
+                    <div className="w-full h-3 rounded-full bg-[#123a63] overflow-hidden">
+                      <motion.div
+                        initial={{ width: 0 }}
+                        whileInView={{ width: "95%" }}
+                        transition={{ duration: 1 }}
+                        className="h-full rounded-full bg-[#00d2c6]"
+                      />
+                    </div>
+                  </div>
+
+                  {/* ITEM 2 */}
+
+                  <div>
+                    <div className="flex items-center justify-between mb-4">
+                      <h4 className="text-white text-2xl font-bold">
+                        Renewable Energy
+                      </h4>
+
+                      <span className="text-[#00d2c6] text-2xl font-black">
+                        90%
+                      </span>
+                    </div>
+
+                    <div className="w-full h-3 rounded-full bg-[#123a63] overflow-hidden">
+                      <motion.div
+                        initial={{ width: 0 }}
+                        whileInView={{ width: "90%" }}
+                        transition={{ duration: 1.2 }}
+                        className="h-full rounded-full bg-[#00d2c6]"
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                {/* ROTATING BADGE */}
+
+                <div className="flex items-center justify-center">
+                  <motion.div
+                    animate={{ rotate: 360 }}
+                    transition={{
+                      duration: 18,
+                      repeat: Infinity,
+                      ease: "linear",
+                    }}
+                    className="relative w-44 h-44 rounded-full border-[10px] border-[#00d2c6] bg-[#123a63] flex items-center justify-center"
+                  >
+                    <div className="absolute inset-0 rounded-full border border-[#334155]" />
+
+                    <div className="text-center">
+                      <div className="text-5xl text-[#00d2c6]">✺</div>
+                    </div>
+
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <div className="w-[85%] h-[85%] rounded-full border border-dashed border-[#00d2c6]/40" />
+                    </div>
+                  </motion.div>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* ================================================= */}
+            {/* FAQ RIGHT SIDE */}
+            {/* ================================================= */}
+
+            <motion.div
+              initial={{ opacity: 0, y: 70 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.9 }}
+              className="space-y-6"
+            >
+              {faqs.map((faq, index) => (
+                <div
+                  key={index}
+                  className={`rounded-[28px] overflow-hidden border transition-all duration-500 ${
+                    active === index
+                      ? "bg-[#123a63] border-[#00d2c6]"
+                      : "bg-[#123a63]/50 border-[#334155]"
+                  }`}
+                >
+                  {/* QUESTION */}
+
+                  <button
+                    onClick={() => setActive(active === index ? -1 : index)}
+                    className={`w-full flex items-center justify-between gap-5 px-8 py-7 text-left transition-all duration-300 ${
+                      active === index
+                        ? "bg-[#00d2c6] text-[#09284b]"
+                        : "text-white hover:bg-[#123a63]"
+                    }`}
+                  >
+                    <span className="text-xl md:text-2xl font-bold leading-snug">
+                      {faq.question}
+                    </span>
+
+                    {active === index ? (
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        className="lucide lucide-chevron-up-icon lucide-chevron-up"
+                      >
+                        <path d="m18 15-6-6-6 6" />
+                      </svg>
+                    ) : (
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        className="lucide lucide-chevron-up-icon lucide-chevron-up"
+                      >
+                        <path d="m18 15-6-6-6 6" />
+                      </svg>
+                    )}
+                  </button>
+
+                  {/* ANSWER */}
+
+                  <motion.div
+                    initial={false}
+                    animate={{
+                      height: active === index ? "auto" : 0,
+                      opacity: active === index ? 1 : 0,
+                    }}
+                    transition={{ duration: 0.4 }}
+                    className="overflow-hidden"
+                  >
+                    <div className="px-8 pb-8 pt-6">
+                      <p className="text-[#cbd5e1] text-lg leading-relaxed">
+                        {faq.answer}
+                      </p>
+                    </div>
+                  </motion.div>
+                </div>
+              ))}
+            </motion.div>
+          </div>
+
+          {/* ================================================= */}
+          {/* BOTTOM LOGOS */}
+          {/* ================================================= */}
+
+          <div className="mt-24">
+            {/* LINE + TITLE */}
+
+            <div className="flex items-center gap-6">
+              <div className="flex-1 h-[1px] bg-[#334155]" />
+
+              <h3 className="text-white text-xl md:text-2xl font-bold text-center whitespace-nowrap">
+                Trusted by Leading Environmental Partners
+              </h3>
+
+              <div className="flex-1 h-[1px] bg-[#334155]" />
+            </div>
+
+            {/* LOGOS */}
+
+            <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-5 gap-8 mt-14">
+              {logos.map((logo, index) => (
+                <motion.div
+                  key={index}
+                  whileHover={{
+                    y: -5,
+                    scale: 1.03,
+                  }}
+                  className="flex items-center justify-center gap-3 rounded-2xl border border-[#334155] bg-[#123a63]/40 px-8 py-6"
+                >
+                  {/* ICON */}
+
+                  <div className="w-14 h-14 rounded-full bg-[#00d2c6]/20 flex items-center justify-center">
+                    <div className="w-7 h-7 rounded-full border-4 border-[#00d2c6]" />
+                  </div>
+
+                  {/* TEXT */}
+
+                  <span className="text-white text-2xl font-black">{logo}</span>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="relative overflow-hidden bg-[#ffffff] py-20 md:py-22">
+        {/* ================= BACKGROUND GLOW ================= */}
+
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[300px] bg-[#00d2c6]/10 blur-[140px]" />
+
+        {/* FLOATING DOT */}
+
+        <motion.div
+          animate={{
+            y: [0, -15, 0],
+            x: [0, 10, 0],
+          }}
+          transition={{
+            duration: 4,
+            repeat: Infinity,
+          }}
+          className="absolute top-[20%] left-[60%] w-3 h-3 rounded-full bg-[#00d2c6]"
+        />
+
+        <div className="max-w-7xl mx-auto px-4 md:px-6 relative z-10">
+          {/* ================================================= */}
+          {/* TOP CONTENT */}
+          {/* ================================================= */}
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
+            {/* LEFT */}
+
+            <motion.div
+              initial={{ opacity: 0, y: 80 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7 }}
+            >
+              {/* TAG */}
+
+              <div className="inline-flex items-center gap-2 bg-[#ffffff] border border-[#334155] rounded-full px-5 py-2">
+                <div className="w-2 h-2 rounded-full bg-[#00d2c6]" />
+
+                <span className="text-slate-900 font-medium text-sm md:text-base">
+                  Latest Blogs
+                </span>
+              </div>
+
+              {/* HEADING */}
+
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-black text-slate-900 leading-[1.1] mt-8 max-w-[780px]">
+                Insights and Stories Driving a More Sustainable Future
+              </h2>
+            </motion.div>
+
+            {/* RIGHT */}
+
+            <motion.div
+              initial={{ opacity: 0, y: 80 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.9 }}
+              className="lg:pl-16"
+            >
+              <p className="text-slate-500 text-lg leading-relaxed max-w-[560px]">
+                Stay informed with stories and insights that showcase real
+                impact, sustainable practices, and global efforts to protect the
+                environment.
+              </p>
+
+              {/* BUTTON */}
+
+              <button className="group mt-8 inline-flex items-center overflow-hidden rounded-full border ">
+                <span className="bg-[#00d2c6] text-[#09284b] font-bold px-8 py-4 text-lg">
+                  View All Blogs
+                </span>
+
+                <span className="w-15 h-15 flex items-center justify-center bg-[#123a63] text-white group-hover:bg-[#00d2c6] group-hover:text-[#09284b] transition-all duration-300">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="lucide lucide-arrow-right-icon lucide-arrow-right"
+                  >
+                    <path d="M5 12h14" />
+                    <path d="m12 5 7 7-7 7" />
+                  </svg>
+                </span>
+              </button>
+            </motion.div>
+          </div>
+
+          {/* ================================================= */}
+          {/* BLOG CARDS */}
+          {/* ================================================= */}
+
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 mt-10">
+            {blogs.map((blog, index) => (
+              <motion.div
+                key={blog.id}
+                initial={{ opacity: 0, y: 80 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{
+                  duration: 0.7,
+                  delay: index * 0.2,
+                }}
+                whileHover={{ y: -10 }}
+                className="group"
+              >
+                {/* IMAGE CARD */}
+
+                <div className="relative overflow-hidden rounded-[30px] bg-[#123a63] border border-[#334155]">
+                  {/* IMAGE */}
+
+                  <div className="relative h-[300px] overflow-hidden">
+                    <Image
+                      src={blog.image}
+                      alt={blog.title}
+                      fill
+                      className="object-cover group-hover:scale-110 transition duration-700"
+                    />
+
+                    {/* OVERLAY */}
+
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#09284b]/80 via-transparent to-transparent" />
+
+                    {/* CATEGORY */}
+
+                    <div className="absolute top-6 left-6">
+                      <div className="bg-[#123a63]/80 backdrop-blur-xl border border-[#334155] rounded-full px-5 py-2">
+                        <span className="text-white text-sm font-medium">
+                          {blog.category}
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* CONTENT */}
+
+                  <div className="p-7">
+                    {/* TITLE */}
+
+                    <h3 className="text-2xl font-bold text-white leading-snug group-hover:text-[#00d2c6] transition duration-300">
+                      {blog.title}
+                    </h3>
+
+                    {/* LINE */}
+
+                    <div className="w-full h-0.5 bg-[#334155] my-7"></div>
+
+                    {/* BUTTON */}
+
+                    <button className="group/btn flex items-center gap-4">
+                      <span className="text-white text-lg font-semibold group-hover/btn:text-[#00d2c6] transition duration-300">
+                        Read More
+                      </span>
+
+                      <div className="w-11 h-11 rounded-full bg-[#00d2c6] flex items-center justify-center text-[#09284b] group-hover/btn:translate-x-1 transition duration-300">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          className="lucide lucide-arrow-right-icon lucide-arrow-right"
+                        >
+                          <path d="M5 12h14" />
+                          <path d="m12 5 7 7-7 7" />
+                        </svg>
+                      </div>
+                    </button>
                   </div>
                 </div>
               </motion.div>

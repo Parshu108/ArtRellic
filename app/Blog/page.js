@@ -5,7 +5,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { useState } from "react";
 
-const Blog = [
+const blogs = [
   {
     id: 1,
     title: "How Sustainable Living Can Reduce Your Carbon Footprint",
@@ -44,7 +44,7 @@ const Blog = [
   },
 ];
 
-const Page = () => {
+const page = () => {
   const BLOGS_PER_PAGE = 6;
   const [currentPage, setCurrentPage] = useState(1);
 
@@ -256,4 +256,4 @@ const Page = () => {
   );
 };
 
-export default Blog;
+export default page;

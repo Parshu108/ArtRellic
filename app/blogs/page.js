@@ -5,46 +5,49 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { useState } from "react";
 
-const blogs = [
-  {
-    id: 1,
-    title: "How Sustainable Living Can Reduce Your Carbon Footprint",
-    category: "Sustainability",
-    image: "/blog1.jpg",
-  },
-  {
-    id: 2,
-    title: "The Role of Renewable Energy in Fighting Climate Change",
-    category: "Climate Action",
-    image: "/blog2.jpg",
-  },
-  {
-    id: 3,
-    title: "Reducing Waste Through Recycling & Circular Economy",
-    category: "Waste Management",
-    image: "/blog3.jpg",
-  },
-  {
-    id: 4,
-    title: "How Sustainable Living Can Reduce Your Carbon Footprint",
-    category: "Eco-friendly",
-    image: "/blog4.jpg",
-  },
-  {
-    id: 5,
-    title: "The Role of Renewable Energy in Fighting Climate Change",
-    category: "Renewable energy",
-    image: "/blog5.jpg",
-  },
-  {
-    id: 6,
-    title: "Reducing Waste Through Recycling & Circular Economy",
-    category: "community",
-    image: "/blog6.jpg",
-  },
-];
 
-const page = () => {
+
+export default function Blog () {
+
+  const blogs = [
+    {
+      id: 1,
+      title: "How Sustainable Living Can Reduce Your Carbon Footprint",
+      category: "Sustainability",
+      image: "/blog1.jpg",
+    },
+    {
+      id: 2,
+      title: "The Role of Renewable Energy in Fighting Climate Change",
+      category: "Climate Action",
+      image: "/blog2.jpg",
+    },
+    {
+      id: 3,
+      title: "Reducing Waste Through Recycling & Circular Economy",
+      category: "Waste Management",
+      image: "/blog3.jpg",
+    },
+    {
+      id: 4,
+      title: "How Sustainable Living Can Reduce Your Carbon Footprint",
+      category: "Eco-friendly",
+      image: "/blog4.jpg",
+    },
+    {
+      id: 5,
+      title: "The Role of Renewable Energy in Fighting Climate Change",
+      category: "Renewable energy",
+      image: "/blog5.jpg",
+    },
+    {
+      id: 6,
+      title: "Reducing Waste Through Recycling & Circular Economy",
+      category: "community",
+      image: "/blog6.jpg",
+    },
+  ];
+  
   const BLOGS_PER_PAGE = 6;
   const [currentPage, setCurrentPage] = useState(1);
 
@@ -253,4 +256,4 @@ const page = () => {
   );
 };
 
-export default page;
+

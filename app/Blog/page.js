@@ -5,7 +5,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { useState } from "react";
 
-const blogdata = [
+const blogs = [
   {
     id: 1,
     title: "How Sustainable Living Can Reduce Your Carbon Footprint",
@@ -44,13 +44,13 @@ const blogdata = [
   },
 ];
 
-const page = () => {
+const Page = () => {
   const BLOGS_PER_PAGE = 6;
   const [currentPage, setCurrentPage] = useState(1);
 
-  const totalPages = Math.ceil(blogdata.length / BLOGS_PER_PAGE);
+  const totalPages = Math.ceil(blogs.length / BLOGS_PER_PAGE);
 
-  const paginatedBlogs = blogdata.slice(
+  const paginatedBlogs = blogs.slice(
     (currentPage - 1) * BLOGS_PER_PAGE,
     currentPage * BLOGS_PER_PAGE,
   );
@@ -256,4 +256,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

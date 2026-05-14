@@ -44,7 +44,7 @@ const blogs = [
   },
 ];
 
-const Page = () => {
+const page = () => {
   const BLOGS_PER_PAGE = 6;
   const [currentPage, setCurrentPage] = useState(1);
 
@@ -55,7 +55,6 @@ const Page = () => {
     currentPage * BLOGS_PER_PAGE,
   );
 
-  // ✅ FIX 1: pageNumbers is a function — call it with ()
   const pageNumbers = () => {
     if (totalPages <= 5)
       return Array.from({ length: totalPages }, (_, i) => i + 1);
@@ -125,7 +124,6 @@ const Page = () => {
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[300px] bg-[#00d2c6]/10 blur-[140px]" />
         <div className="max-w-7xl mx-auto px-4 md:px-6 relative z-10">
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 mt-8">
-            {/* ✅ FIX 2: use paginatedBlogs instead of blogs */}
             {paginatedBlogs.map((blog, index) => (
               <motion.div
                 key={blog.id}
@@ -206,9 +204,8 @@ const Page = () => {
               </svg>
             </button>
 
-            {/* ✅ FIX 1: pageNumbers() called as a function */}
-            {pageNumbers().map((page, i) =>
-              page === "..." ? (
+            {pageNumbers().map((pg, i) =>
+              pg === "..." ? (
                 <span
                   key={i}
                   className="text-[#334155] px-1 text-[15px] leading-[42px]"
@@ -218,14 +215,14 @@ const Page = () => {
               ) : (
                 <button
                   key={i}
-                  onClick={() => setCurrentPage(page)}
+                  onClick={() => setCurrentPage(pg)}
                   className={`w-[42px] h-[42px] rounded-full text-[15px] font-medium flex items-center justify-center transition duration-300 ${
-                    currentPage === page
+                    currentPage === pg
                       ? "bg-[#00d2c6] text-[#09284b] font-bold border-none shadow-[0_0_0_4px_#00d2c620]"
                       : "border border-[#334155] bg-white text-[#123a63] hover:bg-[#123a63] hover:text-white hover:border-[#123a63]"
                   }`}
                 >
-                  {page}
+                  {pg}
                 </button>
               ),
             )}
@@ -256,4 +253,4 @@ const Page = () => {
   );
 };
 
-export default Page;
+export default page;

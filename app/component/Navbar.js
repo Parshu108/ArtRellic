@@ -58,6 +58,7 @@ const Navbar = () => {
             <li className="relative group">
               <Link
                 href="/blogs"
+                prefetch={false}
                 className="text-[#0bccc1]/90 font-semibold transition duration-300 hover:text-[#07ebd1]"
               >
                 Blog
@@ -133,7 +134,7 @@ const Navbar = () => {
             Services
           </Link>
           <Link
-            href="/blog"
+            href="/blogs"
             className="block text-[#0bccc1] hover:text-[#07ebd1] transition"
           >
             Blog

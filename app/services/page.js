@@ -204,7 +204,7 @@ const page = () => {
                 <li>• Ensure compliance with environmental</li>
               </ul>
 
-              <button className="flex items-center gap-2 bg-gradient-to-r from-[#0bccc1] to-[#07ebd1] text-black px-5 py-3 rounded-full font-medium hover:scale-105 transition">
+              <button  className="flex items-center gap-2 bg-gradient-to-r from-[#0bccc1] to-[#07ebd1] text-black px-5 py-3 rounded-full font-medium hover:scale-105 transition" >
                 Read More →
               </button>
             </motion.div>

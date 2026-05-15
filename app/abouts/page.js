@@ -439,13 +439,13 @@ const About = () => {
               transition={{ duration: 0.8 }}
               className="relative"
             >
-              <div className="relative rounded-[36px] overflow-hidden shadow-2xl bg-[#102f5c]">
+              <div className="relative rounded-[36px] sm:rounded-[42px] overflow-hidden shadow-2xl bg-[#102f5c]">
                 <Image
                   src="/service2.jpg"
                   alt="Solar"
                   width={700}
                   height={900}
-                  className="w-full h-230 object-cover hover:scale-105 transition duration-700"
+                  className="w-full h-230  object-cover hover:scale-105 transition duration-700"
                 />
               </div>
 
@@ -511,7 +511,7 @@ const About = () => {
               <motion.div
                 whileHover={{ y: -8 }}
                 transition={{ duration: 0.4 }}
-                className="mt-4 bg-[#102f5c] border border-[#0bccc1]/10 rounded-[32px] overflow-hidden shadow-lg"
+                className="mt-4 bg-[#102f5c] border border-[#0bccc1]/10 rounded-[32px] sm:rounded-4xl overflow-hidden shadow-lg"
               >
                 <div className="grid md:grid-cols-2">
                   <Image
@@ -931,26 +931,26 @@ const About = () => {
                   alt="People"
                   width={700}
                   height={700}
-                  className="w-full h-[670px] object-cover"
+                  className="w-full h-120 object-cover"
                 />
               </motion.div>
 
               <div className="flex flex-col gap-6">
                 <motion.div
                   whileHover={{ scale: 1.03 }}
-                  className="rounded-[32px] overflow-hidden"
+                  className="rounded-4xl overflow-hidden"
                 >
                   <Image
                     src="/long.jpg"
                     alt="Solar"
                     width={400}
                     height={350}
-                    className="w-full h-[320px] object-cover"
+                    className="w-full h-80 object-cover"
                   />
                 </motion.div>
                 <motion.div
                   whileHover={{ scale: 1.03 }}
-                  className="rounded-[32px] overflow-hidden"
+                  className="rounded-4xl overflow-hidden"
                 >
                   <Image
                     src="/mid.jpg"
@@ -966,7 +966,7 @@ const About = () => {
               <motion.div
                 animate={{ rotate: 360 }}
                 transition={{ repeat: Infinity, duration: 12, ease: "linear" }}
-                className="absolute top-1/2 right-[180px] -translate-y-1/2 z-20"
+                className="absolute top-1/2 right-48 -translate-y-1/2 z-20"
               >
                 <div className="relative w-44 h-44 flex items-center justify-center">
                   <svg viewBox="0 0 200 200" className="absolute w-full h-full">
@@ -1985,7 +1985,6 @@ const About = () => {
           HOW IT WORKS — 30% light bg, 70% navy text, 10% teal steps
       ============================================================ */}
       <section className="relative overflow-hidden bg-[#f5f7f4] py-24">
-
         <div className="max-w-7xl mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: -30 }}

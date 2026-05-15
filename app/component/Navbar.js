@@ -68,24 +68,93 @@ const Navbar = () => {
 
             {/* Dropdown */}
             <li className="relative group">
-              <span className="cursor-pointer hover:text-[#0bccc1]">
-                Pages ▾
-              </span>
+              {/* MAIN MENU */}
 
-              <div className="absolute left-0 top-full mt-4 w-64 bg-[#102f5c] text-[#0bccc1] border border-[#0bccc1]/20 backdrop-blur-md rounded-xl shadow-xl p-5 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
-                <ul className="space-y-3 text-sm font-medium">
-                  <li>Service Details</li>
-                  <li>Blog Details</li>
-                  <li>Projects</li>
-                  <li>Project Details</li>
-                  <li>Our Team</li>
-                  <li>Team Details</li>
-                  <li>Testimonials</li>
-                  <li>Pricing Plan</li>
-                  <li>Image Gallery</li>
-                  <li>Video Gallery</li>
-                  <li>FAQs</li>
+              <button className="flex items-center gap-2 text-[#0bccc1]/90 font-semibold tracking-wide transition-all duration-300 hover:text-[#07ebd1]">
+                Pages
+                <span className="text-xs transition-transform duration-300 group-hover:rotate-180">
+                  ▾
+                </span>
+              </button>
+
+              {/* DROPDOWN */}
+
+              <div
+                className="
+                absolute left-1/2 top-full z-50
+                mt-6 w-[200px] -translate-x-1/2
+                rounded-3xl border border-[#0bccc1]/20
+               bg-[#102f5c]/95
+                backdrop-blur-2xl
+                shadow-[0_20px_80px_rgba(0,0,0,0.45)]
+                p-4
+                opacity-0 invisible
+                translate-y-5
+                transition-all duration-500
+                group-hover:opacity-100
+                group-hover:visible
+                group-hover:translate-y-0
+
+                lg:w-[320px]
+              "
+              >
+                {/* GLOW EFFECT */}
+
+                <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-[#0bccc1]/10 via-transparent to-[#4fffd8]/10 pointer-events-none" />
+
+                {/* MENU LIST */}
+
+                <ul className="relative z-10 flex flex-col gap-2">
+                  {[
+                    { name: "Service Details", link: "/pages/service-detail" },
+                    { name: "Blog Details", link: "/pages/blog-detail" },
+                    { name: "Projects", link: "/project" },
+                    { name: "Project Details", link: "/project-details" },
+                    { name: "Our Team", link: "/teams" },
+                    { name: "Team Details", link: "/team-details" },
+                    { name: "Testimonials", link: "/testimonial" },
+                    { name: "Image Gallery", link: "/images" },
+                    { name: "Video Gallery", link: "/videos" },
+                    { name: "FAQs", link: "/faq" },
+                  ].map((item, index) => (
+                    <li key={index}>
+                      <Link
+                        href={item.link}
+                        className="
+              group/item
+              flex items-center justify-between
+              rounded-2xl
+              px-3 py-2
+              text-[15px] font-medium
+              text-[#d8f8f5]
+              transition-all duration-300
+
+              hover:bg-[#0bccc1]
+              hover:text-[#09284b]
+              hover:translate-x-1
+            "
+                      >
+                        <span>{item.name}</span>
+
+                        <span
+                          className="
+                text-lg opacity-0
+                -translate-x-2
+                transition-all duration-300
+                group-hover/item:opacity-100
+                group-hover/item:translate-x-0
+              "
+                        >
+                          →
+                        </span>
+                      </Link>
+                    </li>
+                  ))}
                 </ul>
+
+                {/* BOTTOM BORDER LIGHT */}
+
+                <div className="mt-4 h-px w-full bg-gradient-to-r from-transparent via-[#0bccc1]/40 to-transparent" />
               </div>
             </li>
 
@@ -122,7 +191,7 @@ const Navbar = () => {
             Home
           </Link>
           <Link
-            href="/about"
+            href="/abouts"
             className="block text-[#0bccc1] hover:text-[#07ebd1] transition"
           >
             About
@@ -144,17 +213,16 @@ const Navbar = () => {
           <div>
             <p className="text-cyan-400 font-semibold">Pages</p>
             <ul className="ml-4 mt-2 space-y-2 text-gray-300 text-sm">
-              <li>Service Details</li>
-              <li>Blog Details</li>
-              <li>Projects</li>
-              <li>Project Details</li>
-              <li>Our Team</li>
-              <li>Team Details</li>
-              <li>Testimonials</li>
-              <li>Pricing Plan</li>
-              <li>Image Gallery</li>
-              <li>Video Gallery</li>
-              <li>FAQs</li>
+              <Link href="service-detail">Service Details</Link>
+              <Link href="blog-detail">Blog Details</Link>
+              <Link href="project">Projects</Link>
+              <Link href="project-details">Project Details</Link>
+              <Link href="teams">Our Team</Link>
+              <Link href="team-details">Team Details</Link>
+              <Link href="testinomial">Testimonials</Link>
+              <Link href="images">Image Gallery</Link>
+              <Link href="videos">Video Gallery</Link>
+              <Link href="faq">FAQs</Link>
             </ul>
           </div>
 

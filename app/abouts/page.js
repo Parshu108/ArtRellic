@@ -343,6 +343,7 @@ const About = () => {
     "Logoipsum",
     "Logoipsum",
     "Logoipsum",
+    
   ];
 
   const teamMembers = [
@@ -1966,12 +1967,12 @@ const About = () => {
                 <motion.div
                   key={index}
                   whileHover={{ y: -5, scale: 1.03 }}
-                  className="flex items-center justify-center gap-3 rounded-2xl border border-[#334155] bg-[#102f5c]/40 px-8 py-6"
+                  className=" items-center justify-center animate-marquee inline-block gap-3 rounded-2xl border border-[#334155] bg-[#102f5c]/40 px-8 py-6"
                 >
                   <div className="w-14 h-14 rounded-full bg-[#0bccc1]/20 flex items-center justify-center">
                     <div className="w-7 h-7 rounded-full border-4 border-[#0bccc1]" />
                   </div>
-                  <span className="text-[#f5f7f4] text-2xl font-black">
+                  <span className="text-[#f5f7f4] text-2xl font-black ">
                     {logo}
                   </span>
                 </motion.div>

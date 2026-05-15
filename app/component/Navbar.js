@@ -112,7 +112,7 @@ const Navbar = () => {
                     { name: "Project Details", link: "/project-details" },
                     { name: "Our Team", link: "/teams" },
                     { name: "Team Details", link: "/team-details" },
-                    { name: "Testimonials", link: "/testimonial" },
+                    { name: "Testimonials", link: "/pages/testimonial" },
                     { name: "Image Gallery", link: "/images" },
                     { name: "Video Gallery", link: "/videos" },
                     { name: "FAQs", link: "/faq" },

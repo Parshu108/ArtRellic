@@ -147,7 +147,7 @@ const page = () => {
       </section>
 
       <section className="bg-[#ffffff] text-[#0c264b] py-20">
-        <div className="relative z-10 max-w-7xl mx-auto px-6">
+        <div className="relative z-10 max-w-8xl mx-auto px-8">
           {/* Cards */}
           <motion.div
             initial="hidden"
@@ -168,7 +168,7 @@ const page = () => {
               whileHover={{ y: -10 }}
               className=" p-6 rounded-2xl bg-[#0c264b] border border-[#0bccc1] shadow-lg text-left transition duration-300"
             >
-              <div className="w-12 h-12 bg-gradient-to-r from-[#0bccc1] to-[#07ebd1] text-black rounded-full flex items-center justify-center mb-4">
+              <div className="w-12 h-12 bg-gradient-to-r from-[#0bccc1] to-[#07ebd1] text-white rounded-full flex items-center justify-center mb-4">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -196,7 +196,7 @@ const page = () => {
               </p>
 
               {/* LINE */}
-              <div className="relative z-10 w-full h-0.5 bg-white/10 my-4"></div>
+              <div className="relative z-10 w-full h-0.5 bg-white/60 my-4"></div>
 
               <ul className="relative z-10 space-y-2 text-gray-200 text-sm mb-6">
                 <li>• Conduct data study to assess impact</li>
@@ -204,8 +204,25 @@ const page = () => {
                 <li>• Ensure compliance with environmental</li>
               </ul>
 
-              <button  className="flex items-center gap-2 bg-gradient-to-r from-[#0bccc1] to-[#07ebd1] text-black px-5 py-3 rounded-full font-medium hover:scale-105 transition" >
-                Read More →
+              <button className="flex items-center gap-2 bg-gradient-to-r from-[#0bccc1] to-[#07ebd1] text-white px-5 py-2 rounded-full font-medium hover:scale-105 transition">
+                Read More
+                <span className="w-8 h-8 rounded-full bg-[#0c264b] text-[#07ebd1] flex items-center justify-center group-hover:translate-x-2 transition duration-300">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="lucide lucide-arrow-right-icon lucide-arrow-right"
+                  >
+                    <path d="M5 12h14" />
+                    <path d="m12 5 7 7-7 7" />
+                  </svg>
+                </span>
               </button>
             </motion.div>
 
@@ -214,7 +231,7 @@ const page = () => {
               whileHover={{ y: -10 }}
               className=" p-6 rounded-2xl bg-[#0c264b] border border-[#0bccc1] shadow-lg text-left transition duration-300"
             >
-              <div className="w-12 h-12 bg-gradient-to-r from-[#0bccc1] to-[#07ebd1] text-black rounded-full flex items-center justify-center mb-4">
+              <div className="w-12 h-12 bg-gradient-to-r from-[#0bccc1] to-[#07ebd1] text-white rounded-full flex items-center justify-center mb-4">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -243,7 +260,7 @@ const page = () => {
               </p>
 
               {/* LINE */}
-              <div className="relative z-10 w-full h-0.5 bg-white/10 my-4"></div>
+              <div className="relative z-10 w-full h-0.5 bg-white/60 my-4"></div>
 
               <ul className="relative z-10 text-sm text-gray-200 space-y-2 mb-6">
                 <li>• Conduct data study to assess impact</li>
@@ -251,8 +268,25 @@ const page = () => {
                 <li>• Ensure compliance with environmental</li>
               </ul>
 
-              <button className="flex items-center gap-2 bg-gradient-to-r from-[#0bccc1] to-[#07ebd1] text-black px-5 py-3 rounded-full font-medium hover:scale-105 transition">
-                Read More →
+              <button className="flex items-center gap-2 bg-gradient-to-r from-[#0bccc1] to-[#07ebd1] text-white px-5 py-2 rounded-full font-medium hover:scale-105 transition">
+                Read More
+                <span className="w-8 h-8 rounded-full bg-[#0c264b] text-[#07ebd1] flex items-center justify-center group-hover:translate-x-2 transition duration-300">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="lucide lucide-arrow-right-icon lucide-arrow-right"
+                  >
+                    <path d="M5 12h14" />
+                    <path d="m12 5 7 7-7 7" />
+                  </svg>
+                </span>
               </button>
             </motion.div>
 
@@ -261,7 +295,7 @@ const page = () => {
               whileHover={{ y: -10 }}
               className=" p-6 rounded-2xl bg-[#0c264b] border border-[#0bccc1] shadow-lg text-left transition duration-300"
             >
-              <div className="w-12 h-12 bg-gradient-to-r from-[#0bccc1] to-[#07ebd1] text-black rounded-full flex items-center justify-center mb-4">
+              <div className="w-12 h-12 bg-gradient-to-r from-[#0bccc1] to-[#07ebd1] text-white rounded-full flex items-center justify-center mb-4">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -290,7 +324,7 @@ const page = () => {
               </p>
 
               {/* LINE */}
-              <div className="relative z-10 w-full h-0.5 bg-white/10 my-4"></div>
+              <div className="relative z-10 w-full h-0.5 bg-white/60 my-4"></div>
 
               <ul className="relative z-10 text-sm text-gray-200 space-y-2 mb-6">
                 <li>• Conduct data study to assess impact</li>
@@ -298,8 +332,25 @@ const page = () => {
                 <li>• Ensure compliance with environmental</li>
               </ul>
 
-              <button className="flex items-center gap-2 bg-gradient-to-r from-[#0bccc1] to-[#07ebd1] text-black px-5 py-3 rounded-full font-medium hover:scale-105 transition">
-                Read More →
+              <button className="flex items-center gap-2 bg-gradient-to-r from-[#0bccc1] to-[#07ebd1] text-white px-5 py-2 rounded-full font-medium hover:scale-105 transition">
+                Read More
+                <span className="w-8 h-8 rounded-full bg-[#0c264b] text-[#07ebd1] flex items-center justify-center group-hover:translate-x-2 transition duration-300">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="lucide lucide-arrow-right-icon lucide-arrow-right"
+                  >
+                    <path d="M5 12h14" />
+                    <path d="m12 5 7 7-7 7" />
+                  </svg>
+                </span>
               </button>
             </motion.div>
 
@@ -308,7 +359,7 @@ const page = () => {
               whileHover={{ y: -10 }}
               className=" p-6 rounded-2xl bg-[#0c264b] border border-[#0bccc1] shadow-lg text-left transition duration-300"
             >
-              <div className="w-12 h-12 bg-gradient-to-r from-[#0bccc1] to-[#07ebd1] text-black rounded-full flex items-center justify-center mb-4">
+              <div className="w-12 h-12 bg-gradient-to-r from-[#0bccc1] to-[#07ebd1] text-white rounded-full flex items-center justify-center mb-4">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -337,7 +388,7 @@ const page = () => {
               </p>
 
               {/* LINE */}
-              <div className="relative z-10 w-full h-0.5 bg-white/10 my-4"></div>
+              <div className="relative z-10 w-full h-0.5 bg-white/60 my-4"></div>
 
               <ul className="relative z-10 space-y-2 text-gray-200 text-sm mb-6">
                 <li>• Conduct data study to assess impact</li>
@@ -345,8 +396,25 @@ const page = () => {
                 <li>• Ensure compliance with environmental</li>
               </ul>
 
-              <button className="flex items-center gap-2 bg-gradient-to-r from-[#0bccc1] to-[#07ebd1] text-black px-5 py-3 rounded-full font-medium hover:scale-105 transition">
-                Read More →
+              <button className="flex items-center gap-2 bg-gradient-to-r from-[#0bccc1] to-[#07ebd1] text-white px-5 py-2 rounded-full font-medium hover:scale-105 transition">
+                Read More
+                <span className="w-8 h-8 rounded-full bg-[#0c264b] text-[#07ebd1] flex items-center justify-center group-hover:translate-x-2 transition duration-300">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="lucide lucide-arrow-right-icon lucide-arrow-right"
+                  >
+                    <path d="M5 12h14" />
+                    <path d="m12 5 7 7-7 7" />
+                  </svg>
+                </span>
               </button>
             </motion.div>
 
@@ -355,7 +423,7 @@ const page = () => {
               whileHover={{ y: -10 }}
               className=" p-6 rounded-2xl bg-[#0c264b] border border-[#0bccc1] shadow-lg text-left transition duration-300"
             >
-              <div className="w-12 h-12 bg-gradient-to-r from-[#0bccc1] to-[#07ebd1] text-black rounded-full flex items-center justify-center mb-4">
+              <div className="w-12 h-12 bg-gradient-to-r from-[#0bccc1] to-[#07ebd1] text-white rounded-full flex items-center justify-center mb-4">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -387,7 +455,7 @@ const page = () => {
               </p>
 
               {/* LINE */}
-              <div className="relative z-10 w-full h-0.5 bg-white/10 my-4"></div>
+              <div className="relative z-10 w-full h-0.5 bg-white/60 my-4"></div>
 
               <ul className="relative z-10 space-y-2 text-gray-200 text-sm mb-6">
                 <li>• Conduct data study to assess impact</li>
@@ -395,8 +463,25 @@ const page = () => {
                 <li>• Ensure compliance with environmental</li>
               </ul>
 
-              <button className="flex items-center gap-2 bg-gradient-to-r from-[#0bccc1] to-[#07ebd1] text-black px-5 py-3 rounded-full font-medium hover:scale-105 transition">
-                Read More →
+              <button className="flex items-center gap-2 bg-gradient-to-r from-[#0bccc1] to-[#07ebd1] text-white px-5 py-2 rounded-full font-medium hover:scale-105 transition">
+                Read More
+                <span className="w-8 h-8 rounded-full bg-[#0c264b] text-[#07ebd1] flex items-center justify-center group-hover:translate-x-2 transition duration-300">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="lucide lucide-arrow-right-icon lucide-arrow-right"
+                  >
+                    <path d="M5 12h14" />
+                    <path d="m12 5 7 7-7 7" />
+                  </svg>
+                </span>
               </button>
             </motion.div>
 
@@ -405,7 +490,7 @@ const page = () => {
               whileHover={{ y: -10 }}
               className=" p-6 rounded-2xl bg-[#0c264b] border border-[#0bccc1] shadow-lg text-left transition duration-300"
             >
-              <div className="w-12 h-12 bg-gradient-to-r from-[#0bccc1] to-[#07ebd1] text-black rounded-full flex items-center justify-center mb-4">
+              <div className="w-12 h-12 bg-gradient-to-r from-[#0bccc1] to-[#07ebd1] text-white rounded-full flex items-center justify-center mb-4">
                 <Image
                   src="/service.svg"
                   alt="service icon"
@@ -424,7 +509,7 @@ const page = () => {
               </p>
 
               {/* LINE */}
-              <div className="relative z-10 w-full h-0.5 bg-white/10 my-4"></div>
+              <div className="relative z-10 w-full h-0.5 bg-white/60 my-4"></div>
 
               <ul className="relative z-10 space-y-2 text-gray-200 text-sm mb-6">
                 <li>• Conduct data study to assess impact</li>
@@ -432,8 +517,25 @@ const page = () => {
                 <li>• Ensure compliance with environmental</li>
               </ul>
 
-              <button className="flex items-center gap-2 bg-gradient-to-r from-[#0bccc1] to-[#07ebd1] text-black px-5 py-3 rounded-full font-medium hover:scale-105 transition">
-                Read More →
+              <button className="flex items-center gap-2 bg-gradient-to-r from-[#0bccc1] to-[#07ebd1] text-white px-5 py-2 rounded-full font-medium hover:scale-105 transition">
+                Read More
+                <span className="w-8 h-8 rounded-full bg-[#0c264b] text-[#07ebd1] flex items-center justify-center group-hover:translate-x-2 transition duration-300">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="lucide lucide-arrow-right-icon lucide-arrow-right"
+                  >
+                    <path d="M5 12h14" />
+                    <path d="m12 5 7 7-7 7" />
+                  </svg>
+                </span>
               </button>
             </motion.div>
           </motion.div>
@@ -581,11 +683,11 @@ const page = () => {
             {/* BUTTON */}
             <motion.button
               whileHover={{ scale: 1.05 }}
-              className="group flex items-center w-fit bg-gradient-to-r from-[#0bccc1] to-[#07ebd1] text-[#071c34] font-semibold rounded-full overflow-hidden"
+              className="group flex items-center w-fit bg-gradient-to-r from-[#0bccc1] to-[#07ebd1] text-[#ffffff] font-semibold rounded-full overflow-hidden"
             >
               <span className="px-8 py-5 text-lg">View More Videos</span>
 
-              <span className="w-16 h-16 flex items-center justify-center bg-[#071c34] text-white group-hover:bg-black transition">
+              <span className="w-16 h-16 rounded-full bg-[#0c264b] text-[#07ebd1] flex items-center justify-center group-hover:translate-x-2 transition duration-300">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -818,7 +920,7 @@ const page = () => {
                 whileHover={{ scale: 1.05 }}
                 className="group mt-16 flex items-center overflow-hidden rounded-full bg-gradient-to-r from-[#0bccc1] to-[#07ebd1]"
               >
-                <span className="px-7 py-4 text-[#071c34] text-xl font-semibold">
+                <span className="px-7 py-4 text-[#ffffff] text-xl font-semibold">
                   Learn More
                 </span>
 
@@ -1017,7 +1119,7 @@ const page = () => {
               {/* 10% teal CTA */}
               <motion.button
                 whileHover={{ scale: 1.05 }}
-                className="group mt-4 bg-gradient-to-r from-[#0bccc1] to-[#07ebd1] text-[#0c264b] px-6 py-2 rounded-full font-bold text-xl flex items-center gap-5 shadow-xl"
+                className="group mt-4 bg-gradient-to-r from-[#0bccc1] to-[#07ebd1] text-[#ffffff] px-6 py-2 rounded-full font-bold text-xl flex items-center gap-5 shadow-xl"
               >
                 View All Testimonials
                 <span className="w-14 h-14 rounded-full bg-[#0c264b] text-[#f5f7f4] flex items-center justify-center group-hover:translate-x-2 transition duration-300">
@@ -1150,7 +1252,7 @@ const page = () => {
 
               {/* lime CTA (secondary accent) */}
               <button className="group mt-10 inline-flex items-center overflow-hidden rounded-full bg-[#0bccc1] hover:bg-[#0bccc1] transition-all duration-500">
-                <span className="px-6 py-4 text-[#0c264b] text-xl font-bold">
+                <span className="px-6 py-4 text-[#ffffff] text-xl font-bold">
                   Learn More
                 </span>
                 <span className="flex h-[72px] w-[72px] items-center justify-center bg-[#0c264b] text-[#f5f7f4] transition-all duration-500 group-hover:w-[82px]">
@@ -1185,7 +1287,7 @@ const page = () => {
                 >
                   <div className="flex flex-col sm:flex-row gap-6">
                     <div className="flex-shrink-0">
-                      <div className="flex items-center justify-center w-14 h-14 rounded-full bg-[#0bccc1] text-[#0c264b] shadow-lg">
+                      <div className="flex items-center justify-center w-14 h-14 rounded-full bg-[#0bccc1] text-[#ffffff] shadow-lg">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           width="24"
@@ -1227,7 +1329,7 @@ const page = () => {
             {tags.map((tag, index) => (
               <div
                 key={index}
-                className="inline-flex items-center gap-3 rounded-full bg-[#0c264b]/40 border border-[#0bccc1]/30 px-6 py-3 px-2 py-1 hover:bg-white transition-all duration-300"
+                className="inline-flex items-center gap-3 rounded-full bg-[#0c264b]/10 border border-[#0bccc1]/30 px-6 py-3 px-2 py-1 hover:bg-white transition-all duration-300"
               >
                 <span className="w-2 h-2 rounded-full bg-[#0bccc1]" />
                 <span className="text-[#0c264b] text-md font-medium">
@@ -1236,115 +1338,126 @@ const page = () => {
               </div>
             ))}
           </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.9 }}
-            viewport={{ once: true }}
-            className="mt-4 flex flex-wrap items-center justify-center gap-4 text-center"
-          >
-            <div className="flex items-center">
-              <div className="w-8 h-8 rounded-full overflow-hidden border-2 border-white shadow-lg">
-                <Image
-                  src="/author-1.jpg"
-                  alt="avatar"
-                  width={100}
-                  height={100}
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <div className="-ml-3 flex items-center justify-center w-8 h-8 rounded-full bg-[#0bccc1] border-4 border-[#f5f7f4]">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z" />
-                  <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12" />
-                </svg>
-              </div>
-            </div>
-            <p className="text-[#0c264b] text-md">
-              Let&apos;s make something great work together.
-            </p>
-            <button className="text-[#0c264b] hover:text-[#0bccc1] transition-all duration-300 text-md font-semibold underline underline-offset-4">
-              Get Free Quote
-            </button>
-          </motion.div>
         </div>
       </section>
 
       {/* ============================================================
                 FAQ — 70% navy bg, 30% white text, 10% teal accents
             ============================================================ */}
-      <section className="relative overflow-hidden bg-[#0c264b] py-20 md:py-28">
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[350px] bg-[#0bccc1]/10 blur-[160px]" />
+      <section className="relative overflow-hidden bg-[#09284b] py-20 md:py-28">
+        {/* ================= BACKGROUND GLOW ================= */}
+
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[350px] bg-[#00d2c6]/10 blur-[160px]" />
+
+        {/* FLOATING DOT */}
 
         <motion.div
-          animate={{ y: [0, -20, 0], x: [0, 10, 0] }}
-          transition={{ duration: 4, repeat: Infinity }}
-          className="absolute top-[22%] left-[62%] w-3 h-3 rounded-full bg-[#0bccc1]"
+          animate={{
+            y: [0, -20, 0],
+            x: [0, 10, 0],
+          }}
+          transition={{
+            duration: 4,
+            repeat: Infinity,
+          }}
+          className="absolute top-[22%] left-[62%] w-3 h-3 rounded-full bg-[#00d2c6]"
         />
 
         <div className="max-w-7xl mx-auto px-4 md:px-6 relative z-10">
+          {/* ================================================= */}
+          {/* MAIN GRID */}
+          {/* ================================================= */}
+
           <div className="grid grid-cols-1 xl:grid-cols-2 gap-16 items-start">
-            {/* LEFT */}
+            {/* ================================================= */}
+            {/* LEFT SIDE */}
+            {/* ================================================= */}
+
             <motion.div
               initial={{ opacity: 0, y: 70 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7 }}
             >
-              <div className="inline-flex items-center gap-2 bg-[#102f5c] border border-[#334155] rounded-full px-5 py-2">
-                <div className="w-2 h-2 rounded-full bg-[#0bccc1]" />
-                <span className="text-[#f5f7f4] font-medium text-sm md:text-base">
+              {/* TAG */}
+
+              <div className="inline-flex items-center gap-2 bg-[#123a63] border border-[#334155] rounded-full px-5 py-2">
+                <div className="w-2 h-2 rounded-full bg-[#00d2c6]" />
+
+                <span className="text-white font-medium text-sm md:text-base">
                   Frequently Asked Questions
                 </span>
               </div>
 
-              <h2 className="text-4xl sm:text-5xl md:text-6xl font-black text-[#f5f7f4] leading-[1.1] mt-8 max-w-2xl">
+              {/* HEADING */}
+
+              <h2 className="text-4xl sm:text-5xl md:text-6xl font-black text-white leading-[1.1] mt-8 max-w-[700px]">
                 Clear Information About Our Environmental Approach
               </h2>
 
-              <p className="text-[#b8c5d6] text-lg leading-relaxed mt-8 max-w-xl">
+              {/* PARAGRAPH */}
+
+              <p className="text-[#cbd5e1] text-lg leading-relaxed mt-8 max-w-[650px]">
                 Explore detailed yet easy to understand information about our
                 environmental practices, conservation efforts, and long-term
                 sustainability strategies.
               </p>
 
-              {/* Progress bars */}
+              {/* ================================================= */}
+              {/* PROGRESS SECTION */}
+              {/* ================================================= */}
+
               <div className="mt-14 flex flex-col lg:flex-row lg:items-center gap-12">
+                {/* PROGRESS BARS */}
+
                 <div className="flex-1 space-y-10">
-                  {[
-                    { label: "Climate Action", pct: "95%", w: "95%" },
-                    { label: "Renewable Energy", pct: "90%", w: "90%" },
-                  ].map((bar, i) => (
-                    <div key={i}>
-                      <div className="flex items-center justify-between mb-4">
-                        <h4 className="text-[#f5f7f4] text-2xl font-bold">
-                          {bar.label}
-                        </h4>
-                        <span className="text-[#0bccc1] text-2xl font-black">
-                          {bar.pct}
-                        </span>
-                      </div>
-                      <div className="w-full h-3 rounded-full bg-[#102f5c] overflow-hidden">
-                        <motion.div
-                          initial={{ width: 0 }}
-                          whileInView={{ width: bar.w }}
-                          transition={{ duration: 1 + i * 0.2 }}
-                          className="h-full rounded-full bg-[#0bccc1]"
-                        />
-                      </div>
+                  {/* ITEM 1 */}
+
+                  <div>
+                    <div className="flex items-center justify-between mb-4">
+                      <h4 className="text-white text-2xl font-bold">
+                        Climate Action
+                      </h4>
+
+                      <span className="text-[#00d2c6] text-2xl font-black">
+                        95%
+                      </span>
                     </div>
-                  ))}
+
+                    <div className="w-full h-3 rounded-full bg-[#123a63] overflow-hidden">
+                      <motion.div
+                        initial={{ width: 0 }}
+                        whileInView={{ width: "95%" }}
+                        transition={{ duration: 1 }}
+                        className="h-full rounded-full bg-[#00d2c6]"
+                      />
+                    </div>
+                  </div>
+
+                  {/* ITEM 2 */}
+
+                  <div>
+                    <div className="flex items-center justify-between mb-4">
+                      <h4 className="text-white text-2xl font-bold">
+                        Renewable Energy
+                      </h4>
+
+                      <span className="text-[#00d2c6] text-2xl font-black">
+                        90%
+                      </span>
+                    </div>
+
+                    <div className="w-full h-3 rounded-full bg-[#123a63] overflow-hidden">
+                      <motion.div
+                        initial={{ width: 0 }}
+                        whileInView={{ width: "90%" }}
+                        transition={{ duration: 1.2 }}
+                        className="h-full rounded-full bg-[#00d2c6]"
+                      />
+                    </div>
+                  </div>
                 </div>
+
+                {/* ROTATING BADGE */}
 
                 <div className="flex items-center justify-center">
                   <motion.div
@@ -1354,25 +1467,26 @@ const page = () => {
                       repeat: Infinity,
                       ease: "linear",
                     }}
-                    className="relative w-44 h-44 rounded-full border-[10px] border-[#0bccc1] bg-[#102f5c] flex items-center justify-center"
+                    className="relative w-44 h-44 rounded-full border-[10px] border-[#00d2c6] bg-[#123a63] flex items-center justify-center"
                   >
                     <div className="absolute inset-0 rounded-full border border-[#334155]" />
+
                     <div className="text-center">
-                      <div className="text-3xl text-[#0bccc1]">✺</div>
+                      <div className="text-5xl text-[#00d2c6]">✺</div>
                     </div>
+
                     <div className="absolute inset-0 flex items-center justify-center">
-                      <div className="w-[85%] h-[85%] rounded-full border border-dashed border-[#0bccc1]/40" />
+                      <div className="w-[85%] h-[85%] rounded-full border border-dashed border-[#00d2c6]/40" />
                     </div>
                   </motion.div>
                 </div>
               </div>
             </motion.div>
 
-            {/* ─────────────────────────────────────────────────────────────
-                      BUG FIX #2 — FAQ chevron never changed direction.
-                      Both open/closed states used lucide-chevron-up SVG path.
-                      Fixed: closed state uses chevron-down path (m6 9 6 6 6-6).
-                  ───────────────────────────────────────────────────────────── */}
+            {/* ================================================= */}
+            {/* FAQ RIGHT SIDE */}
+            {/* ================================================= */}
+
             <motion.div
               initial={{ opacity: 0, y: 70 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -1382,18 +1496,27 @@ const page = () => {
               {faqs.map((faq, index) => (
                 <div
                   key={index}
-                  className={`rounded-[28px] overflow-hidden border transition-all duration-500 ${active === index ? "bg-[#102f5c] border-[#0bccc1]" : "bg-[#102f5c]/50 border-[#334155]"}`}
+                  className={`rounded-[28px] overflow-hidden border transition-all duration-500 ${
+                    active === index
+                      ? "bg-[#123a63] border-[#00d2c6]"
+                      : "bg-[#123a63]/50 border-[#334155]"
+                  }`}
                 >
+                  {/* QUESTION */}
+
                   <button
                     onClick={() => setActive(active === index ? -1 : index)}
-                    className={`w-full flex items-center justify-between gap-5 px-8 py-7 text-left transition-all duration-300 ${active === index ? "bg-[#0bccc1] text-[#0c264b]" : "text-[#f5f7f4] hover:bg-[#102f5c]"}`}
+                    className={`w-full flex items-center justify-between gap-5 px-8 py-7 text-left transition-all duration-300 ${
+                      active === index
+                        ? "bg-[#00d2c6] text-[#09284b]"
+                        : "text-white hover:bg-[#123a63]"
+                    }`}
                   >
                     <span className="text-xl md:text-2xl font-bold leading-snug">
                       {faq.question}
                     </span>
 
                     {active === index ? (
-                      /* chevron-up when open */
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="24"
@@ -1404,11 +1527,11 @@ const page = () => {
                         strokeWidth="2"
                         strokeLinecap="round"
                         strokeLinejoin="round"
+                        className="lucide lucide-chevron-up-icon lucide-chevron-up"
                       >
                         <path d="m18 15-6-6-6 6" />
                       </svg>
                     ) : (
-                      /* chevron-down when closed — FIXED */
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="24"
@@ -1419,11 +1542,14 @@ const page = () => {
                         strokeWidth="2"
                         strokeLinecap="round"
                         strokeLinejoin="round"
+                        className="lucide lucide-chevron-up-icon lucide-chevron-up"
                       >
-                        <path d="m6 9 6 6 6-6" />
+                        <path d="m18 15-6-6-6 6" />
                       </svg>
                     )}
                   </button>
+
+                  {/* ANSWER */}
 
                   <motion.div
                     initial={false}
@@ -1435,7 +1561,7 @@ const page = () => {
                     className="overflow-hidden"
                   >
                     <div className="px-8 pb-8 pt-6">
-                      <p className="text-[#b8c5d6] text-lg leading-relaxed">
+                      <p className="text-[#cbd5e1] text-lg leading-relaxed">
                         {faq.answer}
                       </p>
                     </div>
@@ -1445,31 +1571,57 @@ const page = () => {
             </motion.div>
           </div>
 
-          {/* Logos */}
+          {/* ================================================= */}
+          {/* BOTTOM LOGOS */}
+          {/* ================================================= */}
+
           <div className="mt-24">
+            {/* LINE + TITLE */}
+
             <div className="flex items-center gap-6">
               <div className="flex-1 h-[1px] bg-[#334155]" />
-              <h3 className="text-[#f5f7f4] text-xl md:text-2xl font-bold text-center whitespace-nowrap">
+
+              <h3 className="text-white text-xl md:text-2xl font-bold text-center whitespace-nowrap">
                 Trusted by Leading Environmental Partners
               </h3>
+
               <div className="flex-1 h-[1px] bg-[#334155]" />
             </div>
 
-            <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-5 gap-8 mt-14">
-              {logos.map((logo, index) => (
-                <motion.div
-                  key={index}
-                  whileHover={{ y: -5, scale: 1.03 }}
-                  className="flex items-center justify-center gap-3 rounded-2xl border border-[#334155] bg-[#102f5c]/40 px-8 py-6"
-                >
-                  <div className="w-14 h-14 rounded-full bg-[#0bccc1]/20 flex items-center justify-center">
-                    <div className="w-7 h-7 rounded-full border-4 border-[#0bccc1]" />
+            {/* LOGOS */}
+
+            {/* Infinite Marquee */}
+            <div className="mt-14 overflow-hidden relative">
+              {/* Fade edges */}
+              <div className="absolute left-0 top-0 h-full w-24 bg-gradient-to-r from-[#0c264b] to-transparent z-10 pointer-events-none" />
+              <div className="absolute right-0 top-0 h-full w-24 bg-gradient-to-l from-[#0c264b] to-transparent z-10 pointer-events-none" />
+
+              <motion.div
+                className="flex gap-8 w-max"
+                animate={{ x: ["0%", "-50%"] }}
+                transition={{
+                  duration: 18,
+                  ease: "linear",
+                  repeat: Infinity,
+                }}
+              >
+                {[...logos, ...logos].map((logo, index) => (
+                  <div
+                    key={index}
+                    className="flex items-center justify-center gap-3 rounded-2xl border border-[#334155] bg-[#123a63]/40 px-8 py-6 min-w-max"
+                  >
+                    {/* ICON */}
+                    <div className="w-14 h-14 rounded-full bg-[#00d2c6]/20 flex items-center justify-center">
+                      <div className="w-7 h-7 rounded-full border-4 border-[#00d2c6]" />
+                    </div>
+
+                    {/* TEXT */}
+                    <span className="text-white text-2xl font-black">
+                      {logo}
+                    </span>
                   </div>
-                  <span className="text-[#f5f7f4] text-2xl font-black">
-                    {logo}
-                  </span>
-                </motion.div>
-              ))}
+                ))}
+              </motion.div>
             </div>
           </div>
         </div>
@@ -1627,20 +1779,6 @@ const page = () => {
                 • {tag}
               </span>
             ))}
-          </div>
-
-          {/* 🔵 CTA LINE */}
-          <div className="flex items-center justify-center gap-3 mt-8 text-gray-300">
-            <div className="w-10 h-10 bg-secondary rounded-full flex items-center justify-center text-black">
-              ☎
-            </div>
-
-            <p>
-              Lets make something great work together.
-              <span className="text-cyan-400 ml-2 cursor-pointer">
-                Get Free Quote
-              </span>
-            </p>
           </div>
         </div>
       </section>

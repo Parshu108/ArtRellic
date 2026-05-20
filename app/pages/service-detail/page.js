@@ -153,7 +153,7 @@ const page = () => {
 
                   {/* Content */}
                   <div className="absolute bottom-2 left-8 right-8">
-                    <div className="w-14 h-14 rounded-full bg-[#0bccc1]  flex items-center justify-center mb-4 shadow-lg">
+                    <div className="w-14 h-14 rounded-full bg-[#0bccc1] text-[#ffffff] flex items-center justify-center mb-4 shadow-lg">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="24"

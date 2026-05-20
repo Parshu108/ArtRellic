@@ -89,7 +89,7 @@ const page = () => {
                 <div className="grid grid-cols-1 gap-5 rounded-3xl border border-[#0bccc1]/20 bg-[#0c264b]/70 p-6 backdrop-blur-xl md:grid-cols-2">
                   {/* Phone */}
                   <div className="flex items-center gap-4">
-                    <div className="flex h-16 w-16 items-center justify-center rounded-full bg-[#0bccc1] text-[#0c264b] shadow-lg shadow-[#07ebd1]/20">
+                    <div className="flex h-16 w-16 items-center justify-center rounded-full bg-[#0bccc1] text-[#ffffff] shadow-lg shadow-[#07ebd1]/20">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="24"
@@ -119,7 +119,7 @@ const page = () => {
 
                   {/* Email */}
                   <div className="flex items-center gap-4">
-                    <div className="flex h-16 w-16 items-center justify-center rounded-full bg-[#0bccc1] text-[#0c264b] shadow-lg shadow-[#07ebd1]/20">
+                    <div className="flex h-16 w-16 items-center justify-center rounded-full bg-[#0bccc1] text-[#ffffff] shadow-lg shadow-[#07ebd1]/20">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="24"
@@ -258,7 +258,7 @@ const page = () => {
               <motion.button
                 whileHover={{ scale: 1.03 }}
                 whileTap={{ scale: 0.96 }}
-                className="group flex items-center gap-5 rounded-full bg-[#0bccc1] px-4 py-2 text-xl font-bold text-[#0c264b] shadow-xl shadow-[#07ebd1]/20 transition-all duration-300 hover:bg-[#07ebd1]"
+                className="group flex items-center gap-5 rounded-full bg-[#0bccc1] px-4 py-2 text-xl font-bold text-[#ffffff] shadow-xl shadow-[#07ebd1]/20 transition-all duration-300 hover:bg-[#07ebd1]"
               >
                 Submit Message
                 <span className="flex h-12 w-12 items-center justify-center rounded-full bg-[#0c264b] text-[#07ebd1] transition duration-300 group-hover:translate-x-1">

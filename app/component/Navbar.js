@@ -8,58 +8,59 @@ const Navbar = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <nav className="bg-[#0c264b] text-[#0bccc1] p-4 border-b border-slate-700 relative z-50">
-      <div className="flex items-center justify-between max-w-7xl mx-auto">
-        {/* Logo */}
-        <div className="text-2xl font-bold">
+    <nav className="bg-[#0c264b] text-[#0bccc1] p-2 border-b border-slate-700 relative z-50">
+      <div className="flex items-center justify-between max-w-7xl mx-auto h-[50px]">
+        {/* Logo — same line-height as nav links (text-[18px] font-semibold ≈ 44px tall row) */}
+        <div className="flex items-center">
           <Image
-            src="/logo/Logo.jpeg"
+            src="/logo/3.png"
             alt="Logo"
-            width={120}
-            height={50}
+            width={200}
+            height={100}
             priority
-            style={{ width: "auto", height: "auto" }}
+            className="object-contain"
+            style={{ width: "auto", height: "80px" }}
           />
         </div>
 
         {/* Desktop Menu */}
-        <div className="hidden md:block">
-          <ul className="flex space-x-10 items-center">
-            <li className="relative group">
+        <div className="hidden md:flex items-center">
+          <ul className="flex space-x-10 items-center h-[44px]">
+            <li className="relative group flex items-center h-full">
               <Link
                 href="/"
-                className="text-[#0bccc1]/90 font-semibold transition duration-300 hover:text-[#07ebd1]"
+                className="text-[#0bccc1]/90 text-[18px] font-semibold transition duration-300 hover:text-[#07ebd1]"
               >
                 Home
               </Link>
               <span className="absolute left-0 -bottom-1 h-0.5 w-0 bg-gradient-to-r from-[#0bccc1] to-[#07ebd1] transition-all duration-300 group-hover:w-full"></span>
             </li>
 
-            <li className="relative group">
+            <li className="relative group flex items-center h-full">
               <Link
                 href="/abouts"
-                className="text-[#0bccc1]/90 font-semibold transition duration-300 hover:text-[#07ebd1]"
+                className="text-[#0bccc1]/90 text-[18px] font-semibold transition duration-300 hover:text-[#07ebd1]"
               >
                 About
               </Link>
               <span className="absolute left-0 -bottom-1 h-0.5 w-0 bg-gradient-to-r from-[#0bccc1] to-[#07ebd1] transition-all duration-300 group-hover:w-full"></span>
             </li>
 
-            <li className="relative group">
+            <li className="relative group flex items-center h-full">
               <Link
                 href="/services"
-                className="text-[#0bccc1]/90 font-semibold transition duration-300 hover:text-[#07ebd1]"
+                className="text-[#0bccc1]/90 text-[18px] font-semibold transition duration-300 hover:text-[#07ebd1]"
               >
                 Services
               </Link>
               <span className="absolute left-0 -bottom-1 h-0.5 w-0 bg-gradient-to-r from-[#0bccc1] to-[#07ebd1] transition-all duration-300 group-hover:w-full"></span>
             </li>
 
-            <li className="relative group">
+            <li className="relative group flex items-center h-full">
               <Link
                 href="/blogs"
                 prefetch={false}
-                className="text-[#0bccc1]/90 font-semibold transition duration-300 hover:text-[#07ebd1]"
+                className="text-[#0bccc1]/90 text-[18px] font-semibold transition duration-300 hover:text-[#07ebd1]"
               >
                 Blog
               </Link>
@@ -67,24 +68,20 @@ const Navbar = () => {
             </li>
 
             {/* Dropdown */}
-            <li className="relative group">
-              {/* MAIN MENU */}
-
-              <button className="flex items-center gap-2 text-[#0bccc1]/90 font-semibold tracking-wide transition-all duration-300 hover:text-[#07ebd1]">
+            <li className="relative group flex items-center h-full">
+              <button className="flex items-center gap-2 text-[#0bccc1]/90 text-[18px] font-semibold tracking-wide transition-all duration-300 hover:text-[#07ebd1]">
                 Pages
                 <span className="text-xs transition-transform duration-300 group-hover:rotate-180">
                   ▾
                 </span>
               </button>
 
-              {/* DROPDOWN */}
-
               <div
                 className="
                 absolute left-1/2 top-full z-50
                 mt-6 w-[200px] -translate-x-1/2
                 rounded-3xl border border-[#0bccc1]/20
-               bg-[#102f5c]/95
+                bg-[#102f5c]/95
                 backdrop-blur-2xl
                 shadow-[0_20px_80px_rgba(0,0,0,0.45)]
                 p-4
@@ -94,15 +91,10 @@ const Navbar = () => {
                 group-hover:opacity-100
                 group-hover:visible
                 group-hover:translate-y-0
-
                 lg:w-[320px]
               "
               >
-                {/* GLOW EFFECT */}
-
                 <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-[#0bccc1]/10 via-transparent to-[#4fffd8]/10 pointer-events-none" />
-
-                {/* MENU LIST */}
 
                 <ul className="relative z-10 flex flex-col gap-2">
                   {[
@@ -121,29 +113,27 @@ const Navbar = () => {
                       <Link
                         href={item.link}
                         className="
-              group/item
-              flex items-center justify-between
-              rounded-2xl
-              px-3 py-2
-              text-[15px] font-medium
-              text-[#d8f8f5]
-              transition-all duration-300
-
-              hover:bg-[#0bccc1]
-              hover:text-[#09284b]
-              hover:translate-x-1
-            "
+                          group/item
+                          flex items-center justify-between
+                          rounded-2xl
+                          px-3 py-2
+                          text-[15px] font-medium
+                          text-[#d8f8f5]
+                          transition-all duration-300
+                          hover:bg-[#0bccc1]
+                          hover:text-[#09284b]
+                          hover:translate-x-1
+                        "
                       >
                         <span>{item.name}</span>
-
                         <span
                           className="
-                text-lg opacity-0
-                -translate-x-2
-                transition-all duration-300
-                group-hover/item:opacity-100
-                group-hover/item:translate-x-0
-              "
+                            text-lg opacity-0
+                            -translate-x-2
+                            transition-all duration-300
+                            group-hover/item:opacity-100
+                            group-hover/item:translate-x-0
+                          "
                         >
                           →
                         </span>
@@ -152,16 +142,14 @@ const Navbar = () => {
                   ))}
                 </ul>
 
-                {/* BOTTOM BORDER LIGHT */}
-
                 <div className="mt-4 h-px w-full bg-gradient-to-r from-transparent via-[#0bccc1]/40 to-transparent" />
               </div>
             </li>
 
-            <li className="relative group">
+            <li className="relative group flex items-center h-full">
               <Link
                 href="/contact"
-                className="text-[#0bccc1]/90 font-semibold transition duration-300 hover:text-[#07ebd1]"
+                className="text-[#0bccc1]/90 text-[18px] font-semibold transition duration-300 hover:text-[#07ebd1]"
               >
                 Contact
               </Link>
@@ -171,7 +159,7 @@ const Navbar = () => {
         </div>
 
         {/* CTA */}
-        <button className="hidden md:block bg-[#0bccc1] text-[#0c264b] hover:bg-[#07ebd1] shadow-lg shadow-cyan-400/20 font-semibold py-2 px-5 rounded-lg hover:scale-105 transition">
+        <button className="hidden md:block bg-[#0bccc1]/90 text-[#ffffff] hover:bg-[#07ebd1]/90 shadow-lg shadow-cyan-400/20 text-[18px] font-semibold py-2 px-5 rounded-lg hover:scale-105 transition">
           Contact Us
         </button>
 
@@ -209,7 +197,6 @@ const Navbar = () => {
             Blog
           </Link>
 
-          {/* Mobile Dropdown (simple list) */}
           <div>
             <p className="text-cyan-400 font-semibold">Pages</p>
             <ul className="ml-4 mt-2 space-y-2 text-gray-300 text-sm">

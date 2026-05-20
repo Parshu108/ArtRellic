@@ -90,18 +90,16 @@ export default function Footer() {
             {/* LOGO */}
             <div className="flex items-center gap-4">
               <Image
-                src="/logo/Logo.jpeg"
+                src="/logo/1.png"
                 alt="logo"
                 width={80}
                 height={80}
-                className=" rounded-2 w-auto h-auto "
+                className=" rounded-2 w-auto h-40"
               />
-
-              <h2 className="text-3xl font-black">Greva</h2>
             </div>
 
             {/* DESC */}
-            <p className="text-gray-300 leading-relaxed mt-8 text-base md:text-md">
+            <p className="text-gray-300 leading-relaxed mt-4 text-base md:text-md">
               We are dedicated to protect nature promoting sustainable living
               through conservation initiatives, climate action, and
               environmental education.

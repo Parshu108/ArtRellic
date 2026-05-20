@@ -4,9 +4,38 @@ import Navbar from "./component/Navbar";
 import Footer from "./component/Footer";
 
 
+// app/layout.js
+
 export const metadata = {
-  title: "ART-RELLIC Technology",
-  description: "ART-RELLIC Technology is a cutting-edge platform that combines art and technology to create immersive and interactive experiences. Our mission is to revolutionize the way people engage with art by leveraging the power of technology. We offer a wide range of services, including virtual reality art exhibitions, augmented reality installations, and digital art creation tools. With ART-RELLIC Technology, artists can push the boundaries of creativity and audiences can explore art in new and exciting ways.",
+  title: "ArtRellic - Web Development Agency",
+  description:
+    "ArtRellic builds modern websites, dashboards, ecommerce apps and UI designs using Next.js and React.",
+
+  keywords: [
+    "Next.js Developer",
+    "React Developer",
+    "Web Design",
+    "Dashboard UI",
+    "Ecommerce Website",
+  ],
+
+  authors: [{ name: "Parshuram Sahani" }],
+
+  openGraph: {
+    title: "ArtRellic",
+    description: "Modern Web Development Agency",
+    url: "https://yourwebsite.com",
+    siteName: "ArtRellic",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
 };
 
 export default function RootLayout({ children }) {

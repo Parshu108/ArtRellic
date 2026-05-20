@@ -362,7 +362,7 @@ export default function Home() {
               {/* BUTTON */}
               <motion.button
                 whileHover={{ scale: 1.05 }}
-                className="group mt-2 bg-[#0bccc1] text-[#0c264b] hover:bg-[#07ebd1] px-6 py-2 rounded-full font-bold text-xl flex items-center gap-5 shadow-xl"
+                className="group mt-2 bg-[#0bccc1] text-[#ffffff] hover:bg-[#07ebd1] px-6 py-2 rounded-full font-bold text-xl flex items-center gap-5 shadow-xl"
               >
                 Get Involved
                 <span className="w-14 h-14 rounded-full bg-[#0c264b] text-[#07ebd1] flex items-center justify-center group-hover:translate-x-2 transition duration-300">
@@ -435,7 +435,7 @@ export default function Home() {
                   alt="Solar"
                   width={700}
                   height={900}
-                  className="w-full h-[860px] object-cover hover:scale-105 transition duration-700"
+                  className="w-full h-[950px] object-cover hover:scale-105 transition duration-700"
                 />
               </div>
 
@@ -450,7 +450,7 @@ export default function Home() {
                 }}
                 className="absolute bottom-10 right-6  backdrop-blur-xl bg-[#0c264b]/70 border border-[#0bccc1]/20 rounded-[28px] p-6 w-[230px] shadow-2xl"
               >
-                <div className="w-16 h-16 rounded-full bg-[#0bccc1] text-[#0c264b] flex items-center justify-center mb-5">
+                <div className="w-16 h-16 rounded-full bg-[#0bccc1] text-[#ffffff] flex items-center justify-center mb-5">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
@@ -514,29 +514,35 @@ export default function Home() {
                 className="mt-4 bg-[#102f5c] border border-[#0bccc1]/10 rounded-[32px] overflow-hidden shadow-lg"
               >
                 <div className="grid md:grid-cols-2">
-                  <Image
-                    src="/service1.jpg"
-                    alt="Solar"
-                    width={400}
-                    height={300}
-                    className="w-full h-50 object-cover"
-                  />
+                  {/* Image — full height on both mobile & desktop */}
+                  <div className="relative w-full h-60 md:h-full min-h-[200px]">
+                    <Image
+                      src="/service1.jpg"
+                      alt="Solar"
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
 
-                  <div className="p-2 flex flex-col justify-center">
-                    <p className="text-white text-xl font-semibold leading-relaxed">
-                      Protecting the environment is not a choice it is a
+                  {/* Content */}
+                  <div className="p-8 flex flex-col justify-center gap-5">
+                    <p className="text-white text-lg font-medium leading-relaxed -mt-3">
+                      Protecting the environment is not a choice — it is a
                       responsibility we owe to future generations.
                     </p>
 
-                    <div className="w-full h-[1px] bg-gray-300 "></div>
+                    {/* Divider */}
+                    <div className="w-12 h-[2px] bg-gradient-to-r from-[#0bccc1] to-[#07ebd1] rounded-full" />
 
-                    <h4 className="text-xl font-bold text-secondary">
-                      Marvin McKinney
-                    </h4>
-
-                    <p className="text-[#0bccc1]/70 mt-1 text-lg">
-                      Founder & CEO
-                    </p>
+                    {/* Author */}
+                    <div className="flex flex-col gap-1">
+                      <h4 className="text-lg font-bold text-white tracking-wide">
+                        Marvin McKinney
+                      </h4>
+                      <p className="text-[#0bccc1]/70 text-sm tracking-widest uppercase">
+                        Founder & CEO
+                      </p>
+                    </div>
                   </div>
                 </div>
               </motion.div>
@@ -545,7 +551,7 @@ export default function Home() {
               <div className="grid md:grid-cols-2 gap-5 mt-4">
                 {/* FEATURE 1 */}
                 <motion.div whileHover={{ y: -6 }} className="flex gap-5">
-                  <div className="w-12 h-12 rounded-full bg-[#0bccc1] text-[#0c264b] flex items-center justify-center shrink-0">
+                  <div className="w-12 h-12 rounded-full bg-[#0bccc1] text-[#ffffff] flex items-center justify-center shrink-0">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="24"
@@ -577,7 +583,7 @@ export default function Home() {
 
                 {/* FEATURE 2 */}
                 <motion.div whileHover={{ y: -6 }} className="flex gap-5">
-                  <div className="w-12 h-12 rounded-full bg-[#0bccc1] text-[#0c264b] flex items-center justify-center shrink-0">
+                  <div className="w-12 h-12 rounded-full bg-[#0bccc1] text-[#ffffff] flex items-center justify-center shrink-0">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="24"
@@ -663,7 +669,7 @@ export default function Home() {
               {/* BUTTON */}
               <motion.button
                 whileHover={{ scale: 1.05 }}
-                className="group mt-4 bg-gradient-to-r from-[#0bccc1] to-[#07ebd1] text-black px-6 py-2 rounded-full font-bold text-xl flex items-center gap-5 shadow-xl"
+                className="group mt-4 bg-gradient-to-r from-[#0bccc1] to-[#07ebd1] text-white px-6 py-2 rounded-full font-bold text-xl flex items-center gap-5 shadow-xl"
               >
                 More About Us
                 <span className="w-14 h-14 rounded-full bg-[#0c264b] text-[#07ebd1] flex items-center justify-center group-hover:translate-x-2 transition duration-300">
@@ -766,7 +772,7 @@ export default function Home() {
               whileHover={{ y: -10 }}
               className=" p-6 rounded-2xl bg-[#0c264b]/70 border border-[#0bccc1]/20 shadow-lg text-left transition duration-300"
             >
-              <div className="w-12 h-12 bg-gradient-to-r from-[#0bccc1] to-[#07ebd1] text-black rounded-full flex items-center justify-center mb-4">
+              <div className="w-12 h-12 bg-gradient-to-r from-[#0bccc1] to-[#07ebd1] text-white rounded-full flex items-center justify-center mb-4">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -802,8 +808,25 @@ export default function Home() {
                 <li>• Ensure compliance with environmental</li>
               </ul>
 
-              <button className="flex items-center gap-2 bg-gradient-to-r from-[#0bccc1] to-[#07ebd1] text-black px-5 py-2 rounded-full font-medium hover:scale-105 transition">
-                Read More →
+              <button className="flex items-center gap-2 bg-gradient-to-r from-[#0bccc1] to-[#07ebd1] text-white px-5 py-2 rounded-full font-medium hover:scale-105 transition">
+                Read More
+                <span className="w-8 h-8 rounded-full bg-[#0c264b] text-[#07ebd1] flex items-center justify-center group-hover:translate-x-2 transition duration-300">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="lucide lucide-arrow-right-icon lucide-arrow-right"
+                  >
+                    <path d="M5 12h14" />
+                    <path d="m12 5 7 7-7 7" />
+                  </svg>
+                </span>
               </button>
             </motion.div>
 
@@ -812,7 +835,7 @@ export default function Home() {
               whileHover={{ y: -10 }}
               className=" p-6 rounded-2xl bg-[#0c264b]/70 border border-[#0bccc1]/20 shadow-lg text-left transition duration-300"
             >
-              <div className="w-12 h-12 bg-gradient-to-r from-[#0bccc1] to-[#07ebd1] text-black rounded-full flex items-center justify-center mb-4">
+              <div className="w-12 h-12 bg-gradient-to-r from-[#0bccc1] to-[#07ebd1] text-white rounded-full flex items-center justify-center mb-4">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -849,8 +872,25 @@ export default function Home() {
                 <li>• Ensure compliance with environmental</li>
               </ul>
 
-              <button className="flex items-center gap-2 bg-gradient-to-r from-[#0bccc1] to-[#07ebd1] text-black px-5 py-2 rounded-full font-medium hover:scale-105 transition">
-                Read More →
+              <button className="flex items-center gap-2 bg-gradient-to-r from-[#0bccc1] to-[#07ebd1] text-white px-5 py-2 rounded-full font-medium hover:scale-105 transition">
+                Read More
+                <span className="w-8 h-8 rounded-full bg-[#0c264b] text-[#07ebd1] flex items-center justify-center group-hover:translate-x-2 transition duration-300">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="lucide lucide-arrow-right-icon lucide-arrow-right"
+                  >
+                    <path d="M5 12h14" />
+                    <path d="m12 5 7 7-7 7" />
+                  </svg>
+                </span>
               </button>
             </motion.div>
 
@@ -859,7 +899,7 @@ export default function Home() {
               whileHover={{ y: -10 }}
               className=" p-6 rounded-2xl bg-[#0c264b]/70 border border-[#0bccc1]/20 shadow-lg text-left transition duration-300"
             >
-              <div className="w-12 h-12 bg-gradient-to-r from-[#0bccc1] to-[#07ebd1] text-black rounded-full flex items-center justify-center mb-4">
+              <div className="w-12 h-12 bg-gradient-to-r from-[#0bccc1] to-[#07ebd1] text-white rounded-full flex items-center justify-center mb-4">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -896,8 +936,25 @@ export default function Home() {
                 <li>• Ensure compliance with environmental</li>
               </ul>
 
-              <button className="flex items-center gap-2 bg-gradient-to-r from-[#0bccc1] to-[#07ebd1] text-black px-5 py-2 rounded-full font-medium hover:scale-105 transition">
-                Read More →
+              <button className="flex items-center gap-2 bg-gradient-to-r from-[#0bccc1] to-[#07ebd1] text-white px-5 py-2 rounded-full font-medium hover:scale-105 transition">
+                Read More
+                <span className="w-8 h-8 rounded-full bg-[#0c264b] text-[#07ebd1] flex items-center justify-center group-hover:translate-x-2 transition duration-300">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="lucide lucide-arrow-right-icon lucide-arrow-right"
+                  >
+                    <path d="M5 12h14" />
+                    <path d="m12 5 7 7-7 7" />
+                  </svg>
+                </span>
               </button>
             </motion.div>
           </motion.div>
@@ -1060,7 +1117,7 @@ export default function Home() {
                 whileHover={{ scale: 1.05 }}
                 className="group mt-16 flex items-center overflow-hidden rounded-full bg-gradient-to-r from-[#0bccc1] to-[#07ebd1]"
               >
-                <span className="px-7 py-4 text-[#071c34] text-xl font-semibold">
+                <span className="px-7 py-4 text-[#ffffff] text-xl font-semibold">
                   Learn More
                 </span>
 
@@ -1344,11 +1401,11 @@ export default function Home() {
             {/* BUTTON */}
             <motion.button
               whileHover={{ scale: 1.05 }}
-              className="group flex items-center w-fit bg-gradient-to-r from-[#0bccc1] to-[#07ebd1] text-[#071c34] font-semibold rounded-full overflow-hidden"
+              className="group flex items-center w-fit bg-gradient-to-r from-[#0bccc1] to-[#07ebd1] text-[#ffffff] font-semibold rounded-full overflow-hidden"
             >
               <span className="px-8 py-5 text-lg">View More Videos</span>
 
-              <span className="w-16 h-16 flex items-center justify-center bg-[#071c34] text-white group-hover:bg-black transition">
+              <span className="w-16 h-16 rounded-full bg-[#0c264b] text-[#07ebd1] flex items-center justify-center group-hover:translate-x-2 transition duration-300">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -1578,41 +1635,14 @@ export default function Home() {
               </span>
             ))}
           </div>
-
-          {/* 🔵 CTA LINE */}
-          <div className="flex items-center justify-center gap-3 mt-8 text-gray-300">
-            <div className="w-10 h-10 bg-secondary rounded-full flex items-center justify-center text-black">
-              ☎
-            </div>
-
-            <p>
-              Lets make something great work together.
-              <span className="text-cyan-400 ml-2 cursor-pointer">
-                Get Free Quote
-              </span>
-            </p>
-          </div>
         </div>
       </section>
 
       <section className="relative overflow-hidden bg-[#eef1ec] py-24">
         {/* BACKGROUND BIG TEXT */}
-        <h1 className="absolute bottom-[-40px] left-1/2 -translate-x-1/2 text-[220px] font-black uppercase tracking-wider text-[#0bccc1]/10 select-none hidden lg:block">
-          Greva
+        <h1 className="absolute bottom-[-40px] left-1/2 -translate-x-1/2 text-[220px] font-black uppercase tracking-wider text-[#0bccc1]/20 select-none hidden lg:block">
+          ARTRELIC
         </h1>
-
-        {/* FLOATING DOT */}
-        <motion.div
-          animate={{
-            y: [0, -20, 0],
-            x: [0, 10, 0],
-          }}
-          transition={{
-            duration: 5,
-            repeat: Infinity,
-          }}
-          className="absolute top-1/3 left-1/2 w-4 h-4 rounded-full bg-secondary"
-        />
 
         <div className="max-w-7xl mx-auto px-6 relative z-10">
           <div className="flex items-center justify-center gap-3 mb-4">
@@ -1620,7 +1650,7 @@ export default function Home() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              className="bg-[#0bccc1]/10 border border-[#0bccc1]/20 text-slate-700 px-4 py-2 rounded-full text-sm inline-block"
+              className="bg-[#0bccc1]/10 border border-[#0bccc1]/20 text-slate-700 px-6 py-3 rounded-full text-sm inline-block"
             >
               <span className="w-2 h-2 rounded-full bg-[#07ebd1] animate-pulse" />
 
@@ -1860,11 +1890,7 @@ export default function Home() {
                   y: -10,
                 }}
                 className={`relative overflow-hidden rounded-4xl border border-gray-200
-              ${
-                item.dark
-                  ? "bg-[#081c15] text-white"
-                  : "bg-[#f5f7f2] text-[#081c15]"
-              }`}
+              ${item.dark ? "bg-[#0c264b] text-[#f5f7f4]" : "bg-[#f5f7f4] text-[#0c264b]"}`}
               >
                 {/* IMAGE CARD */}
                 {item.image && (
@@ -1892,15 +1918,15 @@ export default function Home() {
                     className={`w-16 h-16 rounded-full flex items-center justify-center shadow-lg bg-gradient-to-r from-[#0bccc1] to-[#07ebd1]
                   ${
                     item.dark
-                      ? "bg-secondary text-[#081c15]"
-                      : "bg-white text-[#081c15]"
+                      ? "bg-secondary text-[#ffffff]"
+                      : "bg-white text-[#ffffff]"
                   }`}
                   >
                     {item.icon}
                   </motion.div>
 
                   {/* TITLE */}
-                  <h2 className="text-4xl text-[#071c34] font-bold mt-4 leading-tight">
+                  <h2 className="text-4xl text-[#ffffff] font-bold mt-4 leading-tight">
                     {item.title}
                   </h2>
 
@@ -1915,7 +1941,7 @@ export default function Home() {
                   {/* LINE */}
                   <div
                     className={`w-full h-0.5 mt-5
-                  ${item.dark ? "bg-[#0bccc1]/20" : "bg-[#07ebd1]"}`}
+                  ${item.dark ? "bg-[#0bccc1]/90" : "bg-[#07ebd1]"}`}
                   ></div>
 
                   {/* POINTS */}
@@ -2020,10 +2046,10 @@ export default function Home() {
               {/* BUTTON */}
               <motion.button
                 whileHover={{ scale: 1.05 }}
-                className="group mt-4 bg-gradient-to-r from-[#0bccc1] to-[#07ebd1] text-black px-6 py-2 rounded-full font-bold text-xl flex items-center gap-5 shadow-xl"
+                className="group mt-4 bg-gradient-to-r from-[#0bccc1] to-[#07ebd1] text-white px-6 py-2 rounded-full font-bold text-xl flex items-center gap-5 shadow-xl"
               >
                 View All Testimonials
-                <span className="w-14 h-14 rounded-full bg-black text-white flex items-center justify-center group-hover:translate-x-2 transition duration-300">
+                <span className="w-14 h-14 rounded-full bg-[#0c264b] text-white flex items-center justify-center group-hover:translate-x-2 transition duration-300">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
@@ -2146,7 +2172,7 @@ export default function Home() {
 
                 {/* QUOTE */}
                 <p className="text-[20px] leading-[1.7] text-[#081c15] font-semibold mt-14">
-                  " {item.quote} "
+                  {item.quote}
                 </p>
 
                 {/* LINE */}
@@ -2422,27 +2448,38 @@ export default function Home() {
 
             {/* LOGOS */}
 
-            <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-5 gap-8 mt-14">
-              {logos.map((logo, index) => (
-                <motion.div
-                  key={index}
-                  whileHover={{
-                    y: -5,
-                    scale: 1.03,
-                  }}
-                  className="flex items-center justify-center gap-3 rounded-2xl border border-[#334155] bg-[#123a63]/40 px-8 py-6"
-                >
-                  {/* ICON */}
+            {/* Infinite Marquee */}
+            <div className="mt-14 overflow-hidden relative">
+              {/* Fade edges */}
+              <div className="absolute left-0 top-0 h-full w-24 bg-gradient-to-r from-[#0c264b] to-transparent z-10 pointer-events-none" />
+              <div className="absolute right-0 top-0 h-full w-24 bg-gradient-to-l from-[#0c264b] to-transparent z-10 pointer-events-none" />
 
-                  <div className="w-14 h-14 rounded-full bg-[#00d2c6]/20 flex items-center justify-center">
-                    <div className="w-7 h-7 rounded-full border-4 border-[#00d2c6]" />
+              <motion.div
+                className="flex gap-8 w-max"
+                animate={{ x: ["0%", "-50%"] }}
+                transition={{
+                  duration: 18,
+                  ease: "linear",
+                  repeat: Infinity,
+                }}
+              >
+                {[...logos, ...logos].map((logo, index) => (
+                  <div
+                    key={index}
+                    className="flex items-center justify-center gap-3 rounded-2xl border border-[#334155] bg-[#123a63]/40 px-8 py-6 min-w-max"
+                  >
+                    {/* ICON */}
+                    <div className="w-14 h-14 rounded-full bg-[#00d2c6]/20 flex items-center justify-center">
+                      <div className="w-7 h-7 rounded-full border-4 border-[#00d2c6]" />
+                    </div>
+
+                    {/* TEXT */}
+                    <span className="text-white text-2xl font-black">
+                      {logo}
+                    </span>
                   </div>
-
-                  {/* TEXT */}
-
-                  <span className="text-white text-2xl font-black">{logo}</span>
-                </motion.div>
-              ))}
+                ))}
+              </motion.div>
             </div>
           </div>
         </div>
@@ -2453,25 +2490,7 @@ export default function Home() {
 
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[300px] bg-[#00d2c6]/10 blur-[140px]" />
 
-        {/* FLOATING DOT */}
-
-        <motion.div
-          animate={{
-            y: [0, -15, 0],
-            x: [0, 10, 0],
-          }}
-          transition={{
-            duration: 4,
-            repeat: Infinity,
-          }}
-          className="absolute top-[20%] left-[60%] w-3 h-3 rounded-full bg-[#00d2c6]"
-        />
-
         <div className="max-w-7xl mx-auto px-4 md:px-6 relative z-10">
-          {/* ================================================= */}
-          {/* TOP CONTENT */}
-          {/* ================================================= */}
-
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
             {/* LEFT */}
 
@@ -2492,7 +2511,7 @@ export default function Home() {
 
               {/* HEADING */}
 
-              <h2 className="text-2xl sm:text-3xl md:text-4xl font-black text-slate-900 leading-[1.1] mt-8 max-w-[780px]">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-black text-[#0bccc1] leading-[1.1] mt-8 max-w-[780px]">
                 Insights and Stories Driving a More Sustainable Future
               </h2>
             </motion.div>
@@ -2514,7 +2533,7 @@ export default function Home() {
               {/* BUTTON */}
 
               <button className="group mt-8 inline-flex items-center overflow-hidden rounded-full border ">
-                <span className="bg-[#00d2c6] text-[#09284b] font-bold px-8 py-4 text-lg">
+                <span className="bg-[#00d2c6] text-[#ffffff] font-bold px-8 py-4 text-lg">
                   View All Blogs
                 </span>
 
@@ -2576,8 +2595,8 @@ export default function Home() {
                     {/* CATEGORY */}
 
                     <div className="absolute top-6 left-6">
-                      <div className="bg-[#123a63]/80 backdrop-blur-xl border border-[#334155] rounded-full px-5 py-2">
-                        <span className="text-white text-sm font-medium">
+                      <div className="bg-[#123a63]/60 backdrop-blur-xl border border-[#334155] rounded-full px-5 py-2">
+                        <span className="text-[#ffffff] text-sm font-medium">
                           {blog.category}
                         </span>
                       </div>

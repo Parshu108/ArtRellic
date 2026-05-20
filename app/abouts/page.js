@@ -343,7 +343,6 @@ const About = () => {
     "Logoipsum",
     "Logoipsum",
     "Logoipsum",
-    
   ];
 
   const teamMembers = [
@@ -455,7 +454,7 @@ const About = () => {
                 transition={{ duration: 5, repeat: Infinity }}
                 className="absolute bottom-10 right-6 backdrop-blur-xl bg-[#0c264b]/70 border border-[#0bccc1]/20 rounded-[28px] p-6 w-60 shadow-2xl"
               >
-                <div className="w-16 h-16 rounded-full bg-[#0bccc1] text-[#0c264b] flex items-center justify-center mb-5">
+                <div className="w-16 h-16 rounded-full bg-[#0bccc1] text-[#ffffff] flex items-center justify-center mb-5">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
@@ -509,38 +508,49 @@ const About = () => {
                 </span>
               </h1>
 
+              {/* QUOTE CARD */}
               <motion.div
                 whileHover={{ y: -8 }}
                 transition={{ duration: 0.4 }}
-                className="mt-4 bg-[#102f5c] border border-[#0bccc1]/10 rounded-[32px] sm:rounded-4xl overflow-hidden shadow-lg"
+                className="mt-4 bg-[#102f5c] border border-[#0bccc1]/10 rounded-[32px] overflow-hidden shadow-lg"
               >
                 <div className="grid md:grid-cols-2">
-                  <Image
-                    src="/service1.jpg"
-                    alt="Solar"
-                    width={400}
-                    height={300}
-                    className="w-full h-50 object-cover"
-                  />
-                  <div className="p-2 flex flex-col justify-center">
-                    <p className="text-[#f5f7f4] text-xl font-semibold leading-relaxed">
-                      Protecting the environment is not a choice it is a
+                  {/* Image — full height on both mobile & desktop */}
+                  <div className="relative w-full h-60 md:h-full min-h-[200px]">
+                    <Image
+                      src="/service1.jpg"
+                      alt="Solar"
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+
+                  {/* Content */}
+                  <div className="p-8 flex flex-col justify-center gap-5">
+                    <p className="text-white text-lg font-medium leading-relaxed -mt-3">
+                      Protecting the environment is not a choice — it is a
                       responsibility we owe to future generations.
                     </p>
-                    <div className="w-full h-[1px] bg-[#f5f7f4]/30"></div>
-                    <h4 className="text-xl font-bold text-[#0bccc1]">
-                      Marvin McKinney
-                    </h4>
-                    <p className="text-[#0bccc1]/70 mt-1 text-lg">
-                      Founder & CEO
-                    </p>
+
+                    {/* Divider */}
+                    <div className="w-12 h-[2px] bg-gradient-to-r from-[#0bccc1] to-[#07ebd1] rounded-full" />
+
+                    {/* Author */}
+                    <div className="flex flex-col gap-1">
+                      <h4 className="text-lg font-bold text-white tracking-wide">
+                        Marvin McKinney
+                      </h4>
+                      <p className="text-[#0bccc1]/70 text-sm tracking-widest uppercase">
+                        Founder & CEO
+                      </p>
+                    </div>
                   </div>
                 </div>
               </motion.div>
 
               <div className="grid md:grid-cols-2 gap-5 mt-4">
                 <motion.div whileHover={{ y: -6 }} className="flex gap-5">
-                  <div className="w-12 h-12 rounded-full bg-[#0bccc1] text-[#0c264b] flex items-center justify-center shrink-0">
+                  <div className="w-12 h-12 rounded-full bg-[#0bccc1] text-[#ffffff] flex items-center justify-center shrink-0">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="24"
@@ -568,7 +578,7 @@ const About = () => {
                 </motion.div>
 
                 <motion.div whileHover={{ y: -6 }} className="flex gap-5">
-                  <div className="w-12 h-12 rounded-full bg-[#0bccc1] text-[#0c264b] flex items-center justify-center shrink-0">
+                  <div className="w-12 h-12 rounded-full bg-[#0bccc1] text-[#ffffff] flex items-center justify-center shrink-0">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="24"
@@ -646,7 +656,7 @@ const About = () => {
               {/* 10% teal CTA button */}
               <motion.button
                 whileHover={{ scale: 1.05 }}
-                className="group mt-4 bg-gradient-to-r from-[#0bccc1] to-[#07ebd1] text-[#0c264b] px-6 py-2 rounded-full font-bold text-xl flex items-center gap-5 shadow-xl"
+                className="group mt-4 bg-gradient-to-r from-[#0bccc1] to-[#07ebd1] text-[#ffffff] px-6 py-2 rounded-full font-bold text-xl flex items-center gap-5 shadow-xl"
               >
                 More About Us
                 <span className="w-14 h-14 rounded-full bg-[#0c264b] text-[#0bccc1] flex items-center justify-center group-hover:translate-x-2 transition duration-300">
@@ -888,16 +898,16 @@ const About = () => {
                   </div>
                 </div>
               </div>
-
-              {/* 10% teal CTA */}
+              {/* 🔵 BUTTON */}
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 className="group mt-16 flex items-center overflow-hidden rounded-full bg-gradient-to-r from-[#0bccc1] to-[#07ebd1]"
               >
-                <span className="px-7 py-4 text-[#0c264b] text-xl font-semibold">
+                <span className="px-7 py-4 text-[#f2f4f7] text-xl font-semibold">
                   Learn More
                 </span>
-                <span className="w-16 h-16 flex items-center justify-center bg-[#0c264b] text-[#f5f7f4] group-hover:bg-black transition duration-300">
+
+                <span className="w-14 h-14 rounded-full bg-[#0c264b] text-[#07ebd1] flex items-center justify-center group-hover:translate-x-2 transition duration-300">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
@@ -908,6 +918,7 @@ const About = () => {
                     strokeWidth="2"
                     strokeLinecap="round"
                     strokeLinejoin="round"
+                    className="lucide lucide-arrow-right-icon lucide-arrow-right"
                   >
                     <path d="M5 12h14" />
                     <path d="m12 5 7 7-7 7" />
@@ -1016,34 +1027,33 @@ const About = () => {
       {/* ============================================================
           FEATURES — 30% light bg, 70% navy text, 10% teal icon bg
       ============================================================ */}
-      <section className="relative overflow-hidden bg-[#f5f7f4] py-24">
-        <h1 className="absolute bottom-[-40px] left-1/2 -translate-x-1/2 text-[220px] font-black uppercase tracking-wider text-[#0bccc1]/10 select-none hidden lg:block">
-          Greva
+      <section className="relative overflow-hidden bg-[#eef1ec] py-24">
+        {/* BACKGROUND BIG TEXT */}
+        <h1 className="absolute bottom-[-40px] left-1/2 -translate-x-1/2 text-[220px] font-black uppercase tracking-wider text-[#0bccc1]/20 select-none hidden lg:block">
+          ARTRELIC
         </h1>
-
-        <motion.div
-          animate={{ y: [0, -20, 0], x: [0, 10, 0] }}
-          transition={{ duration: 5, repeat: Infinity }}
-          className="absolute top-1/3 left-1/2 w-4 h-4 rounded-full bg-[#0bccc1]"
-        />
 
         <div className="max-w-7xl mx-auto px-6 relative z-10">
           <div className="flex items-center justify-center gap-3 mb-4">
-            <motion.span
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              className="bg-[#0bccc1]/20 text-[#0c264b] px-4 py-1 rounded-full text-sm inline-block"
+              className="bg-[#0bccc1]/10 border border-[#0bccc1]/20 text-slate-700 px-6 py-3 rounded-full text-sm inline-block"
             >
-              our Features
-            </motion.span>
-          </div>
+              <span className="w-2 h-2 rounded-full bg-[#07ebd1] animate-pulse" />
 
+              <span className="text-[#0bccc1] font-semibold text-md">
+                our features
+              </span>
+            </motion.div>
+          </div>
+          {/* Heading */}
           <motion.h2
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.6 }}
-            className="text-5xl md:text-4xl font-bold text-center py-10 px-10 text-[#0c264b] leading-tight"
+            className=" w-auto text-5xl md:text-4xl font-bold text-center py-10 px-10  text-black leading-tight"
           >
             Helping Communities, Organizations,& Individuals Take Concrete Step
             Toward a Healthier Planet
@@ -1053,78 +1063,104 @@ const About = () => {
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3, duration: 0.6 }}
-            className="text-[#64748b] max-w-2xl text-center mx-auto mb-12"
+            className="text-gray-700 max-w-2xl text-center mx-auto mb-12"
           >
             Offering trusted environmental services...
           </motion.p>
-
           <div className="grid lg:grid-cols-3 gap-10 items-center">
-            {/* LEFT */}
+            {/* ================= LEFT CARDS ================= */}
             <div className="space-y-10">
               {featuresLeft.map((item, index) => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, x: -80 }}
                   whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.7, delay: index * 0.2 }}
-                  whileHover={{ y: -8 }}
-                  className="bg-white rounded-[30px] p-10 shadow-sm hover:shadow-2xl transition duration-500 border border-transparent hover:border-[#0bccc1]/20"
+                  transition={{
+                    duration: 0.7,
+                    delay: index * 0.2,
+                  }}
+                  whileHover={{
+                    y: -8,
+                  }}
+                  className="bg-[#0bccc1]/10 border border-[#0bccc1]/20 rounded-[30px] p-10 shadow-sm hover:shadow-2xl transition duration-500"
                 >
+                  {/* ICON */}
                   <motion.div
-                    whileHover={{ rotate: 10, scale: 1.1 }}
-                    className="w-16 h-16 rounded-full bg-[#0bccc1] flex items-center justify-center text-[#0c264b] shadow-lg"
+                    whileHover={{
+                      rotate: 10,
+                      scale: 1.1,
+                    }}
+                    className="w-16 h-16 rounded-full bg-gradient-to-r from-[#0bccc1] to-[#07ebd1] flex items-center justify-center text-white shadow-lg"
                   >
                     {item.icon}
                   </motion.div>
-                  <h2 className="text-[36px] font-bold text-[#0c264b] mt-8 leading-tight">
+
+                  {/* TITLE */}
+                  <h2 className="text-[36px] font-bold text-black mt-8 leading-tight">
                     {item.title}
                   </h2>
-                  <p className="text-[#64748b] text-lg leading-relaxed mt-5">
+
+                  {/* DESC */}
+                  <p className="text-gray-500 text-lg leading-relaxed mt-5">
                     {item.desc}
                   </p>
                 </motion.div>
               ))}
             </div>
 
-            {/* CENTER */}
+            {/* ================= CENTER IMAGE ================= */}
             <motion.div
               initial={{ opacity: 0, y: 60 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="relative flex justify-center mt-20"
+              className="relative flex justify-center mt-20 "
             >
-              <div className="absolute w-[380px] h-[380px] bg-[#0bccc1]/20 blur-[120px] rounded-full bottom-0" />
+              {/* GLOW */}
+              <div className="absolute w-96 h-96 bg-secondary/20 blur-[120px] rounded-full bottom-0" />
+
               <Image
                 src="/worker.png"
                 alt="Worker"
                 width={520}
                 height={780}
-                sizes="100vw"
-                className="relative z-10 object-contain h-[600px]"
+                className="relative z-10 object-contain h-165 "
               />
             </motion.div>
 
-            {/* RIGHT */}
+            {/* ================= RIGHT CARDS ================= */}
             <div className="space-y-10">
               {featuresRight.map((item, index) => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, x: 80 }}
                   whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.7, delay: index * 0.2 }}
-                  whileHover={{ y: -8 }}
-                  className="bg-white rounded-[30px] p-10 shadow-sm hover:shadow-2xl transition duration-500 border border-transparent hover:border-[#0bccc1]/20"
+                  transition={{
+                    duration: 0.7,
+                    delay: index * 0.2,
+                  }}
+                  whileHover={{
+                    y: -8,
+                  }}
+                  className="bg-[#0bccc1]/10 border border-[#0bccc1]/20 rounded-[30px] p-10 shadow-sm hover:shadow-2xl transition duration-500"
                 >
+                  {/* ICON */}
                   <motion.div
-                    whileHover={{ rotate: -10, scale: 1.1 }}
-                    className="w-16 h-16 rounded-full bg-[#0bccc1] flex items-center justify-center text-[#0c264b] shadow-lg"
+                    whileHover={{
+                      rotate: -10,
+                      scale: 1.1,
+                    }}
+                    className="w-16 h-16 rounded-full bg-gradient-to-r from-[#0bccc1] to-[#07ebd1]  flex items-center justify-center text-white shadow-lg"
                   >
                     {item.icon}
                   </motion.div>
-                  <h2 className="text-[36px] font-bold text-[#0c264b] mt-8 leading-tight">
+
+                  {/* TITLE */}
+                  <h2 className="text-[36px] font-bold text-[#081c15] mt-8 leading-tight">
                     {item.title}
                   </h2>
-                  <p className="text-[#64748b] text-lg leading-relaxed mt-5">
+
+                  {/* DESC */}
+                  <p className="text-gray-500 text-lg leading-relaxed mt-5">
                     {item.desc}
                   </p>
                 </motion.div>
@@ -1149,12 +1185,6 @@ const About = () => {
           <div className="absolute inset-0 bg-[#0c264b]/55"></div>
           <div className="absolute inset-0 bg-[#0bccc1]/10"></div>
         </div>
-
-        <motion.div
-          animate={{ y: [0, -20, 0], x: [0, 10, 0] }}
-          transition={{ duration: 4, repeat: Infinity }}
-          className="absolute top-72 right-[22%] w-4 h-4 rounded-full bg-[#0bccc1] z-20"
-        />
 
         <div className="max-w-7xl mx-auto px-6 relative z-20">
           <div className="grid lg:grid-cols-2 gap-16 items-start">
@@ -1196,7 +1226,7 @@ const About = () => {
               {/* 10% teal CTA */}
               <motion.button
                 whileHover={{ scale: 1.05 }}
-                className="group mt-4 bg-gradient-to-r from-[#0bccc1] to-[#07ebd1] text-[#0c264b] px-6 py-2 rounded-full font-bold text-xl flex items-center gap-5 shadow-xl"
+                className="group mt-4 bg-gradient-to-r from-[#0bccc1] to-[#07ebd1] text-[#ffffff] px-6 py-2 rounded-full font-bold text-xl flex items-center gap-5 shadow-xl"
               >
                 View All Testimonials
                 <span className="w-14 h-14 rounded-full bg-[#0c264b] text-[#f5f7f4] flex items-center justify-center group-hover:translate-x-2 transition duration-300">
@@ -1329,7 +1359,7 @@ const About = () => {
 
               {/* lime CTA (secondary accent) */}
               <button className="group mt-10 inline-flex items-center overflow-hidden rounded-full bg-[#0bccc1] hover:bg-[#0bccc1] transition-all duration-500">
-                <span className="px-6 py-4 text-[#0c264b] text-xl font-bold">
+                <span className="px-6 py-4 text-[#ffffff] text-xl font-bold">
                   Learn More
                 </span>
                 <span className="flex h-[72px] w-[72px] items-center justify-center bg-[#0c264b] text-[#f5f7f4] transition-all duration-500 group-hover:w-[82px]">
@@ -1364,7 +1394,7 @@ const About = () => {
                 >
                   <div className="flex flex-col sm:flex-row gap-6">
                     <div className="flex-shrink-0">
-                      <div className="flex items-center justify-center w-14 h-14 rounded-full bg-[#0bccc1] text-[#0c264b] shadow-lg">
+                      <div className="flex items-center justify-center w-14 h-14 rounded-full bg-[#0bccc1] text-[#ffffff] shadow-lg">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           width="24"
@@ -1406,7 +1436,7 @@ const About = () => {
             {tags.map((tag, index) => (
               <div
                 key={index}
-                className="inline-flex items-center gap-3 rounded-full bg-[#0c264b]/40 border border-[#0bccc1]/30 px-6 py-3 px-2 py-1 hover:bg-white transition-all duration-300"
+                className="inline-flex items-center gap-3 rounded-full bg-[#0c264b]/10 border border-[#0bccc1]/30 px-6 py-3 px-2 py-1 hover:bg-white transition-all duration-300"
               >
                 <span className="w-2 h-2 rounded-full bg-[#0bccc1]" />
                 <span className="text-[#0c264b] text-md font-medium">
@@ -1414,48 +1444,6 @@ const About = () => {
                 </span>
               </div>
             ))}
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.9 }}
-            viewport={{ once: true }}
-            className="mt-4 flex flex-wrap items-center justify-center gap-4 text-center"
-          >
-            <div className="flex items-center">
-              <div className="w-8 h-8 rounded-full overflow-hidden border-2 border-white shadow-lg">
-                <Image
-                  src="/author-1.jpg"
-                  alt="avatar"
-                  width={100}
-                  height={100}
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <div className="-ml-3 flex items-center justify-center w-8 h-8 rounded-full bg-[#0bccc1] border-4 border-[#f5f7f4]">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z" />
-                  <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12" />
-                </svg>
-              </div>
-            </div>
-            <p className="text-[#0c264b] text-md">
-              Let&apos;s make something great work together.
-            </p>
-            <button className="text-[#0c264b] hover:text-[#0bccc1] transition-all duration-300 text-md font-semibold underline underline-offset-4">
-              Get Free Quote
-            </button>
           </motion.div>
         </div>
       </section>
@@ -2071,7 +2059,7 @@ const About = () => {
                 <div className="relative z-10 p-10 min-h-[300px] flex flex-col">
                   <motion.div
                     whileHover={{ rotate: 10, scale: 1.1 }}
-                    className={`w-16 h-16 rounded-full flex items-center justify-center shadow-lg ${item.dark ? "bg-[#0bccc1] text-[#0c264b]" : "bg-white text-[#0c264b]"}`}
+                    className={`w-16 h-16 rounded-full flex items-center justify-center shadow-lg ${item.dark ? "bg-[#0bccc1] text-[#ffffff]" : "bg-white text-[#0c264b]"}`}
                   >
                     {item.icon}
                   </motion.div>

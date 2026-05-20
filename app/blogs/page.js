@@ -5,10 +5,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { useState } from "react";
 
-
-
-export default function Blog () {
-
+export default function Blog() {
   const blogs = [
     {
       id: 1,
@@ -47,7 +44,7 @@ export default function Blog () {
       image: "/blog6.jpg",
     },
   ];
-  
+
   const BLOGS_PER_PAGE = 6;
   const [currentPage, setCurrentPage] = useState(1);
 
@@ -126,43 +123,67 @@ export default function Blog () {
       <section className="relative overflow-hidden bg-[#ffffff] py-20 md:py-22">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[300px] bg-[#00d2c6]/10 blur-[140px]" />
         <div className="max-w-7xl mx-auto px-4 md:px-6 relative z-10">
-          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 mt-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 mt-10">
             {paginatedBlogs.map((blog, index) => (
               <motion.div
                 key={blog.id}
                 initial={{ opacity: 0, y: 80 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.7, delay: index * 0.2 }}
+                transition={{
+                  duration: 0.7,
+                  delay: index * 0.2,
+                }}
                 whileHover={{ y: -10 }}
                 className="group"
               >
-                <div className="relative overflow-hidden rounded-4xl bg-[#123a63]/10 border border-[#334155]">
-                  <div className="relative h-[200px] gap-5 overflow-hidden">
+                {/* IMAGE CARD */}
+
+                <div className="relative overflow-hidden rounded-[30px] bg-[#123a63] border border-[#334155]">
+                  {/* IMAGE */}
+
+                  <div className="relative h-[300px] overflow-hidden">
                     <Image
                       src={blog.image}
                       alt={blog.title}
                       fill
                       className="object-cover group-hover:scale-110 transition duration-700"
                     />
+
+                    {/* OVERLAY */}
+
                     <div className="absolute inset-0 bg-gradient-to-t from-[#09284b]/80 via-transparent to-transparent" />
+
+                    {/* CATEGORY */}
+
                     <div className="absolute top-6 left-6">
-                      <div className="bg-[#123a63]/20 backdrop-blur-xl border border-[#334155] rounded-full px-5 py-2">
-                        <span className="text-white text-sm font-medium">
+                      <div className="bg-[#123a63]/60 backdrop-blur-xl border border-[#334155] rounded-full px-5 py-2">
+                        <span className="text-[#ffffff] text-sm font-medium">
                           {blog.category}
                         </span>
                       </div>
                     </div>
                   </div>
 
+                  {/* CONTENT */}
+
                   <div className="p-7">
-                    <h3 className="text-2xl font-bold text-black leading-snug group-hover:text-[#00d2c6] transition duration-300">
+                    {/* TITLE */}
+
+                    <h3 className="text-2xl font-bold text-white leading-snug group-hover:text-[#00d2c6] transition duration-300">
                       {blog.title}
                     </h3>
+
+                    {/* LINE */}
+
                     <div className="w-full h-0.5 bg-[#334155] my-7"></div>
+
+                    {/* BUTTON */}
+
                     <button className="group/btn flex items-center gap-4">
-                      <span className="text-black text-lg font-semibold group-hover/btn:text-[#00d2c6] transition duration-300">
+                      <span className="text-white text-lg font-semibold group-hover/btn:text-[#00d2c6] transition duration-300">
                         Read More
                       </span>
+
                       <div className="w-11 h-11 rounded-full bg-[#00d2c6] flex items-center justify-center text-[#09284b] group-hover/btn:translate-x-1 transition duration-300">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
@@ -174,6 +195,7 @@ export default function Blog () {
                           strokeWidth="2"
                           strokeLinecap="round"
                           strokeLinejoin="round"
+                          className="lucide lucide-arrow-right-icon lucide-arrow-right"
                         >
                           <path d="M5 12h14" />
                           <path d="m12 5 7 7-7 7" />
@@ -254,6 +276,4 @@ export default function Blog () {
       </section>
     </>
   );
-};
-
-
+}

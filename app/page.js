@@ -1154,14 +1154,14 @@ export default function Home() {
               {/* BIG IMAGE */}
               <motion.div
                 whileHover={{ scale: 1.02 }}
-                className="relative rounded-[32px] overflow-hidden"
+                className="relative rounded-4xl overflow-hidden"
               >
                 <Image
                   src="/Biger.png"
                   alt="People"
                   width={700}
                   height={700}
-                  className="w-full h-168 object-cover"
+                  className="w-full h-120 object-cover"
                 />
               </motion.div>
 
@@ -1170,28 +1170,28 @@ export default function Home() {
                 {/* TOP IMAGE */}
                 <motion.div
                   whileHover={{ scale: 1.03 }}
-                  className="rounded-[32px] overflow-hidden"
+                  className="rounded-4xl overflow-hidden"
                 >
                   <Image
                     src="/long.jpg"
                     alt="Solar"
                     width={400}
                     height={350}
-                    className="w-full h-[320px] object-cover"
+                    className="w-full h-80 object-cover"
                   />
                 </motion.div>
 
                 {/* BOTTOM IMAGE */}
                 <motion.div
                   whileHover={{ scale: 1.03 }}
-                  className="rounded-[32px] overflow-hidden"
+                  className="rounded-4xl overflow-hidden"
                 >
                   <Image
                     src="/mid.jpg"
                     alt="Wind"
                     width={400}
                     height={350}
-                    className="w-full h-[320px] object-cover"
+                    className="w-full h-80 object-cover"
                   />
                 </motion.div>
               </div>

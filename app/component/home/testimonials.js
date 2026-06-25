@@ -6,34 +6,34 @@ import { useEffect, useState } from "react";
 
 export default function Testimonials() {
       const testimonials = [
-    {
-      quote:
-        "Their conservation programs brought real change to our local community. The approach was practical, transparent, and focused on long-term impact.",
-      name: "Jerome Bell",
-      role: "Community Project Lead",
-      image: "/user1.jpg",
-    },
+        {
+          quote:
+            "The team built a high-performance web application that streamlined our operations and improved productivity across departments.",
+          name: "Jerome Bell",
+          role: "Community Project Lead",
+          image: "/user1.jpg",
+        },
 
-    {
-      quote:
-        "We appreciated their hands-on support and deep understanding of environmental challenges. The results were measurable and meaningful.",
-      name: "Jane Cooper",
-      role: "Environmental Consultant",
-      image: "/user2.jpg",
-    },
+        {
+          quote:
+            "Their expertise in React, Next.js, and modern technologies helped us launch our product faster than expected.",
+          name: "Jane Cooper",
+          role: "Environmental Consultant",
+          image: "/user2.jpg",
+        },
 
-    {
-      quote:
-        "Their sustainability initiatives inspired our organization to take stronger action for a cleaner and healthier future.",
-      name: "Eleanor Pena",
-      role: "Community Project Lead",
-      image: "/user4.jpg",
-    },
-  ];
+        {
+          quote:
+            "From planning to deployment, the development process was smooth and transparent. The final solution perfectly matched our requirements.",
+          name: "Eleanor Pena",
+          role: "Community Project Lead",
+          image: "/user4.jpg",
+        },
+      ];
 
   return (
     <>
-          <section className="relative overflow-hidden py-28 bg-cyan-100/10">
+      <section className="relative overflow-hidden py-28 bg-cyan-100/10">
         {/* BACKGROUND IMAGE */}
         <div className="absolute inset-0">
           <Image
@@ -89,7 +89,8 @@ export default function Testimonials() {
                 transition={{ duration: 0.7 }}
                 className="text-4xl md:text-5xl font-black leading-tight text-white mt-10"
               >
-                Real Stories of Environmental Change & Positive Impact
+                Trusted by Businesses for Modern Web & Software Development
+                Solutions
               </motion.h1>
             </div>
 
@@ -101,9 +102,9 @@ export default function Testimonials() {
                 transition={{ duration: 0.7 }}
                 className="text-xl leading-relaxed text-gray-200 max-w-xl"
               >
-                Hear from partners, communities, and organizations who have
-                experienced the impact of our environmental initiatives
-                firsthand.
+                Discover how our technology services help businesses streamline
+                operations, improve customer experiences, and accelerate digital
+                growth.
               </motion.p>
 
               {/* BUTTON */}
@@ -264,7 +265,6 @@ export default function Testimonials() {
           </div>
         </div>
       </section>
-
     </>
   );
 }

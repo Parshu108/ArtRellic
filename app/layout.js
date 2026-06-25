@@ -1,8 +1,6 @@
-
 import "./globals.css";
 import Navbar from "./component/Navbar";
 import Footer from "./component/Footer";
-
 
 // app/layout.js
 
@@ -18,6 +16,9 @@ export const metadata = {
     "Dashboard UI",
     "Ecommerce Website",
   ],
+  icons: {
+    icon: "/2_5.png",
+  },
 
   authors: [{ name: "Parshuram Sahani" }],
 
@@ -40,13 +41,11 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html
-      lang="en"
-    >
+    <html lang="en">
       <body className="min-h-full flex flex-col">
         <Navbar />
         {children}
-        <Footer/>
+        <Footer />
       </body>
     </html>
   );

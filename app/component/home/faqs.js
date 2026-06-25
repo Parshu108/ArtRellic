@@ -9,27 +9,27 @@ export default function FAQs() {
         {
           question: "Q1. How can we get started with your services?",
           answer:
-            "We support sustainability through eco-friendly practices, community programs, renewable energy advocacy, and partnerships that encourage responsible environmental actions.",
+            "Getting started is simple. Contact our team with your project requirements, and we'll schedule a consultation to discuss goals, timelines, and the best technology solutions for your business.",
         },
         {
-          question: "Q2. How do you measure environmental impact?",
+          question: "Q2. What technologies do you specialize in?",
           answer:
-            "We use measurable sustainability metrics, carbon tracking systems, environmental audits, and transparent reporting methods to evaluate long-term impact.",
+            "We specialize in modern technologies including React.js, Next.js, JavaScript, TypeScript, Node.js, MongoDB, Tailwind CSS, and cloud-based solutions for scalable applications.",
         },
         {
-          question: "Q3. How do you support sustainability initiatives?",
+          question: "Q3. Do you build custom web applications?",
           answer:
-            "Our team works with organizations and communities to implement renewable energy projects, conservation campaigns, and sustainable operational strategies.",
+            "Yes. We develop custom web applications tailored to your business needs, ensuring high performance, security, scalability, and an exceptional user experience.",
         },
         {
-          question: "Q4. Do you provide reports and documentation?",
+          question: "Q4. Do you provide maintenance and support?",
           answer:
-            "Yes, we provide detailed environmental assessments, sustainability reports, compliance documentation, and strategic implementation plans.",
+            "Absolutely. We offer ongoing maintenance, performance optimization, security updates, bug fixes, and technical support after project deployment.",
         },
         {
-          question: "Q5. Can you help with regulatory compliance?",
+          question: "Q5. Can you help improve an existing website?",
           answer:
-            "We assist businesses with environmental compliance, policy guidance, and sustainability frameworks aligned with international standards.",
+            "Yes. We can redesign, optimize, and modernize existing websites to improve performance, SEO, responsiveness, accessibility, and overall user engagement.",
         },
       ];
         const logos = [
@@ -89,7 +89,7 @@ export default function FAQs() {
 
                 {/* HEADING */}
 
-                <h2 className="text-4xl sm:text-5xl md:text-6xl font-black text-white leading-[1.1] mt-8 max-w-[700px]">
+                <h2 className="text-4xl sm:text-4xl md:text-5xl font-black text-white leading-[1.1] mt-8 max-w-[700px]">
                   About Our Digital Solutions & Software Development Services
                 </h2>
 
@@ -113,11 +113,11 @@ export default function FAQs() {
 
                     <div>
                       <div className="flex items-center justify-between mb-4">
-                        <h4 className="text-white text-2xl font-bold">
+                        <h4 className="text-white text-xl font-bold">
                           Climate Action
                         </h4>
 
-                        <span className="text-[#00d2c6] text-2xl font-black">
+                        <span className="text-[#00d2c6] text-xl font-black">
                           95%
                         </span>
                       </div>
@@ -136,11 +136,11 @@ export default function FAQs() {
 
                     <div>
                       <div className="flex items-center justify-between mb-4">
-                        <h4 className="text-white text-2xl font-bold">
+                        <h4 className="text-white text-xl font-bold">
                           Renewable Energy
                         </h4>
 
-                        <span className="text-[#00d2c6] text-2xl font-black">
+                        <span className="text-[#00d2c6] text-xl font-black">
                           90%
                         </span>
                       </div>
@@ -166,7 +166,7 @@ export default function FAQs() {
                         repeat: Infinity,
                         ease: "linear",
                       }}
-                      className="relative w-44 h-44 rounded-full border-[10px] border-[#00d2c6] bg-[#123a63] flex items-center justify-center"
+                      className="relative w-34 h-34 rounded-full border-[10px] border-[#00d2c6] bg-[#123a63] flex items-center justify-center"
                     >
                       <div className="absolute inset-0 rounded-full border border-[#334155]" />
 
@@ -211,7 +211,7 @@ export default function FAQs() {
                           : "text-white hover:bg-[#123a63]"
                       }`}
                     >
-                      <span className="text-xl md:text-2xl font-bold leading-snug">
+                      <span className="text-xl md:text-xl font-bold leading-snug">
                         {faq.question}
                       </span>
 
@@ -260,7 +260,7 @@ export default function FAQs() {
                       className="overflow-hidden"
                     >
                       <div className="px-8 pb-8 pt-6">
-                        <p className="text-[#cbd5e1] text-lg leading-relaxed">
+                        <p className="text-[#cbd5e1] text-md leading-relaxed">
                           {faq.answer}
                         </p>
                       </div>

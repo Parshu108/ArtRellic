@@ -54,41 +54,35 @@ const tags = [
   "Wildlife Protection",
 ];
 
- const logos = [
-   "Logoipsum",
-   "Logoipsum",
-   "Logoipsum",
-   "Logoipsum",
-   "Logoipsum",
- ];
+const logos = ["Logoipsum", "Logoipsum", "Logoipsum", "Logoipsum", "Logoipsum"];
 
- const faqs = [
-   {
-     question: "Q1. How can we get started with your services?",
-     answer:
-       "We support sustainability through eco-friendly practices, community programs, renewable energy advocacy, and partnerships that encourage responsible environmental actions.",
-   },
-   {
-     question: "Q2. How do you measure environmental impact?",
-     answer:
-       "We use measurable sustainability metrics, carbon tracking systems, environmental audits, and transparent reporting methods to evaluate long-term impact.",
-   },
-   {
-     question: "Q3. How do you support sustainability initiatives?",
-     answer:
-       "Our team works with organizations and communities to implement renewable energy projects, conservation campaigns, and sustainable operational strategies.",
-   },
-   {
-     question: "Q4. Do you provide reports and documentation?",
-     answer:
-       "Yes, we provide detailed environmental assessments, sustainability reports, compliance documentation, and strategic implementation plans.",
-   },
-   {
-     question: "Q5. Can you help with regulatory compliance?",
-     answer:
-       "We assist businesses with environmental compliance, policy guidance, and sustainability frameworks aligned with international standards.",
-   },
- ];
+const faqs = [
+  {
+    question: "Q1. How can we get started with your services?",
+    answer:
+      "We support sustainability through eco-friendly practices, community programs, renewable energy advocacy, and partnerships that encourage responsible environmental actions.",
+  },
+  {
+    question: "Q2. How do you measure environmental impact?",
+    answer:
+      "We use measurable sustainability metrics, carbon tracking systems, environmental audits, and transparent reporting methods to evaluate long-term impact.",
+  },
+  {
+    question: "Q3. How do you support sustainability initiatives?",
+    answer:
+      "Our team works with organizations and communities to implement renewable energy projects, conservation campaigns, and sustainable operational strategies.",
+  },
+  {
+    question: "Q4. Do you provide reports and documentation?",
+    answer:
+      "Yes, we provide detailed environmental assessments, sustainability reports, compliance documentation, and strategic implementation plans.",
+  },
+  {
+    question: "Q5. Can you help with regulatory compliance?",
+    answer:
+      "We assist businesses with environmental compliance, policy guidance, and sustainability frameworks aligned with international standards.",
+  },
+];
 
 const page = () => {
   const [active, setActive] = useState(0);
@@ -147,7 +141,7 @@ const page = () => {
       </section>
 
       <section className="bg-[#ffffff] text-[#0c264b] py-20">
-        <div className="relative z-10 max-w-8xl mx-auto px-8">
+        <div className="relative z-10 max-w-7xl mx-auto px-1">
           {/* Cards */}
           <motion.div
             initial="hidden"
@@ -187,25 +181,25 @@ const page = () => {
               </div>
 
               <h2 className="relative z-10 text-white text-2xl font-bold mt-5 leading-tight">
-                Environmental Research
+                Custom Software Development
               </h2>
 
               <p className="relative z-10 text-gray-300 text-md leading-relaxed mt-6">
-                Driven study to understand environmental impact and support
-                sustainable decisions.
+                Build scalable digital solutions tailored to your business
+                needs.
               </p>
 
               {/* LINE */}
               <div className="relative z-10 w-full h-0.5 bg-white/60 my-4"></div>
 
               <ul className="relative z-10 space-y-2 text-gray-200 text-sm mb-6">
-                <li>• Conduct data study to assess impact</li>
-                <li>• Support informed decision-making</li>
-                <li>• Ensure compliance with environmental</li>
+                <li>• Develop custom web and mobile applications</li>
+                <li>• Create scalable and maintainable architectures</li>
+                <li>• Integrate third-party services and APIs</li>
               </ul>
 
               <button className="flex items-center gap-2 bg-gradient-to-r from-[#0bccc1] to-[#07ebd1] text-white px-5 py-2 rounded-full font-medium hover:scale-105 transition">
-                Read More
+                Learn More
                 <span className="w-8 h-8 rounded-full bg-[#0c264b] text-[#07ebd1] flex items-center justify-center group-hover:translate-x-2 transition duration-300">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -251,25 +245,24 @@ const page = () => {
               </div>
 
               <h2 className="relative z-10 text-white text-2xl font-bold mt-5 leading-tight">
-                Sustainability Planning
+                Web Application Development
               </h2>
 
               <p className="relative z-10 text-gray-300 text-md leading-relaxed mt-6">
-                Strategic planning to reduce environmental footprint and improve
-                long-term responsibility.
+                Modern web applications designed for performance and growth.
               </p>
 
               {/* LINE */}
               <div className="relative z-10 w-full h-0.5 bg-white/60 my-4"></div>
 
               <ul className="relative z-10 text-sm text-gray-200 space-y-2 mb-6">
-                <li>• Conduct data study to assess impact</li>
-                <li>• Support informed decision-making</li>
-                <li>• Ensure compliance with environmental</li>
+                <li>• Responsive and user-friendly interfaces</li>
+                <li>• Secure and scalable backend systems </li>
+                <li>• Fast deployment and maintenance </li>
               </ul>
 
               <button className="flex items-center gap-2 bg-gradient-to-r from-[#0bccc1] to-[#07ebd1] text-white px-5 py-2 rounded-full font-medium hover:scale-105 transition">
-                Read More
+                Learn More
                 <span className="w-8 h-8 rounded-full bg-[#0c264b] text-[#07ebd1] flex items-center justify-center group-hover:translate-x-2 transition duration-300">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -315,25 +308,25 @@ const page = () => {
               </div>
 
               <h2 className="relative z-10 text-white text-2xl font-bold mt-5 leading-tight">
-                Nature Conservation
+                Enterprise Solutions
               </h2>
 
               <p className="relative z-10 text-gray-300 text-md leading-relaxed mt-6">
-                Protecting ecosystems and biodiversity through targeted
-                conservation initiatives.
+                Streamline business operations with intelligent enterprise
+                systems.
               </p>
 
               {/* LINE */}
               <div className="relative z-10 w-full h-0.5 bg-white/60 my-4"></div>
 
               <ul className="relative z-10 text-sm text-gray-200 space-y-2 mb-6">
-                <li>• Conduct data study to assess impact</li>
-                <li>• Support informed decision-making</li>
-                <li>• Ensure compliance with environmental</li>
+                <li>• CRM and ERP development</li>
+                <li>• Workflow automation solutions</li>
+                <li>• Centralized business management</li>
               </ul>
 
               <button className="flex items-center gap-2 bg-gradient-to-r from-[#0bccc1] to-[#07ebd1] text-white px-5 py-2 rounded-full font-medium hover:scale-105 transition">
-                Read More
+                Learn More
                 <span className="w-8 h-8 rounded-full bg-[#0c264b] text-[#07ebd1] flex items-center justify-center group-hover:translate-x-2 transition duration-300">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -379,25 +372,24 @@ const page = () => {
               </div>
 
               <h2 className="relative z-10 text-white text-2xl font-bold mt-5 leading-tight">
-                Environmental Research
+                Data Analytics & Insights
               </h2>
 
               <p className="relative z-10 text-gray-300 text-md leading-relaxed mt-6">
-                Driven study to understand environmental impact and support
-                sustainable decisions.
+                Transform data into actionable business intelligence.
               </p>
 
               {/* LINE */}
               <div className="relative z-10 w-full h-0.5 bg-white/60 my-4"></div>
 
               <ul className="relative z-10 space-y-2 text-gray-200 text-sm mb-6">
-                <li>• Conduct data study to assess impact</li>
-                <li>• Support informed decision-making</li>
-                <li>• Ensure compliance with environmental</li>
+                <li>• Interactive dashboards and reports </li>
+                <li>• Data visualization and analysis </li>
+                <li>• Performance monitoring and forecasting</li>
               </ul>
 
               <button className="flex items-center gap-2 bg-gradient-to-r from-[#0bccc1] to-[#07ebd1] text-white px-5 py-2 rounded-full font-medium hover:scale-105 transition">
-                Read More
+                Learn More
                 <span className="w-8 h-8 rounded-full bg-[#0c264b] text-[#07ebd1] flex items-center justify-center group-hover:translate-x-2 transition duration-300">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -446,25 +438,24 @@ const page = () => {
               </div>
 
               <h2 className="relative z-10 text-white text-2xl font-bold mt-5 leading-tight">
-                Environmental Research
+                AI & Automation
               </h2>
 
               <p className="relative z-10 text-gray-300 text-md leading-relaxed mt-6">
-                Driven study to understand environmental impact and support
-                sustainable decisions.
+                Automate repetitive tasks and improve operational efficiency.
               </p>
 
               {/* LINE */}
               <div className="relative z-10 w-full h-0.5 bg-white/60 my-4"></div>
 
               <ul className="relative z-10 space-y-2 text-gray-200 text-sm mb-6">
-                <li>• Conduct data study to assess impact</li>
-                <li>• Support informed decision-making</li>
-                <li>• Ensure compliance with environmental</li>
+                <li>• AI-powered business solutions </li>
+                <li>• Process automation workflows</li>
+                <li>• Intelligent decision-support systems</li>
               </ul>
 
               <button className="flex items-center gap-2 bg-gradient-to-r from-[#0bccc1] to-[#07ebd1] text-white px-5 py-2 rounded-full font-medium hover:scale-105 transition">
-                Read More
+                Learn More
                 <span className="w-8 h-8 rounded-full bg-[#0c264b] text-[#07ebd1] flex items-center justify-center group-hover:translate-x-2 transition duration-300">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -500,25 +491,302 @@ const page = () => {
               </div>
 
               <h2 className="relative z-10 text-white text-2xl font-bold mt-5 leading-tight">
-                Environmental Research
+                API Development & Integration
               </h2>
 
               <p className="relative z-10 text-gray-300 text-md leading-relaxed mt-6">
-                Driven study to understand environmental impact and support
-                sustainable decisions.
+                Connect systems seamlessly with reliable APIs and integrations.
               </p>
 
               {/* LINE */}
               <div className="relative z-10 w-full h-0.5 bg-white/60 my-4"></div>
 
               <ul className="relative z-10 space-y-2 text-gray-200 text-sm mb-6">
-                <li>• Conduct data study to assess impact</li>
-                <li>• Support informed decision-making</li>
-                <li>• Ensure compliance with environmental</li>
+                <li>• REST and GraphQL API development</li>
+                <li>• Third-party platform integrations</li>
+                <li>• Secure data exchange solutions</li>
               </ul>
 
               <button className="flex items-center gap-2 bg-gradient-to-r from-[#0bccc1] to-[#07ebd1] text-white px-5 py-2 rounded-full font-medium hover:scale-105 transition">
-                Read More
+                Learn More
+                <span className="w-8 h-8 rounded-full bg-[#0c264b] text-[#07ebd1] flex items-center justify-center group-hover:translate-x-2 transition duration-300">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="lucide lucide-arrow-right-icon lucide-arrow-right"
+                  >
+                    <path d="M5 12h14" />
+                    <path d="m12 5 7 7-7 7" />
+                  </svg>
+                </span>
+              </button>
+            </motion.div>
+
+            {/* Card 7 */}
+            <motion.div
+              whileHover={{ y: -10 }}
+              className=" p-6 rounded-2xl bg-[#0c264b] border border-[#0bccc1] shadow-lg text-left transition duration-300"
+            >
+              <div className="w-12 h-12 bg-gradient-to-r from-[#0bccc1] to-[#07ebd1] text-white rounded-full flex items-center justify-center mb-4">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="lucide lucide-globe-lock-icon lucide-globe-lock"
+                >
+                  <path d="M15.686 15A14.5 14.5 0 0 1 12 22a14.5 14.5 0 0 1 0-20 10 10 0 1 0 9.542 13" />
+                  <path d="M2 12h8.5" />
+                  <path d="M20 6V4a2 2 0 1 0-4 0v2" />
+                  <rect width="8" height="5" x="14" y="6" rx="1" />
+                </svg>
+              </div>
+
+              <h2 className="relative z-10 text-white text-2xl font-bold mt-5 leading-tight">
+                Cybersecurity Services
+              </h2>
+
+              <p className="relative z-10 text-gray-300 text-md leading-relaxed mt-6">
+                Protect your applications and business data from threats.
+              </p>
+
+              {/* LINE */}
+              <div className="relative z-10 w-full h-0.5 bg-white/60 my-4"></div>
+
+              <ul className="relative z-10 space-y-2 text-gray-200 text-sm mb-6">
+                <li>• Security assessments and audits</li>
+                <li>• Application security testing</li>
+                <li>• Access control and compliance solutions</li>
+              </ul>
+
+              <button className="flex items-center gap-2 bg-gradient-to-r from-[#0bccc1] to-[#07ebd1] text-white px-5 py-2 rounded-full font-medium hover:scale-105 transition">
+                Learn More
+                <span className="w-8 h-8 rounded-full bg-[#0c264b] text-[#07ebd1] flex items-center justify-center group-hover:translate-x-2 transition duration-300">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="lucide lucide-arrow-right-icon lucide-arrow-right"
+                  >
+                    <path d="M5 12h14" />
+                    <path d="m12 5 7 7-7 7" />
+                  </svg>
+                </span>
+              </button>
+            </motion.div>
+
+            {/* Card 8 */}
+            <motion.div
+              whileHover={{ y: -10 }}
+              className=" p-6 rounded-2xl bg-[#0c264b] border border-[#0bccc1] shadow-lg text-left transition duration-300"
+            >
+              <div className="w-12 h-12 bg-gradient-to-r from-[#0bccc1] to-[#07ebd1] text-white rounded-full flex items-center justify-center mb-4">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="lucide lucide-microchip-icon lucide-microchip"
+                >
+                  <path d="M10 12h4" />
+                  <path d="M10 17h4" />
+                  <path d="M10 7h4" />
+                  <path d="M18 12h2" />
+                  <path d="M18 18h2" />
+                  <path d="M18 6h2" />
+                  <path d="M4 12h2" />
+                  <path d="M4 18h2" />
+                  <path d="M4 6h2" />
+                  <rect x="6" y="2" width="12" height="20" rx="2" />
+                </svg>
+              </div>
+
+              <h2 className="relative z-10 text-white text-2xl font-bold mt-5 leading-tight">
+                IT Consulting
+              </h2>
+
+              <p className="relative z-10 text-gray-300 text-md leading-relaxed mt-6">
+                Expert guidance to accelerate your digital transformation
+                journey.
+              </p>
+
+              {/* LINE */}
+              <div className="relative z-10 w-full h-0.5 bg-white/60 my-4"></div>
+
+              <ul className="relative z-10 space-y-2 text-gray-200 text-sm mb-6">
+                <li>• Technology strategy planning </li>
+                <li>• Architecture and infrastructure consulting </li>
+                <li>• Process optimization recommendations </li>
+              </ul>
+
+              <button className="flex items-center gap-2 bg-gradient-to-r from-[#0bccc1] to-[#07ebd1] text-white px-5 py-2 rounded-full font-medium hover:scale-105 transition">
+                Learn More
+                <span className="w-8 h-8 rounded-full bg-[#0c264b] text-[#07ebd1] flex items-center justify-center group-hover:translate-x-2 transition duration-300">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="lucide lucide-arrow-right-icon lucide-arrow-right"
+                  >
+                    <path d="M5 12h14" />
+                    <path d="m12 5 7 7-7 7" />
+                  </svg>
+                </span>
+              </button>
+            </motion.div>
+
+            {/* Card 9 */}
+            <motion.div
+              whileHover={{ y: -10 }}
+              className=" p-6 rounded-2xl bg-[#0c264b] border border-[#0bccc1] shadow-lg text-left transition duration-300"
+            >
+              <div className="w-12 h-12 bg-gradient-to-r from-[#0bccc1] to-[#07ebd1] text-white rounded-full flex items-center justify-center mb-4">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="lucide lucide-file-cog-icon lucide-file-cog"
+                >
+                  <path d="M15 8a1 1 0 0 1-1-1V2a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8z" />
+                  <path d="M20 8v12a2 2 0 0 1-2 2h-4.182" />
+                  <path d="m3.305 19.53.923-.382" />
+                  <path d="M4 10.592V4a2 2 0 0 1 2-2h8" />
+                  <path d="m4.228 16.852-.924-.383" />
+                  <path d="m5.852 15.228-.383-.923" />
+                  <path d="m5.852 20.772-.383.924" />
+                  <path d="m8.148 15.228.383-.923" />
+                  <path d="m8.53 21.696-.382-.924" />
+                  <path d="m9.773 16.852.922-.383" />
+                  <path d="m9.773 19.148.922.383" />
+                  <circle cx="7" cy="18" r="3" />
+                </svg>
+              </div>
+
+              <h2 className="relative z-10 text-white text-2xl font-bold mt-5 leading-tight">
+                Product Engineering
+              </h2>
+
+              <p className="relative z-10 text-gray-300 text-md leading-relaxed mt-6">
+                From concept to launch, we build products that scale.
+              </p>
+
+              {/* LINE */}
+              <div className="relative z-10 w-full h-0.5 bg-white/60 my-4"></div>
+
+              <ul className="relative z-10 space-y-2 text-gray-200 text-sm mb-6">
+                <li>• MVP development</li>
+                <li>• Product architecture design</li>
+                <li>• Continuous improvement and support </li>
+              </ul>
+
+              <button className="flex items-center gap-2 bg-gradient-to-r from-[#0bccc1] to-[#07ebd1] text-white px-5 py-2 rounded-full font-medium hover:scale-105 transition">
+                Learn More
+                <span className="w-8 h-8 rounded-full bg-[#0c264b] text-[#07ebd1] flex items-center justify-center group-hover:translate-x-2 transition duration-300">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="lucide lucide-arrow-right-icon lucide-arrow-right"
+                  >
+                    <path d="M5 12h14" />
+                    <path d="m12 5 7 7-7 7" />
+                  </svg>
+                </span>
+              </button>
+            </motion.div>
+
+            {/* Card 10 */}
+            <motion.div
+              whileHover={{ y: -10 }}
+              className=" p-6 rounded-2xl bg-[#0c264b] border border-[#0bccc1] shadow-lg text-left transition duration-300"
+            >
+              <div className="w-12 h-12 bg-gradient-to-r from-[#0bccc1] to-[#07ebd1] text-white rounded-full flex items-center justify-center mb-4">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="lucide lucide-microchip-icon lucide-microchip"
+                >
+                  <path d="M10 12h4" />
+                  <path d="M10 17h4" />
+                  <path d="M10 7h4" />
+                  <path d="M18 12h2" />
+                  <path d="M18 18h2" />
+                  <path d="M18 6h2" />
+                  <path d="M4 12h2" />
+                  <path d="M4 18h2" />
+                  <path d="M4 6h2" />
+                  <rect x="6" y="2" width="12" height="20" rx="2" />
+                </svg>
+              </div>
+
+              <h2 className="relative z-10 text-white text-2xl font-bold mt-5 leading-tight">
+                Digital Transformation
+              </h2>
+
+              <p className="relative z-10 text-gray-300 text-md leading-relaxed mt-6">
+                Modernize business processes with innovative technology
+                solutions.
+              </p>
+
+              {/* LINE */}
+              <div className="relative z-10 w-full h-0.5 bg-white/60 my-4"></div>
+
+              <ul className="relative z-10 space-y-2 text-gray-200 text-sm mb-6">
+                <li>• Legacy system modernization</li>
+                <li>• Business process optimization</li>
+                <li>• Technology adoption strategies </li>
+              </ul>
+
+              <button className="flex items-center gap-2 bg-gradient-to-r from-[#0bccc1] to-[#07ebd1] text-white px-5 py-2 rounded-full font-medium hover:scale-105 transition">
+                Learn More
                 <span className="w-8 h-8 rounded-full bg-[#0c264b] text-[#07ebd1] flex items-center justify-center group-hover:translate-x-2 transition duration-300">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -580,9 +848,9 @@ const page = () => {
             transition={{ duration: 0.7 }}
             className="max-w-3xl text-4xl md:text-6xl font-bold leading-tight"
           >
-            From Awareness to Action Our Mission{" "}
+            From Vision to Innovation Our Mission{" "}
             <span className="bg-gradient-to-r from-[#0bccc1] to-[#07ebd1] bg-clip-text text-transparent">
-              in Motion
+              in Action
             </span>
           </motion.h1>
 
@@ -593,9 +861,10 @@ const page = () => {
             transition={{ delay: 0.3, duration: 0.8 }}
             className="max-w-2xl mt-6 text-lg text-gray-300 leading-relaxed"
           >
-            We guide individuals and organizations from understanding
-            environmental challenges to taking meaningful actions that create
-            real, lasting impact.
+            We empower businesses through innovative technology solutions that
+            solve real-world challenges. Our mission is to transform ideas into
+            scalable digital products, helping organizations achieve growth,
+            efficiency, and long-term success.
           </motion.p>
 
           {/* 🔵 CARDS */}
@@ -625,17 +894,18 @@ const page = () => {
                 </svg>
               </div>
 
-              <h2 className="text-5xl font-bold mb-2">5,000+</h2>
+              <h2 className="text-5xl font-bold mb-2">500+</h2>
 
               <h3 className="text-[#0bccc1] text-2xl font-semibold mb-6">
-                Volunteers Engaged
+                Features Delivered
               </h3>
 
               <div className="w-full h-[1px] bg-white/10 mb-6" />
 
               <p className="text-gray-300 leading-relaxed">
-                Volunteers making a difference by contributing their energy,
-                skills, and time to protect.
+                Robust, user-focused features developed across web applications,
+                enterprise platforms, and custom software solutions that drive
+                measurable business outcomes.
               </p>
             </motion.div>
 
@@ -663,17 +933,18 @@ const page = () => {
                 </svg>
               </div>
 
-              <h2 className="text-5xl font-bold mb-2">150+</h2>
+              <h2 className="text-5xl font-bold mb-2">50+</h2>
 
               <h3 className="text-[#0bccc1] text-2xl font-semibold mb-6">
-                Community Projects
+                Successful Projects
               </h3>
 
               <div className="w-full h-0.5 bg-white/10 mb-6" />
 
               <p className="text-gray-300 leading-relaxed">
-                Environmental initiatives and programs carried out to engage
-                communities effectively.
+                Custom-built software solutions delivered for startups, SMEs,
+                and enterprises, helping clients streamline operations and
+                accelerate digital transformation.
               </p>
             </motion.div>
           </div>
@@ -768,7 +1039,7 @@ const page = () => {
         {/* 🔵 BACKGROUND GLOW */}
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(34,211,238,0.15),transparent_35%)]" />
 
-        <div className="relative z-10 max-w-7xl mx-auto px-6">
+        <div className="relative z-10 max-w-7xl mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             {/* ================================================= */}
             {/* 🔵 LEFT CONTENT */}
@@ -789,52 +1060,84 @@ const page = () => {
               </div>
 
               {/* HEADING */}
-              <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-8">
-                Purpose Led Environmental Solutions{" "}
+              <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-6">
+                Purpose-Built Technology Solutions{" "}
                 <span className="bg-gradient-to-r from-[#0bccc1] to-[#07ebd1] bg-clip-text text-transparent">
                   you Can Trust
                 </span>
               </h1>
 
               {/* DESCRIPTION */}
-              <p className="text-gray-300 text-lg leading-relaxed max-w-xl mb-14">
-                Our work is guided by clear purpose, scientific knowledge, and
-                ethical practices to ensure reliable and sustainable
-                environmental outcomes.
+              <p className="text-gray-300 text-lg leading-relaxed max-w-xl mb-4">
+                We develop indigenous software solutions designed around your
+                unique business needs. Instead of adapting your processes to
+                generic products, we build technology that fits your goals,
+                workflows, and future growth plans.
               </p>
 
               {/* 🔵 CONTENT GRID */}
               <div className="grid md:grid-cols-[280px_1fr] gap-10 items-start">
-                {/* STATS CARD */}
-                <motion.div
-                  whileHover={{ y: -8 }}
-                  className="bg-white/5 border border-[#0bccc1]/20 backdrop-blur-xl rounded-3xl p-6 shadow-[0_0_40px_rgba(34,211,238,0.08)]"
-                >
-                  <div>
-                    <h2 className="text-6xl font-bold text-[#0bccc1]">45K+</h2>
+                <div>
+                  {/* STATS CARD */}
+                  <motion.div
+                    whileHover={{ y: -8 }}
+                    className="bg-white/5 h-110 border border-[#0bccc1]/20 backdrop-blur-xl rounded-3xl p-6 shadow-[0_0_40px_rgba(34,211,238,0.08)]"
+                  >
+                    <div>
+                      <h2 className="text-6xl font-bold text-[#0bccc1]">
+                        500+
+                      </h2>
 
-                    <p className="text-2xl mt-5 leading-snug font-semibold">
-                      Trees Planted Through Conservation
-                    </p>
-                  </div>
+                      <p className="text-2xl mt-5 leading-snug font-semibold">
+                        Successful Features Delivered
+                      </p>
+                    </div>
 
-                  <div className="w-full h-0.5 bg-white/10 my-10" />
+                    <div className="w-full h-0.5 bg-white/10 my-10" />
 
-                  <div>
-                    <h2 className="text-6xl font-bold text-[#0bccc1]">80+</h2>
+                    <div>
+                      <h2 className="text-6xl font-bold text-[#0bccc1]">50+</h2>
 
-                    <p className="text-2xl mt-5 leading-snug font-semibold">
-                      Communities Actively Supported
-                    </p>
-                  </div>
-                </motion.div>
+                      <p className="text-2xl mt-5 leading-snug font-semibold">
+                        Projects Completed Across Industries
+                      </p>
+                    </div>
+                  </motion.div>
+                  {/* 🔵 BUTTON */}
+                  <motion.button
+                    whileHover={{ scale: 1.05 }}
+                    className="group ml-2 mt-12  flex items-center overflow-hidden rounded-full bg-gradient-to-r from-[#0bccc1] to-[#07ebd1]"
+                  >
+                    <span className="px-7 py-4 text-[#ffffff] text-xl font-semibold">
+                      Learn More
+                    </span>
+
+                    <span className="w-14 h-14 rounded-full bg-[#0c264b] text-[#07ebd1] flex items-center justify-center group-hover:translate-x-2 transition duration-300">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        className="lucide lucide-arrow-right-icon lucide-arrow-right"
+                      >
+                        <path d="M5 12h14" />
+                        <path d="m12 5 7 7-7 7" />
+                      </svg>
+                    </span>
+                  </motion.button>
+                </div>
 
                 {/* RIGHT INFO */}
-                <div>
+                <div className="flex flex-col justify-between h-full ">
                   {/* ICON */}
                   <motion.div
                     whileHover={{ scale: 1.1, rotate: 10 }}
-                    className="w-15 h-15 rounded-full bg-gradient-to-r from-[#0bccc1] to-[#07ebd1] flex items-center justify-center shadow-[0_0_30px_rgba(34,211,238,0.4)] mb-8"
+                    className="w-14 h-14 rounded-full bg-gradient-to-r from-[#0bccc1] to-[#07ebd1] flex items-center justify-center shadow-[0_0_30px_rgba(34,211,238,0.4)] mb-2"
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -854,94 +1157,48 @@ const page = () => {
                   </motion.div>
 
                   {/* TITLE */}
-                  <h3 className="text-4xl font-bold mb-5">
-                    Sustainability Planning
+                  <h3 className="text-3xl font-bold mb-2">
+                    Indigenous Solution Development
                   </h3>
 
                   {/* TEXT */}
-                  <p className="text-gray-300 text-lg leading-relaxed mb-8">
-                    Strategic planning to reduce environmental footprint and
-                    improve long term responsibility.
+                  <p className="text-gray-300 text-md leading-relaxed mb-3">
+                    Our team creates custom-built digital solutions from the
+                    ground up, ensuring every feature serves a real business
+                    purpose and delivers measurable value.
                   </p>
 
-                  <div className="w-full h-0.5 bg-white/10 mb-8" />
+                  <div className="w-full h-0.5 bg-white/10 mb-2" />
 
                   {/* CHECK LIST */}
-                  <div className="space-y-5">
-                    <div className="flex items-center gap-4">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="24"
-                        height="24"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        className="lucide lucide-circle-check-icon lucide-circle-check"
-                      >
-                        <circle cx="12" cy="12" r="10" />
-                        <path d="m9 12 2 2 4-4" />
-                      </svg>
-
-                      <p className="text-gray-300 text-lg">
-                        Our planning focuses on realistic goals
-                      </p>
-                    </div>
-
-                    <div className="flex items-center gap-4">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="24"
-                        height="24"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        className="lucide lucide-circle-check-icon lucide-circle-check"
-                      >
-                        <circle cx="12" cy="12" r="10" />
-                        <path d="m9 12 2 2 4-4" />
-                      </svg>
-
-                      <p className="text-gray-300 text-lg">
-                        We create structured sustainability plans help
-                      </p>
-                    </div>
+                  <div className="grid grid-cols-1  gap-x-4 gap-y-2">
+                    {[
+                      "Tailored solutions designed specifically for your business requirements",
+                      "Scalable architecture built to support long-term growth",
+                      "Focus on performance, security, and reliability from day one",
+                    ].map((item, i) => (
+                      <div key={i} className="flex items-center gap-4">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          className="lucide lucide-circle-check shrink-0"
+                        >
+                          <circle cx="12" cy="12" r="10" />
+                          <path d="m9 12 2 2 4-4" />
+                        </svg>
+                        <p className="text-gray-300 text-sm">{item}</p>
+                      </div>
+                    ))}
                   </div>
                 </div>
               </div>
-
-              {/* 🔵 BUTTON */}
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                className="group mt-16 flex items-center overflow-hidden rounded-full bg-gradient-to-r from-[#0bccc1] to-[#07ebd1]"
-              >
-                <span className="px-7 py-4 text-[#ffffff] text-xl font-semibold">
-                  Learn More
-                </span>
-
-                <span className="w-14 h-14 rounded-full bg-[#0c264b] text-[#07ebd1] flex items-center justify-center group-hover:translate-x-2 transition duration-300">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    className="lucide lucide-arrow-right-icon lucide-arrow-right"
-                  >
-                    <path d="M5 12h14" />
-                    <path d="m12 5 7 7-7 7" />
-                  </svg>
-                </span>
-              </motion.button>
             </motion.div>
 
             {/* ================================================= */}
@@ -964,7 +1221,7 @@ const page = () => {
                   alt="People"
                   width={700}
                   height={700}
-                  className="w-full h-120 object-cover"
+                  className="w-full h-168 object-cover"
                 />
               </motion.div>
 

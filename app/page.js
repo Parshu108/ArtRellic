@@ -28,9 +28,9 @@ export default function Home() {
       <OurServices />
       <WhyChoseUs />
       <OurStory />
-      <WhatWeDo />
-      <Features />
-      <HowWeWork />
+      {/* <WhatWeDo/> */}
+      {/* <Features/> */}
+      {/* <HowWeWork/> */}
       <Testimonials />
       <FAQs />
       <LatestBlogs />

@@ -21,58 +21,6 @@ export default function Footer() {
 
       <div className="max-w-7xl mx-auto px-2 md:px-3 xl:px-3 py-6 md:py-6 relative z-10">
         {/* ================================================= */}
-        {/* NEWSLETTER */}
-        {/* ================================================= */}
-
-        <div className="grid grid-cols-1 lg:grid-cols-[1.1fr_1fr_1fr] gap-6 xl:gap-16 items-center">
-          {/* LEFT */}
-          <motion.div
-            initial={{ opacity: 0, y: 70 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7 }}
-            className="max-w-xl"
-          >
-            <h2 className="text-2xl md:text-3xl font-black leading-tight">
-              Subscribe Our Newsletter to Get Latest Updates
-            </h2>
-          </motion.div>
-
-          {/* CENTER */}
-          <motion.div
-            initial={{ opacity: 0, y: 70 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <p className="text-gray-300 text-base md:text-md leading-relaxed">
-              Stay informed with the latest environmental news, sustainability
-              insights, and eco friendly initiatives.
-            </p>
-          </motion.div>
-
-          {/* RIGHT */}
-          <motion.div
-            initial={{ opacity: 0, y: 70 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.9 }}
-          >
-            <div className="flex items-center overflow-hidden rounded-2xl bg-[#0bccc1]/10 border border-[#0bccc1]/20 backdrop-blur-xl">
-              <input
-                type="email"
-                placeholder="Enter Email Address*"
-                className="w-full bg-transparent px-6 py-5 text-base md:text-lg outline-none placeholder:text-gray-400"
-              />
-
-              <button className="w-16 h-16 flex items-center justify-center bg-secondary text-[#0c264b] hover:bg-[#0bccc1] transition duration-300">
-                <ArrowRight size={28} />
-              </button>
-            </div>
-          </motion.div>
-        </div>
-
-        {/* LINE */}
-        <div className="w-full h-0.5 bg-[#0bccc1]/10 my-4 md:my-8"></div>
-
-        {/* ================================================= */}
         {/* FOOTER CONTENT */}
         {/* ================================================= */}
 
@@ -171,6 +119,7 @@ export default function Footer() {
             initial={{ opacity: 0, y: 70 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
+            className="mt-13"
           >
             <h2 className="text-xl md:text-2xl font-black mb-4">Quick Links</h2>
 
@@ -202,6 +151,7 @@ export default function Footer() {
             initial={{ opacity: 0, y: 70 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9 }}
+            className="mt-13"
           >
             <h2 className="text-xl md:text-2xl font-black mb-4">
               Our Focus Areas
@@ -238,6 +188,7 @@ export default function Footer() {
             initial={{ opacity: 0, y: 70 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
+            className="mt-13"
           >
             <h2 className="text-xl md:text-2xl font-black mb-4">
               Contact Information

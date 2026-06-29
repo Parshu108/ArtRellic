@@ -8,6 +8,7 @@ import { FaDribbble } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa";
 import { FaInstagramSquare } from "react-icons/fa";
+import { FcGoogle } from "react-icons/fc";
 import WhyChoseUs from "../component/home/why_chose_us";
 import OurStory from "../component/home/our_story";
 

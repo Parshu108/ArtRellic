@@ -2,8 +2,20 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
+import { useState } from "react";
 
 const page = () => {
+  const [name, setName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [message, setMessage] = useState("");
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Handle form submission logic here
+    console.log("Form submitted:", { name, lastName, email, phone, message });
+  }
   return (
     <>
       <section className="relative h-[70vh] min-h-[560px] overflow-hidden bg-[#0c264b]">
@@ -194,6 +206,8 @@ const page = () => {
                   <input
                     type="text"
                     placeholder="Enter First Name *"
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
                     className="h-12 w-full rounded-2xl border border-[#0bccc1]/20 bg-[#102f5c] px-6 text-white outline-none placeholder:text-[#b8c5d6]/60 focus:border-[#07ebd1]"
                   />
                 </div>
@@ -207,6 +221,8 @@ const page = () => {
                   <input
                     type="text"
                     placeholder="Enter Last Name *"
+                    value={lastName}
+                    onChange={(e) => setLastName(e.target.value)}
                     className="h-12 w-full rounded-2xl border border-[#0bccc1]/20 bg-[#102f5c] px-6 text-white outline-none placeholder:text-[#b8c5d6]/60 focus:border-[#07ebd1]"
                   />
                 </div>
@@ -223,6 +239,8 @@ const page = () => {
                   <input
                     type="email"
                     placeholder="Enter Email Address *"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
                     className="h-12 w-full rounded-2xl border border-[#0bccc1]/20 bg-[#102f5c] px-6 text-white outline-none placeholder:text-[#b8c5d6]/60 focus:border-[#07ebd1]"
                   />
                 </div>
@@ -236,6 +254,8 @@ const page = () => {
                   <input
                     type="text"
                     placeholder="Enter Phone Number *"
+                    value={phone}
+                    onChange={(e) => setPhone(e.target.value)}
                     className="h-12 w-full rounded-2xl border border-[#0bccc1]/20 bg-[#102f5c] px-6 text-white outline-none placeholder:text-[#b8c5d6]/60 focus:border-[#07ebd1]"
                   />
                 </div>
@@ -250,6 +270,8 @@ const page = () => {
                 <textarea
                   rows={6}
                   placeholder="Any Additional Message..."
+                  value={message}
+                  onChange={(e) => setMessage(e.target.value)}
                   className="w-full rounded-3xl border border-[#0bccc1]/20 bg-[#102f5c] p-6 text-white outline-none placeholder:text-[#b8c5d6]/60 focus:border-[#07ebd1]"
                 />
               </div>
@@ -258,7 +280,8 @@ const page = () => {
               <motion.button
                 whileHover={{ scale: 1.03 }}
                 whileTap={{ scale: 0.96 }}
-                className="group flex items-center gap-5 rounded-full bg-[#0bccc1] px-4 py-2 text-xl font-bold text-[#ffffff] shadow-xl shadow-[#07ebd1]/20 transition-all duration-300 hover:bg-[#07ebd1]"
+                className="group flex w-full items-center justify-center gap-5 rounded-full bg-[#0bccc1] px-4 py-2 text-2xl font-bold text-white shadow-xl shadow-[#07ebd1]/20 transition-all duration-300 hover:bg-[#07ebd1]"
+                onClick={handleSubmit}
               >
                 Submit Message
                 <span className="flex h-12 w-12 items-center justify-center rounded-full bg-[#0c264b] text-[#07ebd1] transition duration-300 group-hover:translate-x-1">

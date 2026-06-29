@@ -1,8 +1,19 @@
 "use client";
-import Image from "next/image";
+import { useState } from "react";
 import { motion } from "framer-motion";
 
 export default function WhyChoseUs() {
+  const [name, setName] = useState("");
+  const [companyName, setCompanyName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [message, setMessage] = useState("");
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Handle form submission logic here
+    console.log("Form submitted:", { name, companyName, email, phone, message });
+  }
   return (
     <>
       <section className="relative overflow-hidden bg-[#071c34] py-24 text-white">
@@ -171,120 +182,138 @@ export default function WhyChoseUs() {
               </div>
             </motion.div>
 
-            {/* ================================================= */}
-            {/* 🔵 RIGHT IMAGE LAYOUT */}
-            {/* ================================================= */}
-
+            {/* ================= RIGHT FORM ================= */}
             <motion.div
-              initial={{ opacity: 0, x: 60 }}
+              initial={{ opacity: 0, x: 80 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
-              className="relative grid grid-cols-[1fr_280px] gap-6 items-center"
+              className="flex flex-col justify-center"
             >
-              {/* BIG IMAGE */}
-              <motion.div
-                whileHover={{ scale: 1.02 }}
-                className="relative rounded-4xl overflow-hidden"
-              >
-                <Image
-                  src="/Biger.png"
-                  alt="People"
-                  width={700}
-                  height={700}
-                  className="w-full h-168 object-cover"
-                />
-              </motion.div>
+              {/* Heading */}
+              <h1 className="max-w-2xl text-3xl font-bold leading-tight text-white md:text-5xl">
+                Contact Us
+                <span className="block bg-gradient-to-r from-[#0bccc1] to-[#07ebd1] bg-clip-text text-transparent">
+                  Today!
+                </span>
+              </h1>
 
-              {/* RIGHT COLUMN */}
-              <div className="flex flex-col gap-6">
-                {/* TOP IMAGE */}
-                <motion.div
-                  whileHover={{ scale: 1.03 }}
-                  className="rounded-4xl overflow-hidden"
-                >
-                  <Image
-                    src="/long.jpg"
-                    alt="Solar"
-                    width={400}
-                    height={350}
-                    className="w-full h-80 object-cover"
-                  />
-                </motion.div>
+              {/* Description */}
+              <p className="mt-4 max-w-xl text-lg leading-relaxed text-[#b8c5d6]">
+                Whether you&apos;re looking for guidance, collaboration, or
+                support, contact us today and our team will be happy to assist
+                you.
+              </p>
 
-                {/* BOTTOM IMAGE */}
-                <motion.div
-                  whileHover={{ scale: 1.03 }}
-                  className="rounded-4xl overflow-hidden"
-                >
-                  <Image
-                    src="/mid.jpg"
-                    alt="Wind"
-                    width={400}
-                    height={350}
-                    className="w-full h-80 object-cover"
-                  />
-                </motion.div>
-              </div>
+              {/* Form */}
+              <form className="mt-6 space-y-8">
+                {/* Row */}
+                <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+                  {/* Name */}
+                  <div>
+                    <label className="mb-2 block text-lg font-semibold text-white">
+                      Name:
+                    </label>
 
-              {/* 🔵 ROTATING BADGE */}
-              <motion.div
-                animate={{ rotate: 360 }}
-                transition={{
-                  repeat: Infinity,
-                  duration: 12,
-                  ease: "linear",
-                }}
-                className="absolute top-1/2 right-[180px] -translate-y-1/2 z-20"
-              >
-                <div className="relative w-44 h-44 flex items-center justify-center">
-                  {/* SVG TEXT */}
-                  <svg viewBox="0 0 200 200" className="absolute w-full h-full">
-                    <defs>
-                      <path
-                        id="circlePath"
-                        d="
-                                    M 100,100
-                                    m -75,0
-                                    a 75,75 0 1,1 150,0
-                                    a 75,75 0 1,1 -150,0
-                                  "
-                      />
-                    </defs>
+                    <input
+                      type="text"
+                      placeholder="Enter Name *"
+                      value={name}
+                      onChange={(e) => setName(e.target.value)}
+                      className="h-12 w-full rounded-2xl border border-[#0bccc1]/20 bg-[#102f5c] px-6 text-white outline-none placeholder:text-[#b8c5d6]/60 focus:border-[#07ebd1]"
+                    />
+                  </div>
 
-                    <text
-                      fill="#22d3ee"
-                      fontSize="15"
-                      fontWeight="700"
-                      letterSpacing="3"
-                    >
-                      <textPath href="#circlePath">
-                        • Contact Us • Contact Us • Contact Us •
-                      </textPath>
-                    </text>
-                  </svg>
+                  {/* Company Name */}
+                  <div>
+                    <label className="mb-2 block text-lg font-semibold text-white">
+                      Company Name:
+                    </label>
 
-                  {/* CENTER */}
-                  <div className="w-24 h-24 rounded-full bg-[#071c34] border border-[#0bccc1] flex items-center justify-center shadow-[0_0_40px_rgba(34,211,238,0.4)]">
-                    <div className="w-14 h-14 rounded-full bg-gradient-to-r from-[#0bccc1] to-[#07ebd1] flex items-center justify-center">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="24"
-                        height="24"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        className="lucide lucide-leaf-icon lucide-leaf"
-                      >
-                        <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z" />
-                        <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12" />
-                      </svg>
-                    </div>
+                    <input
+                      type="text"
+                      placeholder="Enter Company Name *"
+                      value={companyName}
+                      onChange={(e) => setCompanyName(e.target.value)}
+                      className="h-12 w-full rounded-2xl border border-[#0bccc1]/20 bg-[#102f5c] px-6 text-white outline-none placeholder:text-[#b8c5d6]/60 focus:border-[#07ebd1]"
+                    />
                   </div>
                 </div>
-              </motion.div>
+
+                {/* Row */}
+                <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+                  {/* Email */}
+                  <div>
+                    <label className="mb-1 block text-lg font-semibold text-white">
+                      Email Address:
+                    </label>
+
+                    <input
+                      type="email"
+                      placeholder="Enter Email Address *"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                      className="h-12 w-full rounded-2xl border border-[#0bccc1]/20 bg-[#102f5c] px-6 text-white outline-none placeholder:text-[#b8c5d6]/60 focus:border-[#07ebd1]"
+                    />
+                  </div>
+
+                  {/* Phone */}
+                  <div>
+                    <label className="mb-1 block text-lg font-semibold text-white">
+                      Phone Number:
+                    </label>
+
+                    <input
+                      type="text"
+                      placeholder="Enter Phone Number *"
+                      value={phone}
+                      onChange={(e) => setPhone(e.target.value)}
+                      className="h-12 w-full rounded-2xl border border-[#0bccc1]/20 bg-[#102f5c] px-6 text-white outline-none placeholder:text-[#b8c5d6]/60 focus:border-[#07ebd1]"
+                    />
+                  </div>
+                </div>
+
+                {/* Message */}
+                <div>
+                  <label className="mb-1 block text-lg font-semibold text-white">
+                    Message:
+                  </label>
+
+                  <textarea
+                    rows={6}
+                    placeholder="Any Additional Message..."
+                    value={message}
+                    onChange={(e) => setMessage(e.target.value)}
+                    className="w-full rounded-3xl border border-[#0bccc1]/20 bg-[#102f5c] p-6 text-white outline-none placeholder:text-[#b8c5d6]/60 focus:border-[#07ebd1]"
+                  />
+                </div>
+
+                {/* Button */}
+                <motion.button
+                  whileHover={{ scale: 1.03 }}
+                  whileTap={{ scale: 0.96 }}
+                  className="group flex w-full items-center justify-center gap-5 rounded-full bg-[#0bccc1] px-4 py-2 text-2xl font-bold text-white shadow-xl shadow-[#07ebd1]/20 transition-all duration-300 hover:bg-[#07ebd1]"
+                  onClick={handleSubmit}
+                >
+                  Submit Message
+                  <span className="flex h-12 w-12 items-center justify-center rounded-full bg-[#0c264b] text-[#07ebd1] transition duration-300 group-hover:translate-x-1">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      className="lucide lucide-arrow-right-icon lucide-arrow-right"
+                    >
+                      <path d="M5 12h14" />
+                      <path d="m12 5 7 7-7 7" />
+                    </svg>
+                  </span>
+                </motion.button>
+              </form>
             </motion.div>
           </div>
         </div>
